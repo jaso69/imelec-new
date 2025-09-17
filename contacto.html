@@ -143,6 +143,27 @@
             height: 100%;
             min-height: 300px;
         }
+        #mobile-menu {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        background-color: rgba(0, 84, 179, 0.98);
+        z-index: 40;
+        padding-top: 80px;
+        transform: translateX(-100%);
+        transition: transform 0.3s ease-in-out;
+        }
+
+        #mobile-menu.active {
+            transform: translateX(0);
+        }
+
+        .body-no-scroll {
+            overflow: hidden;
+        }
     </style>
 </head>
 <body class="bg-gray-50">
@@ -171,7 +192,7 @@
                 </nav>
                 
                 <div class="md:hidden">
-                    <button class="text-white text-2xl" aria-label="Abrir menú">
+                    <button id="menu-toggle" class="text-white text-2xl" aria-label="Abrir menú">
                         <i class="fas fa-bars"></i>
                     </button>
                 </div>
@@ -180,7 +201,7 @@
     </header>
 
     <!-- Mobile Menu -->
-    <div id="mobile-menu" class="mobile-menu fixed inset-0 bg-primary z-40 pt-20 px-6 md:hidden">
+    <div id="mobile-menu" class="md:hidden">
         <button id="menu-close" class="absolute top-5 right-5 text-white text-2xl">
             <i class="fas fa-times"></i>
         </button>
@@ -536,53 +557,53 @@
         </div>
     </footer>
      <!-- JavaScript para el menú móvil -->
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            const menuToggle = document.getElementById('menu-toggle');
-            const menuClose = document.getElementById('menu-close');
-            const mobileMenu = document.getElementById('mobile-menu');
-            
-            // Abrir menú
-            menuToggle.addEventListener('click', function() {
-                mobileMenu.style.display = 'block';
-                setTimeout(() => {
-                    mobileMenu.classList.add('active');
-                }, 10);
-                document.body.style.overflow = 'hidden'; // Prevenir scroll
-            });
-            
-            // Cerrar menú
-            menuClose.addEventListener('click', function() {
-                mobileMenu.classList.remove('active');
-                setTimeout(() => {
-                    mobileMenu.style.display = 'none';
-                }, 300);
-                document.body.style.overflow = ''; // Restaurar scroll
-            });
-            
-            // Cerrar menú al hacer clic en un enlace
-            const menuLinks = mobileMenu.querySelectorAll('a');
-            menuLinks.forEach(link => {
-                link.addEventListener('click', function() {
-                    mobileMenu.classList.remove('active');
-                    setTimeout(() => {
-                        mobileMenu.style.display = 'none';
-                    }, 300);
-                    document.body.style.overflow = ''; // Restaurar scroll
-                });
-            });
-            
-            // Cerrar menú al hacer clic fuera de él
-            mobileMenu.addEventListener('click', function(e) {
-                if (e.target === mobileMenu) {
-                    mobileMenu.classList.remove('active');
-                    setTimeout(() => {
-                        mobileMenu.style.display = 'none';
-                    }, 300);
-                    document.body.style.overflow = ''; // Restaurar scroll
-                }
-            });
+   <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const menuToggle = document.getElementById('menu-toggle');
+        const menuClose = document.getElementById('menu-close');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const body = document.body;
+        
+        // Abrir menú
+        menuToggle.addEventListener('click', function() {
+            mobileMenu.style.display = 'block';
+            setTimeout(() => {
+                mobileMenu.classList.add('active');
+                body.classList.add('body-no-scroll');
+            }, 10);
         });
+        
+        // Cerrar menú
+        function closeMenu() {
+            mobileMenu.classList.remove('active');
+            setTimeout(() => {
+                mobileMenu.style.display = 'none';
+                body.classList.remove('body-no-scroll');
+            }, 300);
+        }
+        
+        menuClose.addEventListener('click', closeMenu);
+        
+        // Cerrar menú al hacer clic en un enlace
+        const menuLinks = mobileMenu.querySelectorAll('a');
+        menuLinks.forEach(link => {
+            link.addEventListener('click', closeMenu);
+        });
+        
+        // Cerrar menú al hacer clic fuera de él
+        mobileMenu.addEventListener('click', function(e) {
+            if (e.target === mobileMenu) {
+                closeMenu();
+            }
+        });
+        
+        // Cerrar menú con la tecla Escape
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape' && mobileMenu.classList.contains('active')) {
+                closeMenu();
+            }
+        });
+    });
     </script>
     <script>
         const formulario = document.querySelector('#formulario') 
