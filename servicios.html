@@ -1,0 +1,553 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Servicios de Electricidad | Imelec - Electricistas en Madrid</title>
+    <meta name="description" content="Servicios eléctricos profesionales en Madrid: instalaciones, reparaciones, puntos de carga para vehículos eléctricos, energía solar y automatización. Presupuesto sin compromiso.">
+    <meta name="keywords" content="servicios electricistas madrid, instalaciones eléctricas, reparaciones urgentes, puntos de carga vehículos eléctricos, energía solar madrid, automatización industrial, imelec servicios">
+    <meta name="author" content="Imelec">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://www.imelec.es/servicios">
+    <link rel="shortcut icon" href="favicon.svg" type="image/svg+xml">
+
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.imelec.es/servicios/">
+    <meta property="og:title" content="Servicios de Electricidad | Imelec - Electricistas en Madrid">
+    <meta property="og:description" content="Servicios eléctricos profesionales en Madrid: instalaciones, reparaciones, puntos de carga para vehículos eléctricos, energía solar y automatización.">
+    <meta property="og:image" content="https://www.imelec.es/images/servicios-electricos-imelec.jpg">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://www.imelec.es/servicios/">
+    <meta property="twitter:title" content="Servicios de Electricidad | Imelec - Electricistas en Madrid">
+    <meta property="twitter:description" content="Servicios eléctricos profesionales en Madrid: instalaciones, reparaciones, puntos de carga para vehículos eléctricos, energía solar y automatización.">
+    <meta property="twitter:image" content="https://www.imelec.es/images/servicios-electricos-imelec-twitter.jpg">
+    
+    <!-- Schema.org markup for Local Business -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      "serviceType": "Electrician",
+      "provider": {
+        "@type": "Electrician",
+        "name": "Imelec",
+        "image": "https://www.imelec.es/images/imelec-logo.jpg",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Dirección: Ctra de Loeches 55, Torrejon de Ardoz",
+          "addressLocality": "Madrid",
+          "postalCode": "28850",
+          "addressCountry": "ES"
+        },
+        "telephone": "+34691502361",
+        "openingHours": "Mo-Su 00:00-23:59"
+      },
+      "areaServed": {
+        "@type": "City",
+        "name": "Madrid"
+      },
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Servicios de Electricidad",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Instalaciones Eléctricas"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Reparaciones Urgentes 24h"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Puntos de Carga para Vehículos Eléctricos"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Energía Solar y Renovables"
+            }
+          }
+        ]
+      }
+    }
+    </script>
+    
+    <!-- Preload critical resources -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#0056b3',
+                        secondary: '#FFD700',
+                        accent: '#003366',
+                        light: '#f8f9fa',
+                        dark: '#212529',
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <style type="text/css">
+        body {
+            font-family: 'Roboto', sans-serif;
+            scroll-behavior: smooth;
+        }
+        .service-hero {
+            background: linear-gradient(rgba(0, 84, 179, 0.85), rgba(0, 51, 102, 0.85)), url('https://images.unsplash.com/photo-1558618047-3c8c8e5a962c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+        .breadcrumb {
+            padding: 0.75rem 1rem;
+            background-color: #f8f9fa;
+            border-radius: 0.375rem;
+        }
+        .breadcrumb ol {
+            display: flex;
+            flex-wrap: wrap;
+            list-style: none;
+        }
+        .breadcrumb li:not(:last-child):after {
+            content: "/";
+            margin: 0 0.5rem;
+            color: #6c757d;
+        }
+        .breadcrumb a {
+            color: #0056b3;
+            text-decoration: none;
+        }
+        .breadcrumb a:hover {
+            text-decoration: underline;
+        }
+        .service-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .service-card:hover {
+            transform: translateY(-5px);
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Skip to main content for accessibility -->
+    <a href="#main-content" class="sr-only focus:not-sr-only">Saltar al contenido principal</a>
+    
+    <!-- Header -->
+    <header class="bg-primary shadow-md sticky top-0 z-50">
+        <div class="container mx-auto px-4 py-3">
+            <div class="flex justify-between items-center">
+                <div class="flex items-center">
+                    <a href="https://www.imelec.es" class="flex items-center">
+                        <div class="rounded-full p-2 mr-3">
+                            <svg class="icon icon-tabler icon-tabler-bolt" height="48" viewBox="0 0 24 24" width="48" fill="none" stroke="#ffec00" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none" stroke="none"></path><path d="M13 3l0 7l6 0l-8 11l0 -7l-6 0l8 -11"></path></svg>
+                        </div>
+                        <span class="text-white text-2xl font-bold">IMELEC</span>
+                    </a>
+                </div>
+                
+                <nav aria-label="Navegación principal">
+                    <ul class="hidden md:flex space-x-8">
+                        <li><a href="https://www.imelec.es" class="text-white hover:text-secondary font-medium">Inicio</a></li>
+                        <li><a href="#main-content" class="text-white hover:text-secondary font-medium">Servicios</a></li>
+                        <li><a href="https://www.imelec.es/contacto.html" class="text-white hover:text-secondary font-medium">Contacto</a></li>
+                    </ul>
+                </nav>
+                
+                <div class="md:hidden">
+                    <button class="text-white text-2xl" aria-label="Abrir menú">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Breadcrumb -->
+    <nav class="bg-light py-2" aria-label="Miga de pan">
+        <div class="container mx-auto px-4">
+            <div class="breadcrumb">
+                <ol>
+                    <li><a href="https://www.imelec.es">Inicio</a></li>
+                    <li aria-current="page">Servicios de Electricidad en Madrid</li>
+                </ol>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="service-hero py-16 md:py-24 text-white">
+        <div class="container mx-auto px-4 text-center">
+            <h1 class="text-4xl md:text-5xl font-bold mb-6">Servicios de Electricidad en Madrid</h1>
+            <p class="text-xl mb-8 max-w-3xl mx-auto">Soluciones eléctricas integrales para hogares, empresas y comunidades en Madrid. Expertos en instalaciones, reparaciones y puntos de carga para vehículos eléctricos.</p>
+            <a href="/contacto.html" class="bg-secondary text-accent font-bold py-3 px-8 rounded-lg hover:bg-yellow-400 transition duration-300 inline-block">
+                Solicitar Presupuesto
+            </a>
+        </div>
+    </section>
+
+    <!-- Services Grid -->
+    <main id="main-content" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center text-accent mb-12">Nuestros Servicios de Electricidad</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Service 1 -->
+                <div class="service-card bg-light rounded-lg p-6 shadow-md hover:shadow-xl border-l-4 border-primary">
+                    <div class="text-primary text-4xl mb-4">
+                        <i class="fas fa-house-chimney" aria-hidden="true"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-accent mb-3">Instalaciones Eléctricas</h3>
+                    <p class="text-gray-700 mb-4">Instalaciones eléctricas completas para viviendas, locales comerciales, oficinas y edificios en Madrid.</p>
+                    <ul class="text-gray-700 space-y-2 mb-4">
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-primary mr-2 mt-1" aria-hidden="true"></i>
+                            <span>Cuadros eléctricos y automatismos</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-primary mr-2 mt-1" aria-hidden="true"></i>
+                            <span>Instalaciones nuevas y reformas</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-primary mr-2 mt-1" aria-hidden="true"></i>
+                            <span>Certificados de instalación eléctrica</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-primary mr-2 mt-1" aria-hidden="true"></i>
+                            <span>Cumplimiento del REBT</span>
+                        </li>
+                    </ul>
+                    <a href="/contacto.html" class="text-primary font-semibold hover:underline inline-flex items-center">
+                        Solicitar información
+                        <i class="fas fa-arrow-right ml-2" aria-hidden="true"></i>
+                    </a>
+                </div>
+                
+                <!-- Service 2 -->
+                <div class="service-card bg-light rounded-lg p-6 shadow-md hover:shadow-xl border-l-4 border-primary">
+                    <div class="text-primary text-4xl mb-4">
+                        <i class="fas fa-tools" aria-hidden="true"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-accent mb-3">Reparaciones Urgentes 24h</h3>
+                    <p class="text-gray-700 mb-4">Servicio de urgencia las 24 horas en Madrid. Diagnóstico preciso y solución de averías eléctricas.</p>
+                    <ul class="text-gray-700 space-y-2 mb-4">
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-primary mr-2 mt-1" aria-hidden="true"></i>
+                            <span>Averías eléctricas urgentes</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-primary mr-2 mt-1" aria-hidden="true"></i>
+                            <span>Caídas de tensión y cortes de luz</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-primary mr-2 mt-1" aria-hidden="true"></i>
+                            <span>Cambio de cuadros eléctricos</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-primary mr-2 mt-1" aria-hidden="true"></i>
+                            <span>Reparación de enchufes y puntos de luz</span>
+                        </li>
+                    </ul>
+                    <a href="tel:+34691502361" class="text-primary font-semibold hover:underline inline-flex items-center">
+                        Llamar ahora
+                        <i class="fas fa-phone ml-2" aria-hidden="true"></i>
+                    </a>
+                </div>
+                
+                <!-- Service 3 -->
+                <div class="service-card bg-light rounded-lg p-6 shadow-md hover:shadow-xl border-l-4 border-primary">
+                    <div class="text-primary text-4xl mb-4">
+                        <i class="fas fa-charging-station" aria-hidden="true"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-accent mb-3">Puntos de Carga VE</h3>
+                    <p class="text-gray-700 mb-4">Instalación de puntos de carga para vehículos eléctricos en Madrid. Asesoramiento completo y gestión de subvenciones.</p>
+                    <ul class="text-gray-700 space-y-2 mb-4">
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-primary mr-2 mt-1" aria-hidden="true"></i>
+                            <span>Instalación Wallbox y puntos de carga</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-primary mr-2 mt-1" aria-hidden="true"></i>
+                            <span>Asesoramiento en potencia necesaria</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-primary mr-2 mt-1" aria-hidden="true"></i>
+                            <span>Gestión de subvenciones y ayudas</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-primary mr-2 mt-1" aria-hidden="true"></i>
+                            <span>Instalaciones para comunidades</span>
+                        </li>
+                    </ul>
+                    <a href="/contacto.html" class="text-primary font-semibold hover:underline inline-flex items-center">
+                        Solicitar información
+                        <i class="fas fa-arrow-right ml-2" aria-hidden="true"></i>
+                    </a>
+                </div>
+                
+                <!-- Service 4 -->
+                <div class="service-card bg-light rounded-lg p-6 shadow-md hover:shadow-xl border-l-4 border-primary">
+                    <div class="text-primary text-4xl mb-4">
+                        <i class="fas fa-solar-panel" aria-hidden="true"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-accent mb-3">Energías Renovables</h3>
+                    <p class="text-gray-700 mb-4">Instalación de placas solares y sistemas de autoconsumo en Madrid. Estudio de viabilidad y gestión de subvenciones.</p>
+                    <ul class="text-gray-700 space-y-2 mb-4">
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-primary mr-2 mt-1" aria-hidden="true"></i>
+                            <span>Instalación de placas solares</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-primary mr-2 mt-1" aria-hidden="true"></i>
+                            <span>Sistemas de autoconsumo</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-primary mr-2 mt-1" aria-hidden="true"></i>
+                            <span>Estudios de viabilidad y rentabilidad</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-primary mr-2 mt-1" aria-hidden="true"></i>
+                            <span>Gestión de subvenciones y bonificaciones</span>
+                        </li>
+                    </ul>
+                    <a href="/contacto.html" class="text-primary font-semibold hover:underline inline-flex items-center">
+                        Solicitar información
+                        <i class="fas fa-arrow-right ml-2" aria-hidden="true"></i>
+                    </a>
+                </div>
+                
+                <!-- Service 5 -->
+                <div class="service-card bg-light rounded-lg p-6 shadow-md hover:shadow-xl border-l-4 border-primary">
+                    <div class="text-primary text-4xl mb-4">
+                        <i class="fas fa-building" aria-hidden="true"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-accent mb-3">Automatización Industrial</h3>
+                    <p class="text-gray-700 mb-4">Sistemas de automatización y cuadros eléctricos para empresas en Madrid. Mejora de eficiencia energética.</p>
+                    <ul class="text-gray-700 space-y-2 mb-4">
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-primary mr-2 mt-1" aria-hidden="true"></i>
+                            <span>Automatización industrial</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-primary mr-2 mt-1" aria-hidden="true"></i>
+                            <span>Cuadros eléctricos personalizados</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-primary mr-2 mt-1" aria-hidden="true"></i>
+                            <span>Control y monitorización de consumo</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-primary mr-2 mt-1" aria-hidden="true"></i>
+                            <span>Mejora de eficiencia energética</span>
+                        </li>
+                    </ul>
+                    <a href="/contacto.html" class="text-primary font-semibold hover:underline inline-flex items-center">
+                        Solicitar información
+                        <i class="fas fa-arrow-right ml-2" aria-hidden="true"></i>
+                    </a>
+                </div>
+                
+                <!-- Service 6 -->
+                <div class="service-card bg-light rounded-lg p-6 shadow-md hover:shadow-xl border-l-4 border-primary">
+                    <div class="text-primary text-4xl mb-4">
+                        <i class="fas fa-lightbulb" aria-hidden="true"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-accent mb-3">Iluminación Eficiente</h3>
+                    <p class="text-gray-700 mb-4">Diseño e instalación de sistemas de iluminación LED eficientes para interiores y exteriores en Madrid.</p>
+                    <ul class="text-gray-700 space-y-2 mb-4">
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-primary mr-2 mt-1" aria-hidden="true"></i>
+                            <span>Iluminación LED eficiente</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-primary mr-2 mt-1" aria-hidden="true"></i>
+                            <span>Diseño de proyectos de iluminación</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-primary mr-2 mt-1" aria-hidden="true"></i>
+                            <span>Automatización de iluminación</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-primary mr-2 mt-1" aria-hidden="true"></i>
+                            <span>Estudios de ahorro energético</span>
+                        </li>
+                    </ul>
+                    <a href="/contacto.html" class="text-primary font-semibold hover:underline inline-flex items-center">
+                        Solicitar información
+                        <i class="fas fa-arrow-right ml-2" aria-hidden="true"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Process Section -->
+    <section class="py-16 bg-gray-100">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center text-accent mb-12">Nuestro Proceso de Trabajo</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div class="text-center">
+                    <div class="bg-primary text-white rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4 text-2xl font-bold">1</div>
+                    <h3 class="text-xl font-semibold text-accent mb-2">Contacto</h3>
+                    <p class="text-gray-700">Nos llama o rellena el formulario para explicarnos sus necesidades.</p>
+                </div>
+                
+                <div class="text-center">
+                    <div class="bg-primary text-white rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4 text-2xl font-bold">2</div>
+                    <h3 class="text-xl font-semibold text-accent mb-2">Evaluación</h3>
+                    <p class="text-gray-700">Estudiamos su caso y realizamos un presupuesto personalizado.</p>
+                </div>
+                
+                <div class="text-center">
+                    <div class="bg-primary text-white rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4 text-2xl font-bold">3</div>
+                    <h3 class="text-xl font-semibold text-accent mb-2">Ejecución</h3>
+                    <p class="text-gray-700">Realizamos el trabajo con profesionalidad y en el plazo acordado.</p>
+                </div>
+                
+                <div class="text-center">
+                    <div class="bg-primary text-white rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4 text-2xl font-bold">4</div>
+                    <h3 class="text-xl font-semibold text-accent mb-2">Garantía</h3>
+                    <p class="text-gray-700">Revisión final y entrega de garantías por escrito de todos los trabajos.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section id="contact" class="py-16 bg-primary text-white">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-3xl font-bold mb-6">¿Necesita un Electricista en Madrid?</h2>
+            <p class="text-xl mb-8 max-w-3xl mx-auto">Contáctenos para solicitar presupuesto sin compromiso o para cualquier emergencia eléctrica las 24 horas</p>
+            <div class="flex flex-col md:flex-row justify-center gap-4">
+                <a href="tel:+34691502361" class="bg-secondary text-accent font-bold py-3 px-8 rounded-lg hover:bg-yellow-400 transition duration-300">
+                    <i class="fas fa-phone mr-2" aria-hidden="true"></i>691 50 23 61
+                </a>
+                <a href="mailto:info@imelec.es" class="bg-white text-primary font-bold py-3 px-8 rounded-lg hover:bg-gray-100 transition duration-300">
+                    <i class="fas fa-envelope mr-2" aria-hidden="true"></i>info@imelec.es
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center text-accent mb-12">Preguntas Frecuentes - Servicios Eléctricos</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div>
+                    <h3 class="text-xl font-semibold mb-3">¿Qué zonas de Madrid cubren?</h3>
+                    <p class="text-gray-700">Trabajamos en toda la Comunidad de Madrid: Madrid capital y todos los municipios de la comunidad.</p>
+                </div>
+                <div>
+                    <h3 class="text-xl font-semibold mb-3">¿Ofrecen presupuesto sin compromiso?</h3>
+                    <p class="text-gray-700">Sí, todos nuestros presupuestos son gratuitos y sin compromiso. Le detallaremos todos los conceptos.</p>
+                </div>
+                <div>
+                    <h3 class="text-xl font-semibold mb-3">¿Trabajan con comunidades de vecinos?</h3>
+                    <p class="text-gray-700">Sí, realizamos instalaciones y mantenimiento eléctrico para comunidades de vecinos en Madrid.</p>
+                </div>
+                <div>
+                    <h3 class="text-xl font-semibold mb-3">¿Qué garantías ofrecen?</h3>
+                    <p class="text-gray-700">Todos nuestros trabajos incluyen garantía por escrito, con cobertura de 2 años en instalaciones.</p>
+                </div>
+                <div>
+                    <h3 class="text-xl font-semibold mb-3">¿Gestionan las subvenciones para puntos de carga?</h3>
+                    <p class="text-gray-700">Sí, nos encargamos de toda la gestión de subvenciones y ayudas para puntos de carga de vehículos eléctricos.</p>
+                </div>
+                <div>
+                    <h3 class="text-xl font-semibold mb-3">¿Realizan urgentes los fines de semana?</h3>
+                    <p class="text-gray-700">Sí, nuestro servicio de urgencias está disponible 24 horas, los 365 días del año, incluidos fines de semana y festivos.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-accent text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-4">IMELEC</h3>
+                    <p class="mb-4">Electricistas expertos en Madrid. Servicios eléctricos integrales con garantía de calidad.</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-white hover:text-secondary text-xl" aria-label="Facebook de Imelec"><i class="fab fa-facebook"></i></a>
+                        <a href="#" class="text-white hover:text-secondary text-xl" aria-label="Twitter de Imelec"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-white hover:text-secondary text-xl" aria-label="Instagram de Imelec"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-white hover:text-secondary text-xl" aria-label="LinkedIn de Imelec"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Servicios</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="hover:text-secondary">Instalaciones eléctricas</a></li>
+                        <li><a href="#" class="hover:text-secondary">Reparaciones y mantenimiento</a></li>
+                        <li><a href="#" class="hover:text-secondary">Puntos de carga para VE</a></li>
+                        <li><a href="#" class="hover:text-secondary">Energías renovables</a></li>
+                        <li><a href="#" class="hover:text-secondary">Automatización industrial</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Enlaces rápidos</h3>
+                    <ul class="space-y-2">
+                        <li><a href="https://www.imelec.es" class="hover:text-secondary">Inicio</a></li>
+                        <li><a href="#main-content" class="hover:text-secondary">Servicios</a></li>
+                        <li><a href="/contacto.html" class="hover:text-secondary">Contacto</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Contacto</h3>
+                    <ul class="space-y-2">
+                        <li class="flex items-start">
+                            <i class="fas fa-map-marker-alt mr-3 mt-1" aria-hidden="true"></i>
+                            <span>Ctra de Loeches 55, Torrejon de Ardoz, <br>28850 Madrid</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-phone mr-3" aria-hidden="true"></i>
+                            <span><a href="tel:+34691502361">691 50 23 61</a></span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-envelope mr-3" aria-hidden="true"></i>
+                            <span><a href="mailto:info@imelec.es">info@imelec.es</a></span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-clock mr-3" aria-hidden="true"></i>
+                            <span>24/7 Emergencias</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-600 mt-8 pt-8 text-center">
+                <p>&copy; 2023 IMELEC - Electricistas en Madrid. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
