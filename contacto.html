@@ -179,6 +179,23 @@
         </div>
     </header>
 
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="mobile-menu fixed inset-0 bg-primary z-40 pt-20 px-6 md:hidden">
+        <button id="menu-close" class="absolute top-5 right-5 text-white text-2xl">
+            <i class="fas fa-times"></i>
+        </button>
+        <ul class="space-y-6 text-white text-xl">
+            <li><a href="/index.html" class="block py-2 hover:text-secondary">Inicio</a></li>
+            <li><a href="/servicios.html" class="block py-2 hover:text-secondary">Servicios</a></li>
+            <li><a href="/contacto.html" class="block py-2 hover:text-secondary">Contacto</a></li>
+            <li class="pt-8">
+                <a href="tel:+34691502361" class="bg-secondary text-accent font-bold py-3 px-6 rounded-lg inline-block">
+                    <i class="fas fa-phone mr-2"></i>Llamar ahora
+                </a>
+            </li>
+        </ul>
+    </div>
+
     <!-- Breadcrumb -->
     <nav class="bg-light py-2" aria-label="Miga de pan">
         <div class="container mx-auto px-4">
@@ -286,7 +303,7 @@
                 <!-- Contact Form -->
                 <div class="lg:col-span-2">
                     <h2 class="text-3xl font-bold text-accent mb-8">Solicite Presupuesto o Información</h2>
-                    <p class="text-gray-700 mb-6">Complete el siguiente formulario y nos pondremos en contacto con usted en menos de 24 horas. Para emergencias, llame directamente al <a href="tel:+34912345678" class="text-primary font-semibold hover:underline">91 234 56 78</a>.</p>
+                    <p class="text-gray-700 mb-6">Complete el siguiente formulario y nos pondremos en contacto con usted en menos de 24 horas. Para emergencias, llame directamente al <a href="tel:+34691502361" class="text-primary font-semibold hover:underline">691 50 23 61</a>.</p>
                     
                     <form id="formulario" class="bg-light rounded-lg p-6 shadow-md">
                         <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
@@ -355,7 +372,7 @@
                     </div>
                     <div>
                         <h3 class="text-xl font-bold">¿Emergencia eléctrica?</h3>
-                        <p class="text-red-100">Servicio urgente 24 horas en Madrid</p>
+                        <p class="text-red-100">Servicio urgente en Madrid</p>
                     </div>
                 </div>
                 <a href="tel:+34912345678" class="bg-white text-red-600 font-bold py-3 px-8 rounded-lg hover:bg-gray-100 transition duration-300 inline-flex items-center">
@@ -518,6 +535,55 @@
             </div>
         </div>
     </footer>
+     <!-- JavaScript para el menú móvil -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const menuToggle = document.getElementById('menu-toggle');
+            const menuClose = document.getElementById('menu-close');
+            const mobileMenu = document.getElementById('mobile-menu');
+            
+            // Abrir menú
+            menuToggle.addEventListener('click', function() {
+                mobileMenu.style.display = 'block';
+                setTimeout(() => {
+                    mobileMenu.classList.add('active');
+                }, 10);
+                document.body.style.overflow = 'hidden'; // Prevenir scroll
+            });
+            
+            // Cerrar menú
+            menuClose.addEventListener('click', function() {
+                mobileMenu.classList.remove('active');
+                setTimeout(() => {
+                    mobileMenu.style.display = 'none';
+                }, 300);
+                document.body.style.overflow = ''; // Restaurar scroll
+            });
+            
+            // Cerrar menú al hacer clic en un enlace
+            const menuLinks = mobileMenu.querySelectorAll('a');
+            menuLinks.forEach(link => {
+                link.addEventListener('click', function() {
+                    mobileMenu.classList.remove('active');
+                    setTimeout(() => {
+                        mobileMenu.style.display = 'none';
+                    }, 300);
+                    document.body.style.overflow = ''; // Restaurar scroll
+                });
+            });
+            
+            // Cerrar menú al hacer clic fuera de él
+            mobileMenu.addEventListener('click', function(e) {
+                if (e.target === mobileMenu) {
+                    mobileMenu.classList.remove('active');
+                    setTimeout(() => {
+                        mobileMenu.style.display = 'none';
+                    }, 300);
+                    document.body.style.overflow = ''; // Restaurar scroll
+                }
+            });
+        });
+    </script>
     <script>
         const formulario = document.querySelector('#formulario') 
         formulario.addEventListener('submit', async (event) => {

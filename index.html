@@ -156,6 +156,23 @@
         </div>
     </header>
 
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="mobile-menu fixed inset-0 bg-primary z-40 pt-20 px-6 md:hidden">
+        <button id="menu-close" class="absolute top-5 right-5 text-white text-2xl">
+            <i class="fas fa-times"></i>
+        </button>
+        <ul class="space-y-6 text-white text-xl">
+            <li><a href="/index.html" class="block py-2 hover:text-secondary">Inicio</a></li>
+            <li><a href="/servicios.html" class="block py-2 hover:text-secondary">Servicios</a></li>
+            <li><a href="/contacto.html" class="block py-2 hover:text-secondary">Contacto</a></li>
+            <li class="pt-8">
+                <a href="tel:+34691502361" class="bg-secondary text-accent font-bold py-3 px-6 rounded-lg inline-block">
+                    <i class="fas fa-phone mr-2"></i>Llamar ahora
+                </a>
+            </li>
+        </ul>
+    </div>
+
     <!-- Breadcrumb -->
     <nav class="bg-light py-2" aria-label="Miga de pan">
         <div class="container mx-auto px-4">
@@ -204,8 +221,8 @@
                     <div class="text-primary text-4xl mb-4">
                         <i class="fas fa-tools" aria-hidden="true"></i>
                     </div>
-                    <h3 class="text-xl font-bold text-accent mb-3">Reparaciones Urgentes 24h</h3>
-                    <p class="text-gray-700">Servicio de urgencia las 24 horas en Madrid. Diagnóstico preciso y solución de averías eléctricas con garantía.</p>
+                    <h3 class="text-xl font-bold text-accent mb-3">Reparaciones Urgentes</h3>
+                    <p class="text-gray-700">Servicio de urgencia en Madrid. Diagnóstico preciso y solución de averías eléctricas con garantía.</p>
                 </div>
                 
                 <!-- Service 3 -->
@@ -273,7 +290,7 @@
                         </li>
                         <li class="flex items-center">
                             <i class="fas fa-check-circle text-primary mr-3" aria-hidden="true"></i>
-                            <span class="text-gray-700">Servicio de urgencias 24 horas en Madrid</span>
+                            <span class="text-gray-700">Servicio de urgencias en Madrid</span>
                         </li>
                     </ul>
                 </div>
@@ -351,8 +368,8 @@
             <h2 class="text-3xl font-bold text-center text-accent mb-12">Preguntas Frecuentes - Electricistas Madrid</h2>
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
                 <div>
-                    <h3 class="text-xl font-semibold mb-3">¿Realizan urgentes eléctricas en Madrid?</h3>
-                    <p class="text-gray-700">Sí, ofrecemos servicio de electricistas urgentes las 24 horas en toda la comunidad de Madrid.</p>
+                    <h3 class="text-xl font-semibold mb-3">¿Realizan urgencias eléctricas en Madrid?</h3>
+                    <p class="text-gray-700">Sí, ofrecemos servicio de electricistas urgentes en toda la comunidad de Madrid. <span class="font-bold">No trabajamos con servicio 24 horas.</span></p>
                 </div>
                 <div>
                     <h3 class="text-xl font-semibold mb-3">¿Instalan puntos de carga para coches eléctricos?</h3>
@@ -433,5 +450,54 @@
             </div>
         </div>
     </footer>
+     <!-- JavaScript para el menú móvil -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const menuToggle = document.getElementById('menu-toggle');
+            const menuClose = document.getElementById('menu-close');
+            const mobileMenu = document.getElementById('mobile-menu');
+            
+            // Abrir menú
+            menuToggle.addEventListener('click', function() {
+                mobileMenu.style.display = 'block';
+                setTimeout(() => {
+                    mobileMenu.classList.add('active');
+                }, 10);
+                document.body.style.overflow = 'hidden'; // Prevenir scroll
+            });
+            
+            // Cerrar menú
+            menuClose.addEventListener('click', function() {
+                mobileMenu.classList.remove('active');
+                setTimeout(() => {
+                    mobileMenu.style.display = 'none';
+                }, 300);
+                document.body.style.overflow = ''; // Restaurar scroll
+            });
+            
+            // Cerrar menú al hacer clic en un enlace
+            const menuLinks = mobileMenu.querySelectorAll('a');
+            menuLinks.forEach(link => {
+                link.addEventListener('click', function() {
+                    mobileMenu.classList.remove('active');
+                    setTimeout(() => {
+                        mobileMenu.style.display = 'none';
+                    }, 300);
+                    document.body.style.overflow = ''; // Restaurar scroll
+                });
+            });
+            
+            // Cerrar menú al hacer clic fuera de él
+            mobileMenu.addEventListener('click', function(e) {
+                if (e.target === mobileMenu) {
+                    mobileMenu.classList.remove('active');
+                    setTimeout(() => {
+                        mobileMenu.style.display = 'none';
+                    }, 300);
+                    document.body.style.overflow = ''; // Restaurar scroll
+                }
+            });
+        });
+    </script>
 </body>
 </html>
