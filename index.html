@@ -10,7 +10,7 @@
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://www.imelec.es">
     <link rel="shortcut icon" href="favicon.svg" type="image/svg+xml">
-
+    <link href="https://cdn.jsdelivr.net/npm/@n8n/chat/dist/style.css" rel="stylesheet" />
     
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
@@ -43,22 +43,6 @@
         --color-dark: #212529;
       }
     </style>
-    <!-- <script src="https://cdn.tailwindcss.com"></script> -->
-    <!-- <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        primary: '#0056b3',
-                        secondary: '#FFD700',
-                        accent: '#003366',
-                        light: '#f8f9fa',
-                        dark: '#212529',
-                    }
-                }
-            }
-        }
-    </script> -->
     
     <style type="text/css">
         body {
@@ -432,6 +416,23 @@
             </div>
         </div>
     </footer>
+    <script type="module">
+        import { createChat } from 'https://cdn.jsdelivr.net/npm/@n8n/chat/dist/chat.bundle.es.js';
+    
+        createChat({
+            webhookUrl: 'https://primary-production-4a2d4.up.railway.app/webhook/b50c3709-d2a6-4e0f-8bb9-72ba69e56438/chat',
+            initialMessages: ['Asistente Imelec Electricdad.'],
+            i18n: {
+                en: {
+                    title: 'Imelec Electricidad',
+                    subtitle: "",
+                    footer: '',
+                    getStarted: 'New Conversation',
+                    inputPlaceholder: 'Escribe tu consulta..',
+                },
+            },
+        });
+    </script>
      <!-- JavaScript para el menú móvil -->
     <script>
     document.addEventListener('DOMContentLoaded', function() {
