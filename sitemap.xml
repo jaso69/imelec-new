@@ -7,23 +7,23 @@
     <!-- Página principal - Máxima prioridad -->
     <url>
         <loc>https://www.imelec.es/</loc>
-        <lastmod>2023-10-15</lastmod>
+        <lastmod>2026-05-01</lastmod>
         <changefreq>monthly</changefreq>
         <priority>1.0</priority>
     </url>
     
     <!-- Página de servicios - Alta prioridad -->
     <url>
-        <loc>https://www.imelec.es/servicios.html/</loc>
-        <lastmod>2023-10-10</lastmod>
+        <loc>https://www.imelec.es/servicios.html</loc>
+        <lastmod>2026-05-01</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
     </url>
     
     <!-- Página de contacto - Alta prioridad -->
     <url>
-        <loc>https://www.imelec.es/contacto.html/</loc>
-        <lastmod>2023-10-05</lastmod>
+        <loc>https://www.imelec.es/contacto.html</loc>
+        <lastmod>2026-05-01</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.9</priority>
     </url>

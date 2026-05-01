@@ -5,8 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Imelec - Electricistas en Madrid | Instalaciones Eléctricas y Puntos de Carga</title>
     <meta name="description" content="Imelec: Electricistas expertos en Madrid. Instalaciones eléctricas, reparaciones urgentes 24h, puntos de carga para vehículos eléctricos y energía solar. Presupuesto sin compromiso.">
+    <meta name="keywords" content="electricistas madrid, instalaciones eléctricas, reparaciones urgentes, puntos de carga vehículos eléctricos, energía solar madrid, automatización industrial, imelec">
+    <meta name="author" content="Imelec">
     <meta name="robots" content="index, follow">
-    <link rel="canonical" href="https://www.imelec.es">
+    <link rel="canonical" href="https://www.imelec.es/">
     <link rel="shortcut icon" href="favicon.svg" type="image/svg+xml">
     <link href="https://cdn.jsdelivr.net/npm/@n8n/chat/dist/style.css" rel="stylesheet" />
     
@@ -15,14 +17,18 @@
     <meta property="og:url" content="https://www.imelec.es/">
     <meta property="og:title" content="Imelec - Electricistas Expertos en Madrid">
     <meta property="og:description" content="Electricistas expertos en Madrid. Instalaciones eléctricas, reparaciones urgentes 24h, puntos de carga para vehículos eléctricos y energía solar.">
-    <meta property="og:image" content="https://www.imelec.es/images/imelec-og-image.jpg">
+    <meta property="og:image" content="https://www.imelec.es/img/averias.webp">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="Imelec - Electricistas expertos en Madrid">
     
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="https://www.imelec.es/">
     <meta property="twitter:title" content="Imelec - Electricistas Expertos en Madrid">
     <meta property="twitter:description" content="Electricistas expertos en Madrid. Instalaciones eléctricas, reparaciones urgentes 24h, puntos de carga para vehículos eléctricos y energía solar.">
-    <meta property="twitter:image" content="https://www.imelec.es/images/imelec-twitter-image.jpg">
+    <meta property="twitter:image" content="https://www.imelec.es/img/averias.webp">
+    <meta property="twitter:image:alt" content="Imelec - Electricistas expertos en Madrid">
     
     <!-- Preload critical resources -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -34,23 +40,44 @@
         "@context": "https://schema.org",
         "@type": "LocalBusiness",
         "name": "Imelec",
-        "image": "https://www.imelec.es/logo.jpg",
-        "description": "Electricistas expertos en Madrid con más de 15 años de experiencia",
+        "image": "https://www.imelec.es/favicon.svg",
+        "description": "Electricistas expertos en Madrid con más de 15 años de experiencia. Instalaciones eléctricas, reparaciones urgentes, puntos de carga para vehículos eléctricos y energía solar.",
+        "@id": "https://www.imelec.es/#organization",
+        "url": "https://www.imelec.es",
+        "telephone": "+34-691-50-23-61",
+        "email": "info@imelec.es",
         "address": {
             "@type": "PostalAddress",
-            "streetAddress": "Tu dirección",
+            "streetAddress": "Ctra de Loeches 55, Torrejon de Ardoz",
             "addressLocality": "Madrid",
-            "postalCode": "28000",
+            "postalCode": "28850",
             "addressCountry": "ES"
         },
         "geo": {
             "@type": "GeoCoordinates",
-            "latitude": "40.44664",
-            "longitude": "-3.466656"
+            "latitude": "40.4465358",
+            "longitude": "-3.4665775"
         },
-        "url": "https://www.imelec.es",
-        "telephone": "+34-691-502361",
-        "openingHours": "Lu-Vi 08:00-20:00, Sa 09:00-14:00",
+        "openingHoursSpecification": [
+            {
+                "@type": "OpeningHoursSpecification",
+                "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+                "opens": "09:00",
+                "closes": "14:00"
+            },
+            {
+                "@type": "OpeningHoursSpecification",
+                "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+                "opens": "16:00",
+                "closes": "19:00"
+            }
+        ],
+        "priceRange": "€€",
+        "areaServed": {
+            "@type": "City",
+            "name": "Madrid"
+        },
+        "sameAs": []
         }
     </script>
     
@@ -71,6 +98,53 @@
             font-family: 'Roboto', sans-serif;
             scroll-behavior: smooth;
         }
+        
+        /* Accessibility: visually hidden but available to screen readers */
+        .visually-hidden {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            white-space: nowrap;
+            border: 0;
+        }
+        
+        /* Accessibility: visible focus indicators for keyboard users */
+        :focus-visible {
+            outline: 2px solid #0056b3;
+            outline-offset: 2px;
+        }
+        :focus:not(:focus-visible) {
+            outline: none;
+        }
+        
+        /* Accessibility: respect reduced motion preferences */
+        @media (prefers-reduced-motion: reduce) {
+            *, *::before, *::after {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
+                scroll-behavior: auto !important;
+            }
+        }
+        
+        /* Accessibility: ensure focus targets aren't hidden behind sticky header */
+        :target {
+            scroll-margin-top: 80px;
+        }
+        :focus {
+            scroll-margin-top: 80px;
+        }
+        
+        /* Accessibility: minimum touch target sizes */
+        button, [role="button"], .btn, a[href] {
+            min-height: 44px;
+            min-width: 44px;
+        }
+        
         .hero-pattern {
             background: linear-gradient(rgba(0, 84, 179, 0.8), rgba(0, 51, 102, 0.8)), url('/img/averias.webp');
             background-size: cover;
@@ -123,30 +197,31 @@
 </head>
 <body class="bg-gray-50">
     <!-- Skip to main content for accessibility -->
-    <a href="#main-content" class="sr-only focus:not-sr-only">Saltar al contenido principal</a>
+    <a href="#main-content" class="visually-hidden focus:not-sr-only focus:absolute focus:top-0 focus:left-0 focus:bg-primary focus:text-white focus:p-4 focus:z-50">Saltar al contenido principal</a>
     
     <!-- Header -->
-    <header class="bg-primary shadow-md sticky top-0 z-50">
+    <header class="bg-primary shadow-md sticky top-0 z-50" role="banner">
         <div class="container mx-auto px-4 py-3">
             <div class="flex justify-between items-center">
                 <div class="flex items-center">
                     <div class="rounded-full p-2 mr-3">
                             <svg class="icon icon-tabler icon-tabler-bolt" height="48" viewBox="0 0 24 24" width="48" fill="none" stroke="#ffec00" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none" stroke="none"></path><path d="M13 3l0 7l6 0l-8 11l0 -7l-6 0l8 -11"></path></svg>
                     </div>
-                    <h1 class="text-white text-2xl font-bold">IMELEC</h1>
+                    <span class="text-white text-2xl font-bold">IMELEC</span>
                 </div>
                 
                 <nav aria-label="Navegación principal">
                     <ul class="hidden md:flex space-x-8">
-                        <li><a href="/index.html" class="text-white hover:text-secondary font-medium">Inicio</a></li>
+                        <li><a href="/index.html" class="text-white hover:text-secondary font-medium" aria-current="page">Inicio</a></li>
                         <li><a href="/servicios.html" class="text-white hover:text-secondary font-medium">Servicios</a></li>
                         <li><a href="/contacto.html" class="text-white hover:text-secondary font-medium">Contacto</a></li>
                     </ul>
                 </nav>
                 
                 <div class="md:hidden">
-                    <button id="menu-toggle" class="text-white text-2xl" aria-label="Abrir menú">
-                        <i class="fas fa-bars"></i>
+                    <button id="menu-toggle" class="text-white text-2xl" aria-label="Abrir menú" aria-expanded="false" aria-controls="mobile-menu">
+                        <i class="fas fa-bars" aria-hidden="true"></i>
+                        <span class="visually-hidden">Menú</span>
                     </button>
                 </div>
             </div>
@@ -155,8 +230,9 @@
 
     <!-- Mobile Menu -->
     <div id="mobile-menu" class="md:hidden">
-        <button id="menu-close" class="absolute top-5 right-5 text-white text-2xl">
-            <i class="fas fa-times"></i>
+        <button id="menu-close" class="absolute top-5 right-5 text-white text-2xl" aria-label="Cerrar menú">
+            <i class="fas fa-times" aria-hidden="true"></i>
+            <span class="visually-hidden">Cerrar menú</span>
         </button>
         <ul class="space-y-6 text-white text-xl">
             <li><a href="/index.html" class="block py-2 hover:text-secondary">Inicio</a></li>
@@ -182,6 +258,8 @@
         </div>
     </nav>
 
+    <!-- Main Content -->
+    <main id="main-content" tabindex="-1">
     <!-- Hero Section -->
     <section class="hero-pattern py-20 md:py-32 text-white">
         <div class="container mx-auto px-4 text-center">
@@ -266,7 +344,7 @@
         <div class="container mx-auto px-4">
             <div class="flex flex-col md:flex-row items-center">
                 <div class="md:w-1/2 mb-8 md:mb-0">
-                    <img src="/img/recarga.webp" alt="Electricista profesional de Imelec trabajando en Madrid" class="rounded-lg shadow-lg">
+                    <img src="/img/recarga.webp" alt="Electricista profesional de Imelec trabajando en Madrid" class="rounded-lg shadow-lg" width="600" height="400" loading="lazy">
                 </div>
                 <div class="md:w-1/2 md:pl-12">
                     <h2 class="text-3xl font-bold text-accent mb-6">Electricistas Expertos en Madrid</h2>
@@ -384,8 +462,9 @@
         </div>
     </section>
 
+    </main>
     <!-- Footer -->
-    <footer class="bg-accent text-white py-12">
+    <footer class="bg-accent text-white py-12" role="contentinfo">
         <div class="container mx-auto px-4">
             <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
                 <div>
@@ -396,11 +475,11 @@
                 <div>
                     <h3 class="text-xl font-bold mb-4">Servicios</h3>
                     <ul class="space-y-2">
-                        <li><a href="#" class="hover:text-secondary">Instalaciones eléctricas</a></li>
-                        <li><a href="#" class="hover:text-secondary">Reparaciones y mantenimiento</a></li>
-                        <li><a href="#" class="hover:text-secondary">Puntos de carga para VE</a></li>
-                        <li><a href="#" class="hover:text-secondary">Energías renovables</a></li>
-                        <li><a href="#" class="hover:text-secondary">Automatización industrial</a></li>
+                        <li><a href="/servicios.html" class="hover:text-secondary">Instalaciones eléctricas</a></li>
+                        <li><a href="/servicios.html" class="hover:text-secondary">Reparaciones y mantenimiento</a></li>
+                        <li><a href="/servicios.html" class="hover:text-secondary">Puntos de carga para VE</a></li>
+                        <li><a href="/servicios.html" class="hover:text-secondary">Energías renovables</a></li>
+                        <li><a href="/servicios.html" class="hover:text-secondary">Automatización industrial</a></li>
                     </ul>
                 </div>
                 
@@ -434,7 +513,7 @@
             </div>
             
             <div class="border-t border-gray-600 mt-8 pt-8 text-center">
-                <p>&copy; 2023 IMELEC - Electricistas en Madrid. Todos los derechos reservados.</p>
+                <p>&copy; <span id="current-year">2026</span> IMELEC - Electricistas en Madrid. Todos los derechos reservados.</p>
             </div>
         </div>
     </footer>
@@ -466,18 +545,23 @@
         // Abrir menú
         menuToggle.addEventListener('click', function() {
             mobileMenu.style.display = 'block';
+            menuToggle.setAttribute('aria-expanded', 'true');
             setTimeout(() => {
                 mobileMenu.classList.add('active');
                 body.classList.add('body-no-scroll');
+                const menuCloseBtn = document.getElementById('menu-close');
+                if (menuCloseBtn) menuCloseBtn.focus();
             }, 10);
         });
         
         // Cerrar menú
         function closeMenu() {
             mobileMenu.classList.remove('active');
+            menuToggle.setAttribute('aria-expanded', 'false');
             setTimeout(() => {
                 mobileMenu.style.display = 'none';
                 body.classList.remove('body-no-scroll');
+                menuToggle.focus();
             }, 300);
         }
         
@@ -503,6 +587,7 @@
             }
         });
     });
+    document.getElementById('current-year').textContent = new Date().getFullYear();
 </script>
 </body>
 </html>

@@ -8,23 +8,27 @@
     <meta name="keywords" content="servicios electricistas madrid, instalaciones eléctricas, reparaciones urgentes, puntos de carga vehículos eléctricos, energía solar madrid, automatización industrial, imelec servicios">
     <meta name="author" content="Imelec">
     <meta name="robots" content="index, follow">
-    <link rel="canonical" href="https://www.imelec.es/servicios">
+    <link rel="canonical" href="https://www.imelec.es/servicios.html">
     <link rel="shortcut icon" href="favicon.svg" type="image/svg+xml">
     <link href="https://cdn.jsdelivr.net/npm/@n8n/chat/dist/style.css" rel="stylesheet" />
     
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://www.imelec.es/servicios/">
+    <meta property="og:url" content="https://www.imelec.es/servicios.html">
     <meta property="og:title" content="Servicios de Electricidad | Imelec - Electricistas en Madrid">
     <meta property="og:description" content="Servicios eléctricos profesionales en Madrid: instalaciones, reparaciones, puntos de carga para vehículos eléctricos, energía solar y automatización.">
-    <meta property="og:image" content="https://www.imelec.es/images/servicios-electricos-imelec.jpg">
+    <meta property="og:image" content="https://www.imelec.es/img/averias.webp">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="Servicios de electricidad Imelec en Madrid">
     
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://www.imelec.es/servicios/">
+    <meta property="twitter:url" content="https://www.imelec.es/servicios.html">
     <meta property="twitter:title" content="Servicios de Electricidad | Imelec - Electricistas en Madrid">
     <meta property="twitter:description" content="Servicios eléctricos profesionales en Madrid: instalaciones, reparaciones, puntos de carga para vehículos eléctricos, energía solar y automatización.">
-    <meta property="twitter:image" content="https://www.imelec.es/images/servicios-electricos-imelec-twitter.jpg">
+    <meta property="twitter:image" content="https://www.imelec.es/img/averias.webp">
+    <meta property="twitter:image:alt" content="Servicios de electricidad Imelec en Madrid">
        
     <!-- Preload critical resources -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -104,18 +108,125 @@
         .body-no-scroll {
             overflow: hidden;
         }
+        
+        /* Accessibility */
+        .visually-hidden {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            white-space: nowrap;
+            border: 0;
+        }
+        
+        :focus-visible {
+            outline: 2px solid #0056b3;
+            outline-offset: 2px;
+        }
+        :focus:not(:focus-visible) {
+            outline: none;
+        }
+        
+        @media (prefers-reduced-motion: reduce) {
+            *, *::before, *::after {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
+                scroll-behavior: auto !important;
+            }
+        }
+        
+        :target {
+            scroll-margin-top: 80px;
+        }
+        :focus {
+            scroll-margin-top: 80px;
+        }
+        
+        button, [role="button"], .btn, a[href] {
+            min-height: 44px;
+            min-width: 44px;
+        }
     </style>
+    <script type="application/ld+json">
+        {
+        "@context": "https://schema.org",
+        "@type": "Service",
+        "serviceType": "Servicios de Electricidad",
+        "provider": {
+            "@type": "LocalBusiness",
+            "name": "Imelec",
+            "@id": "https://www.imelec.es/#organization"
+        },
+        "areaServed": {
+            "@type": "City",
+            "name": "Madrid"
+        },
+        "description": "Servicios eléctricos profesionales en Madrid: instalaciones eléctricas, reparaciones urgentes, puntos de carga para vehículos eléctricos, energía solar, automatización industrial e iluminación eficiente.",
+        "hasOfferCatalog": {
+            "@type": "OfferCatalog",
+            "name": "Servicios Eléctricos",
+            "itemListElement": [
+                {
+                    "@type": "Offer",
+                    "itemOffered": {
+                        "@type": "Service",
+                        "name": "Instalaciones Eléctricas"
+                    }
+                },
+                {
+                    "@type": "Offer",
+                    "itemOffered": {
+                        "@type": "Service",
+                        "name": "Reparaciones Urgentes"
+                    }
+                },
+                {
+                    "@type": "Offer",
+                    "itemOffered": {
+                        "@type": "Service",
+                        "name": "Puntos de Carga para Vehículos Eléctricos"
+                    }
+                },
+                {
+                    "@type": "Offer",
+                    "itemOffered": {
+                        "@type": "Service",
+                        "name": "Energías Renovables y Placas Solares"
+                    }
+                },
+                {
+                    "@type": "Offer",
+                    "itemOffered": {
+                        "@type": "Service",
+                        "name": "Automatización Industrial"
+                    }
+                },
+                {
+                    "@type": "Offer",
+                    "itemOffered": {
+                        "@type": "Service",
+                        "name": "Iluminación Eficiente"
+                    }
+                }
+            ]
+        }
+        }
+    </script>
 </head>
 <body class="bg-gray-50">
     <!-- Skip to main content for accessibility -->
-    <a href="#main-content" class="sr-only focus:not-sr-only">Saltar al contenido principal</a>
+    <a href="#main-content" class="visually-hidden focus:not-sr-only focus:absolute focus:top-0 focus:left-0 focus:bg-primary focus:text-white focus:p-4 focus:z-50">Saltar al contenido principal</a>
     
     <!-- Header -->
-    <header class="bg-primary shadow-md sticky top-0 z-50">
+    <header class="bg-primary shadow-md sticky top-0 z-50" role="banner">
         <div class="container mx-auto px-4 py-3">
             <div class="flex justify-between items-center">
                 <div class="flex items-center">
-                    <a href="https://www.imelec.es" class="flex items-center">
+                    <a href="/index.html" class="flex items-center">
                         <div class="rounded-full p-2 mr-3">
                             <svg class="icon icon-tabler icon-tabler-bolt" height="48" viewBox="0 0 24 24" width="48" fill="none" stroke="#ffec00" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none" stroke="none"></path><path d="M13 3l0 7l6 0l-8 11l0 -7l-6 0l8 -11"></path></svg>
                         </div>
@@ -125,15 +236,16 @@
                 
                 <nav aria-label="Navegación principal">
                     <ul class="hidden md:flex space-x-8">
-                        <li><a href="https://www.imelec.es" class="text-white hover:text-secondary font-medium">Inicio</a></li>
-                        <li><a href="#main-content" class="text-white hover:text-secondary font-medium">Servicios</a></li>
-                        <li><a href="https://www.imelec.es/contacto.html" class="text-white hover:text-secondary font-medium">Contacto</a></li>
+                        <li><a href="/index.html" class="text-white hover:text-secondary font-medium">Inicio</a></li>
+                        <li><a href="#main-content" class="text-white hover:text-secondary font-medium" aria-current="page">Servicios</a></li>
+                        <li><a href="/contacto.html" class="text-white hover:text-secondary font-medium">Contacto</a></li>
                     </ul>
                 </nav>
                 
                 <div class="md:hidden">
-                    <button id="menu-toggle" class="text-white text-2xl" aria-label="Abrir menú">
-                        <i class="fas fa-bars"></i>
+                    <button id="menu-toggle" class="text-white text-2xl" aria-label="Abrir menú" aria-expanded="false" aria-controls="mobile-menu">
+                        <i class="fas fa-bars" aria-hidden="true"></i>
+                        <span class="visually-hidden">Menú</span>
                     </button>
                 </div>
             </div>
@@ -142,8 +254,9 @@
 
     <!-- Mobile Menu -->
     <div id="mobile-menu" class="md:hidden">
-        <button id="menu-close" class="absolute top-5 right-5 text-white text-2xl">
-            <i class="fas fa-times"></i>
+        <button id="menu-close" class="absolute top-5 right-5 text-white text-2xl" aria-label="Cerrar menú">
+            <i class="fas fa-times" aria-hidden="true"></i>
+            <span class="visually-hidden">Cerrar menú</span>
         </button>
         <ul class="space-y-6 text-white text-xl">
             <li><a href="/index.html" class="block py-2 hover:text-secondary">Inicio</a></li>
@@ -181,7 +294,7 @@
     </section>
 
     <!-- Services Grid -->
-    <main id="main-content" class="py-16 bg-white">
+    <main id="main-content" tabindex="-1" class="py-16 bg-white">
         <div class="container mx-auto px-4">
             <h2 class="text-3xl font-bold text-center text-accent mb-12">Nuestros Servicios de Electricidad</h2>
             
@@ -458,7 +571,7 @@
     </section>
 
     <!-- Footer -->
-    <footer class="bg-accent text-white py-12">
+    <footer class="bg-accent text-white py-12" role="contentinfo">
         <div class="container mx-auto px-4">
             <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
                 <div>
@@ -470,19 +583,19 @@
                 <div>
                     <h3 class="text-xl font-bold mb-4">Servicios</h3>
                     <ul class="space-y-2">
-                        <li><a href="#" class="hover:text-secondary">Instalaciones eléctricas</a></li>
-                        <li><a href="#" class="hover:text-secondary">Reparaciones y mantenimiento</a></li>
-                        <li><a href="#" class="hover:text-secondary">Puntos de carga para VE</a></li>
-                        <li><a href="#" class="hover:text-secondary">Energías renovables</a></li>
-                        <li><a href="#" class="hover:text-secondary">Automatización industrial</a></li>
+                        <li><a href="/servicios.html" class="hover:text-secondary">Instalaciones eléctricas</a></li>
+                        <li><a href="/servicios.html" class="hover:text-secondary">Reparaciones y mantenimiento</a></li>
+                        <li><a href="/servicios.html" class="hover:text-secondary">Puntos de carga para VE</a></li>
+                        <li><a href="/servicios.html" class="hover:text-secondary">Energías renovables</a></li>
+                        <li><a href="/servicios.html" class="hover:text-secondary">Automatización industrial</a></li>
                     </ul>
                 </div>
                 
                 <div>
                     <h3 class="text-xl font-bold mb-4">Enlaces rápidos</h3>
                     <ul class="space-y-2">
-                        <li><a href="https://www.imelec.es" class="hover:text-secondary">Inicio</a></li>
-                        <li><a href="#main-content" class="hover:text-secondary">Servicios</a></li>
+                        <li><a href="/index.html" class="hover:text-secondary">Inicio</a></li>
+                        <li><a href="/servicios.html" class="hover:text-secondary">Servicios</a></li>
                         <li><a href="/contacto.html" class="hover:text-secondary">Contacto</a></li>
                     </ul>
                 </div>
@@ -508,7 +621,7 @@
             </div>
             
             <div class="border-t border-gray-600 mt-8 pt-8 text-center">
-                <p>&copy; 2023 IMELEC - Electricistas en Madrid. Todos los derechos reservados.</p>
+                <p>&copy; <span id="current-year">2026</span> IMELEC - Electricistas en Madrid. Todos los derechos reservados.</p>
             </div>
         </div>
     </footer>
@@ -540,18 +653,23 @@
         // Abrir menú
         menuToggle.addEventListener('click', function() {
             mobileMenu.style.display = 'block';
+            menuToggle.setAttribute('aria-expanded', 'true');
             setTimeout(() => {
                 mobileMenu.classList.add('active');
                 body.classList.add('body-no-scroll');
+                const menuCloseBtn = document.getElementById('menu-close');
+                if (menuCloseBtn) menuCloseBtn.focus();
             }, 10);
         });
         
         // Cerrar menú
         function closeMenu() {
             mobileMenu.classList.remove('active');
+            menuToggle.setAttribute('aria-expanded', 'false');
             setTimeout(() => {
                 mobileMenu.style.display = 'none';
                 body.classList.remove('body-no-scroll');
+                menuToggle.focus();
             }, 300);
         }
         
@@ -577,6 +695,7 @@
             }
         });
     });
+    document.getElementById('current-year').textContent = new Date().getFullYear();
     </script>
 </body>
 </html>
