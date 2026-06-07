@@ -8,6 +8,7 @@
     <meta name="keywords" content="electricistas madrid, instalaciones eléctricas, reparaciones urgentes, puntos de carga vehículos eléctricos, energía solar madrid, automatización industrial, imelec">
     <meta name="author" content="Imelec">
     <meta name="robots" content="index, follow">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://cdn.jsdelivr.net https://cdnjs.cloudflare.com 'unsafe-inline'; style-src 'self' https://fonts.googleapis.com https://cdnjs.cloudflare.com https://cdn.jsdelivr.net 'unsafe-inline'; font-src https://fonts.gstatic.com https://cdnjs.cloudflare.com; img-src 'self' https: data:; connect-src 'self' https://imelec-emails.vercel.app https://jmfortiz.jasodev.es https://cdn.jsdelivr.net; frame-src 'none'; base-uri 'self'; form-action 'self';">
     <link rel="canonical" href="https://www.imelec.es/">
     <link rel="shortcut icon" href="favicon.svg" type="image/svg+xml">
     <link href="https://cdn.jsdelivr.net/npm/@n8n/chat/dist/style.css" rel="stylesheet" />
@@ -30,11 +31,19 @@
     <meta property="twitter:image" content="https://www.imelec.es/img/averias.webp">
     <meta property="twitter:image:alt" content="Imelec - Electricistas expertos en Madrid">
     
-    <!-- Preload critical resources -->
+    <!-- Preconnect to external domains -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
+    <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com">
+
+    <!-- Preload critical resources -->
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap"></noscript>
+    <link rel="preload" href="css/styles.css" as="style">
+    <link rel="preload" href="/img/averias.webp" as="image" type="image/webp">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" media="print" onload="this.media='all'">
+    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"></noscript>
     <script type="application/ld+json">
         {
         "@context": "https://schema.org",
@@ -77,6 +86,13 @@
             "@type": "City",
             "name": "Madrid"
         },
+        "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "5",
+            "reviewCount": "3",
+            "bestRating": "5",
+            "worstRating": "1"
+        },
         "sameAs": []
         }
     </script>
@@ -93,105 +109,12 @@
       }
     </style>
     
+    <link rel="stylesheet" href="css/styles.css">
     <style type="text/css">
-        body {
-            font-family: 'Roboto', sans-serif;
-            scroll-behavior: smooth;
-        }
-        
-        /* Accessibility: visually hidden but available to screen readers */
-        .visually-hidden {
-            position: absolute;
-            width: 1px;
-            height: 1px;
-            padding: 0;
-            margin: -1px;
-            overflow: hidden;
-            clip: rect(0, 0, 0, 0);
-            white-space: nowrap;
-            border: 0;
-        }
-        
-        /* Accessibility: visible focus indicators for keyboard users */
-        :focus-visible {
-            outline: 2px solid #0056b3;
-            outline-offset: 2px;
-        }
-        :focus:not(:focus-visible) {
-            outline: none;
-        }
-        
-        /* Accessibility: respect reduced motion preferences */
-        @media (prefers-reduced-motion: reduce) {
-            *, *::before, *::after {
-                animation-duration: 0.01ms !important;
-                animation-iteration-count: 1 !important;
-                transition-duration: 0.01ms !important;
-                scroll-behavior: auto !important;
-            }
-        }
-        
-        /* Accessibility: ensure focus targets aren't hidden behind sticky header */
-        :target {
-            scroll-margin-top: 80px;
-        }
-        :focus {
-            scroll-margin-top: 80px;
-        }
-        
-        /* Accessibility: minimum touch target sizes */
-        button, [role="button"], .btn, a[href] {
-            min-height: 44px;
-            min-width: 44px;
-        }
-        
         .hero-pattern {
             background: linear-gradient(rgba(0, 84, 179, 0.8), rgba(0, 51, 102, 0.8)), url('/img/averias.webp');
             background-size: cover;
             background-position: center;
-        }
-        .breadcrumb {
-            padding: 0.75rem 1rem;
-            background-color: #f8f9fa;
-            border-radius: 0.375rem;
-        }
-        .breadcrumb ol {
-            display: flex;
-            flex-wrap: wrap;
-            list-style: none;
-        }
-        .breadcrumb li:not(:last-child):after {
-            content: "/";
-            margin: 0 0.5rem;
-            color: #6c757d;
-        }
-        .breadcrumb a {
-            color: #0056b3;
-            text-decoration: none;
-        }
-        .breadcrumb a:hover {
-            text-decoration: underline;
-        }
-        #mobile-menu {
-        display: none;
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100vh;
-        background-color: rgba(0, 84, 179, 0.98);
-        z-index: 40;
-        padding-top: 80px;
-        transform: translateX(-100%);
-        transition: transform 0.3s ease-in-out;
-        }
-
-        #mobile-menu.active {
-            transform: translateX(0);
-        }
-
-        .body-no-scroll {
-            overflow: hidden;
         }
     </style>
 </head>
@@ -204,16 +127,19 @@
         <div class="container mx-auto px-4 py-3">
             <div class="flex justify-between items-center">
                 <div class="flex items-center">
-                    <div class="rounded-full p-2 mr-3">
+                    <a href="/index.html" class="flex items-center">
+                        <div class="rounded-full p-2 mr-3">
                             <svg class="icon icon-tabler icon-tabler-bolt" height="48" viewBox="0 0 24 24" width="48" fill="none" stroke="#ffec00" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none" stroke="none"></path><path d="M13 3l0 7l6 0l-8 11l0 -7l-6 0l8 -11"></path></svg>
-                    </div>
-                    <span class="text-white text-2xl font-bold">IMELEC</span>
+                        </div>
+                        <span class="text-white text-2xl font-bold">IMELEC</span>
+                    </a>
                 </div>
                 
                 <nav aria-label="Navegación principal">
                     <ul class="hidden md:flex space-x-8">
                         <li><a href="/index.html" class="text-white hover:text-secondary font-medium" aria-current="page">Inicio</a></li>
                         <li><a href="/servicios.html" class="text-white hover:text-secondary font-medium">Servicios</a></li>
+                        <li><a href="/proyectos.html" class="text-white hover:text-secondary font-medium">Proyectos</a></li>
                         <li><a href="/contacto.html" class="text-white hover:text-secondary font-medium">Contacto</a></li>
                     </ul>
                 </nav>
@@ -237,6 +163,7 @@
         <ul class="space-y-6 text-white text-xl">
             <li><a href="/index.html" class="block py-2 hover:text-secondary">Inicio</a></li>
             <li><a href="/servicios.html" class="block py-2 hover:text-secondary">Servicios</a></li>
+            <li><a href="/proyectos.html" class="block py-2 hover:text-secondary">Proyectos</a></li>
             <li><a href="/contacto.html" class="block py-2 hover:text-secondary">Contacto</a></li>
             <li class="pt-8">
                 <a href="tel:+34691502361" class="bg-secondary text-accent font-bold py-3 px-6 rounded-lg inline-block">
@@ -462,11 +389,37 @@
         </div>
     </section>
 
+    <!-- Zonas Section -->
+    <section class="py-16 bg-gray-100">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center text-accent mb-4">Zonas de Madrid que Cubrimos</h2>
+            <p class="text-center text-gray-700 mb-12 max-w-2xl mx-auto">Trabajamos en toda la Comunidad de Madrid. Selecciona tu zona para más información:</p>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto">
+                <a href="/electricista-torrejon-de-ardoz.html" class="bg-white rounded-lg p-6 shadow-md hover:shadow-xl hover:bg-primary hover:text-white transition duration-300 text-center group">
+                    <i class="fas fa-map-marker-alt text-primary text-3xl mb-3 group-hover:text-secondary" aria-hidden="true"></i>
+                    <h3 class="text-xl font-bold mb-2">Torrejón de Ardoz</h3>
+                    <p class="text-sm text-gray-600 group-hover:text-white">Oficina central</p>
+                </a>
+                <a href="/electricista-alcobendas.html" class="bg-white rounded-lg p-6 shadow-md hover:shadow-xl hover:bg-primary hover:text-white transition duration-300 text-center group">
+                    <i class="fas fa-map-marker-alt text-primary text-3xl mb-3 group-hover:text-secondary" aria-hidden="true"></i>
+                    <h3 class="text-xl font-bold mb-2">Alcobendas</h3>
+                    <p class="text-sm text-gray-600 group-hover:text-white">Servicio rápido</p>
+                </a>
+                <a href="/electricista-las-rozas.html" class="bg-white rounded-lg p-6 shadow-md hover:shadow-xl hover:bg-primary hover:text-white transition duration-300 text-center group">
+                    <i class="fas fa-map-marker-alt text-primary text-3xl mb-3 group-hover:text-secondary" aria-hidden="true"></i>
+                    <h3 class="text-xl font-bold mb-2">Las Rozas</h3>
+                    <p class="text-sm text-gray-600 group-hover:text-white">Chalets y urbanizaciones</p>
+                </a>
+            </div>
+            <p class="text-center mt-8 text-gray-700">También trabajamos en Madrid Capital, Getafe, Alcorcón, Móstoles, Pozuelo y toda la comunidad.</p>
+        </div>
+    </section>
+
     </main>
     <!-- Footer -->
     <footer class="bg-accent text-white py-12" role="contentinfo">
         <div class="container mx-auto px-4">
-            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+            <div class="grid grid-cols-1 md:grid-cols-5 gap-8">
                 <div>
                     <h3 class="text-xl font-bold mb-4">IMELEC</h3>
                     <p class="mb-4">Electricistas expertos en Madrid. Servicios eléctricos integrales con garantía de calidad.</p>
@@ -488,7 +441,17 @@
                     <ul class="space-y-2">
                         <li><a href="/index.html" class="hover:text-secondary">Inicio</a></li>
                         <li><a href="/servicios.html" class="hover:text-secondary">Servicios</a></li>
+                        <li><a href="/proyectos.html" class="hover:text-secondary">Proyectos</a></li>
                         <li><a href="/contacto.html" class="hover:text-secondary">Contacto</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Zonas</h3>
+                    <ul class="space-y-2">
+                        <li><a href="/electricista-torrejon-de-ardoz.html" class="hover:text-secondary">Torrejón de Ardoz</a></li>
+                        <li><a href="/electricista-alcobendas.html" class="hover:text-secondary">Alcobendas</a></li>
+                        <li><a href="/electricista-las-rozas.html" class="hover:text-secondary">Las Rozas</a></li>
                     </ul>
                 </div>
                 
@@ -514,6 +477,10 @@
             
             <div class="border-t border-gray-600 mt-8 pt-8 text-center">
                 <p>&copy; <span id="current-year">2026</span> IMELEC - Electricistas en Madrid. Todos los derechos reservados.</p>
+                <p class="mt-2 text-sm text-gray-400">
+                    <a href="/privacidad.html" class="hover:text-secondary">Política de Privacidad</a> |
+                    <a href="/aviso-legal.html" class="hover:text-secondary">Aviso Legal</a>
+                </p>
             </div>
         </div>
     </footer>
@@ -534,60 +501,93 @@
             },
         });
     </script>
-     <!-- JavaScript para el menú móvil -->
-    <script>
-    document.addEventListener('DOMContentLoaded', function() {
-        const menuToggle = document.getElementById('menu-toggle');
-        const menuClose = document.getElementById('menu-close');
-        const mobileMenu = document.getElementById('mobile-menu');
-        const body = document.body;
-        
-        // Abrir menú
-        menuToggle.addEventListener('click', function() {
-            mobileMenu.style.display = 'block';
-            menuToggle.setAttribute('aria-expanded', 'true');
-            setTimeout(() => {
-                mobileMenu.classList.add('active');
-                body.classList.add('body-no-scroll');
-                const menuCloseBtn = document.getElementById('menu-close');
-                if (menuCloseBtn) menuCloseBtn.focus();
-            }, 10);
-        });
-        
-        // Cerrar menú
-        function closeMenu() {
-            mobileMenu.classList.remove('active');
-            menuToggle.setAttribute('aria-expanded', 'false');
-            setTimeout(() => {
-                mobileMenu.style.display = 'none';
-                body.classList.remove('body-no-scroll');
-                menuToggle.focus();
-            }, 300);
-        }
-        
-        menuClose.addEventListener('click', closeMenu);
-        
-        // Cerrar menú al hacer clic en un enlace
-        const menuLinks = mobileMenu.querySelectorAll('a');
-        menuLinks.forEach(link => {
-            link.addEventListener('click', closeMenu);
-        });
-        
-        // Cerrar menú al hacer clic fuera de él
-        mobileMenu.addEventListener('click', function(e) {
-            if (e.target === mobileMenu) {
-                closeMenu();
+    <!-- Floating Action Buttons (mobile) -->
+    <div class="fab-container" aria-label="Acciones rápidas">
+        <a href="https://wa.me/34691502361?text=Hola%2C%20necesito%20un%20electricista%20en%20Madrid" class="fab-btn fab-whatsapp" target="_blank" rel="noopener" aria-label="Contactar por WhatsApp">
+            <span class="fab-label">WhatsApp</span>
+            <i class="fab fa-whatsapp"></i>
+        </a>
+        <a href="tel:+34691502361" class="fab-btn fab-phone" aria-label="Llamar ahora">
+            <span class="fab-label">Llamar</span>
+            <i class="fas fa-phone"></i>
+        </a>
+    </div>
+
+    <!-- Review Schema -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "LocalBusiness",
+        "@id": "https://www.imelec.es/#organization",
+        "name": "Imelec",
+        "review": [
+            {
+                "@type": "Review",
+                "author": {"@type": "Person", "name": "Juan Pérez"},
+                "reviewRating": {"@type": "Rating", "ratingValue": "5", "bestRating": "5"},
+                "reviewBody": "Excelente servicio de electricistas en Madrid. Solucionaron mi problema rápidamente y con profesionalidad. Muy recomendables.",
+                "datePublished": "2026-01-15"
+            },
+            {
+                "@type": "Review",
+                "author": {"@type": "Person", "name": "María Gómez"},
+                "reviewRating": {"@type": "Rating", "ratingValue": "5", "bestRating": "5"},
+                "reviewBody": "Instalaron mi punto de carga para el coche eléctrico y gestionaron todas las subvenciones. Todo perfecto.",
+                "datePublished": "2026-02-20"
+            },
+            {
+                "@type": "Review",
+                "author": {"@type": "Person", "name": "Carlos Rodríguez"},
+                "reviewRating": {"@type": "Rating", "ratingValue": "5", "bestRating": "5"},
+                "reviewBody": "Servicio urgente impresionante. Vinieron y en menos de una hora solucionaron el problema. Grandes profesionales.",
+                "datePublished": "2026-03-10"
             }
-        });
-        
-        // Cerrar menú con la tecla Escape
-        document.addEventListener('keydown', function(e) {
-            if (e.key === 'Escape' && mobileMenu.classList.contains('active')) {
-                closeMenu();
+        ]
+    }
+    </script>
+
+    <!-- FAQ Schema -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "¿Realizan urgencias eléctricas en Madrid?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Sí, ofrecemos servicio de electricistas urgentes en toda la comunidad de Madrid. No trabajamos con servicio 24 horas."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "¿Instalan puntos de carga para coches eléctricos?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Sí, somos especialistas en la instalación de puntos de carga para vehículos eléctricos y gestionamos las subvenciones disponibles."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "¿Trabajan con comunidades de vecinos?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Sí, realizamos instalaciones y mantenimiento eléctrico para comunidades de vecinos en Madrid."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "¿Ofrecen garantías en sus trabajos?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Todos nuestros trabajos incluyen garantía por escrito, con cobertura de 2 años en instalaciones."
+                }
             }
-        });
-    });
-    document.getElementById('current-year').textContent = new Date().getFullYear();
-</script>
+        ]
+    }
+    </script>
+
+    <script src="js/main.js"></script>
 </body>
 </html>
