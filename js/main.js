@@ -2,8 +2,8 @@
    IMELEC - Scripts Comunes
    ======================================== */
 
-document.addEventListener('DOMContentLoaded', function() {
-    // Mobile menu elements
+// Mobile menu elements
+(function() {
     const menuToggle = document.getElementById('menu-toggle');
     const menuClose = document.getElementById('menu-close');
     const mobileMenu = document.getElementById('mobile-menu');
@@ -114,4 +114,14 @@ document.addEventListener('DOMContentLoaded', function() {
     document.querySelectorAll('.reveal').forEach((el) => {
         revealObserver.observe(el);
     });
-});
+
+    // Header scroll effect
+    const siteHeader = document.getElementById('site-header');
+    if (siteHeader) {
+        const onScroll = () => {
+            siteHeader.classList.toggle('header-scrolled', window.scrollY > 20);
+        };
+        onScroll();
+        window.addEventListener('scroll', onScroll, { passive: true });
+    }
+})();

@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
+    <script>document.documentElement.classList.add('js')</script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contacto | Imelec - Electricistas en Madrid</title>
@@ -38,8 +39,8 @@
     <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com">
 
     <!-- Preload critical resources -->
-    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap"></noscript>
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@400;500;600;700;800&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@400;500;600;700;800&display=swap"></noscript>
     <link rel="preload" href="css/styles.css" as="style">
     <link rel="preload" href="/img/recarga.webp" as="image" type="image/webp">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" media="print" onload="this.media='all'">
@@ -49,11 +50,13 @@
      <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
      <style type="text/tailwindcss">
       @theme {
-        --color-primary: #0056b3;
-        --color-secondary: #FFD700;
-        --color-accent: #003366;
-        --color-light: #f8f9fa;
-        --color-dark: #212529;
+        --color-primary: #0f1f3d;
+        --color-primary-light: #1a3a66;
+        --color-secondary: #f5b700;
+        --color-secondary-light: #ffd54f;
+        --color-accent: #06b6d4;
+        --color-light: #f6f8fb;
+        --color-dark: #0a1220;
       }
     </style>
     <!-- <script src="https://cdn.tailwindcss.com"></script> -->
@@ -76,7 +79,7 @@
     <link rel="stylesheet" href="css/styles.css">
     <style type="text/css">
         .contact-hero {
-            background: linear-gradient(rgba(0, 84, 179, 0.85), rgba(0, 51, 102, 0.85)), url('/img/recarga.webp');
+            background: linear-gradient(135deg, rgba(15, 31, 61, 0.92) 0%, rgba(10, 18, 32, 0.90) 100%), url('/img/recarga.webp');
             background-size: cover;
             background-position: center;
         }
@@ -116,12 +119,12 @@
         }
     </script>
 </head>
-<body class="bg-gray-50">
+<body class="bg-light">
     <!-- Skip to main content for accessibility -->
     <a href="#main-content" class="visually-hidden focus:not-sr-only focus:absolute focus:top-0 focus:left-0 focus:bg-primary focus:text-white focus:p-4 focus:z-50">Saltar al contenido principal</a>
     
     <!-- Header -->
-    <header class="bg-primary shadow-md sticky top-0 z-50" role="banner">
+    <header class="bg-dark shadow-lg sticky top-0 z-50" role="banner">
         <div class="container mx-auto px-4 py-3">
             <div class="flex justify-between items-center">
                 <div class="flex items-center">
@@ -164,7 +167,7 @@
             <li><a href="/proyectos.html" class="block py-2 hover:text-secondary">Proyectos</a></li>
             <li><a href="/contacto.html" class="block py-2 hover:text-secondary">Contacto</a></li>
             <li class="pt-8">
-                <a href="tel:+34691502361" class="bg-secondary text-accent font-bold py-3 px-6 rounded-lg inline-block">
+                <a href="tel:+34691502361" class="bg-secondary text-primary font-bold py-3 px-6 rounded-lg inline-block">
                     <i class="fas fa-phone mr-2"></i>Llamar ahora
                 </a>
             </li>
@@ -186,9 +189,9 @@
     <!-- Hero Section -->
     <section class="contact-hero py-16 md:py-24 text-white">
         <div class="container mx-auto px-4 text-center">
-            <h1 class="text-4xl md:text-5xl font-bold mb-6">Contacte con Electricistas en Madrid</h1>
+            <h1 class="text-4xl md:text-5xl font-bold mb-6 font-display">Contacte con Electricistas en Madrid</h1>
             <p class="text-xl mb-8 max-w-3xl mx-auto">Presupuestos gratuitos, reparaciones urgentes y profesionales certificados.</p>
-            <a href="tel:+34691502361" class="bg-secondary text-accent font-bold py-3 px-8 rounded-lg hover:bg-yellow-400 transition duration-300 inline-block">
+            <a href="tel:+34691502361" class="bg-secondary text-primary font-bold py-3 px-8 rounded-lg hover:bg-secondary-light transition duration-300 inline-block">
                 <i class="fas fa-phone mr-2" aria-hidden="true"></i>Llamar Ahora:  691 50 23 61
             </a>
         </div>
@@ -200,7 +203,7 @@
             <div class="grid grid-cols-1 lg:grid-cols-3 gap-12">
                 <!-- Contact Information -->
                 <div class="lg:col-span-1">
-                    <h2 class="text-3xl font-bold text-accent mb-8">Información de Contacto</h2>
+                    <h2 class="text-3xl font-bold text-primary mb-8 font-display">Información de Contacto</h2>
                     
                     <div class="space-y-6">
                         <div class="contact-card bg-light rounded-lg p-6 shadow-md border-l-4 border-primary">
@@ -209,7 +212,7 @@
                                     <i class="fas fa-phone text-white text-xl" aria-hidden="true"></i>
                                 </div>
                                 <div>
-                                    <h3 class="text-xl font-semibold text-accent mb-2">Teléfono</h3>
+                                    <h3 class="text-xl font-semibold text-primary mb-2 font-display">Teléfono</h3>
                                     <a href="tel:+34691502361" class="text-primary text-lg font-semibold hover:underline"> 691 50 23 61</a>
                                 </div>
                             </div>
@@ -221,7 +224,7 @@
                                     <i class="fas fa-envelope text-white text-xl" aria-hidden="true"></i>
                                 </div>
                                 <div>
-                                    <h3 class="text-xl font-semibold text-accent mb-2">Email</h3>
+                                    <h3 class="text-xl font-semibold text-primary mb-2 font-display">Email</h3>
                                     <p class="text-gray-700 mb-2">Para presupuestos y consultas</p>
                                     <a href="mailto:info@imelec.es" class="text-primary text-lg font-semibold hover:underline">info@imelec.es</a>
                                 </div>
@@ -234,7 +237,7 @@
                                     <i class="fas fa-map-marker-alt text-white text-xl" aria-hidden="true"></i>
                                 </div>
                                 <div>
-                                    <h3 class="text-xl font-semibold text-accent mb-2">Oficina Central</h3>
+                                    <h3 class="text-xl font-semibold text-primary mb-2 font-display">Oficina Central</h3>
                                     <p class="text-gray-700 mb-2">Ctra de Loeches 55, Torrejon de Ardoz<br>28850 Madrid</p>
                                     <a href="https://www.google.com/maps/place/Carr.+de+Loeches,+55,+28850+Torrej%C3%B3n+de+Ardoz,+Madrid/@40.4465358,-3.4691524,824m/data=!3m1!1e3!4m15!1m8!3m7!1s0xd42370e914c17a7:0x1b87a4fc17803804!2sCarr.+de+Loeches,+55,+28850+Torrej%C3%B3n+de+Ardoz,+Madrid!3b1!8m2!3d40.4465358!4d-3.4665775!16s%2Fg%2F11bw49vfjr!3m5!1s0xd42370e914c17a7:0x1b87a4fc17803804!8m2!3d40.4465358!4d-3.4665775!16s%2Fg%2F11bw49vfjr?authuser=0&entry=ttu&g_ep=EgoyMDI1MDkxNC4wIKXMDSoASAFQAw%3D%3D" class="text-primary text-sm font-semibold hover:underline" target="_blank">Ver en mapa</a>
                                 </div>
@@ -247,7 +250,7 @@
                                     <i class="fas fa-clock text-white text-xl" aria-hidden="true"></i>
                                 </div>
                                 <div>
-                                    <h3 class="text-xl font-semibold text-accent mb-2">Horario</h3>
+                                    <h3 class="text-xl font-semibold text-primary mb-2 font-display">Horario</h3>
                                     <p class="text-gray-700 mb-1"><span class="font-semibold">Oficina:</span> Lunes a Viernes 9:00-14:00 / 16:00-19:00</p>
                                 </div>
                             </div>
@@ -258,7 +261,7 @@
                 
                 <!-- Contact Form -->
                 <div class="lg:col-span-2">
-                    <h2 class="text-3xl font-bold text-accent mb-8">Solicite Presupuesto o Información</h2>
+                    <h2 class="text-3xl font-bold text-primary mb-8 font-display">Solicite Presupuesto o Información</h2>
                     <p class="text-gray-700 mb-6">Complete el siguiente formulario y nos pondremos en contacto con usted en menos de 24 horas. Para emergencias, llame directamente al <a href="tel:+34691502361" class="text-primary font-semibold hover:underline">691 50 23 61</a>.</p>
                     
                     <form id="formulario" class="bg-light rounded-lg p-6 shadow-md" novalidate>
@@ -339,7 +342,7 @@
                         <p class="text-red-100">Servicio urgente en Madrid</p>
                     </div>
                 </div>
-                <a href="tel:+34691502361" class="bg-white text-red-600 font-bold py-3 px-8 rounded-lg hover:bg-gray-100 transition duration-300 inline-flex items-center">
+                <a href="tel:+34691502361" class="bg-white text-red-600 font-bold py-3 px-8 rounded-lg hover:bg-light transition duration-300 inline-flex items-center">
                     <i class="fas fa-phone mr-2" aria-hidden="true"></i>Llamar ahora: 691 50 23 61
 
                 </a>
@@ -348,11 +351,11 @@
     </section>
 
     <!-- Map Section -->
-    <section id="map" class="py-16 bg-gray-100">
+    <section id="map" class="py-16 bg-light">
         <div class="container mx-auto px-4">          
                 
             <div class="bg-white rounded-lg p-6 shadow-md">
-                <h3 class="text-xl font-semibold text-accent mb-4">Zonas de actuación</h3>
+                <h3 class="text-xl font-semibold text-primary mb-4 font-display">Zonas de actuación</h3>
                 <p class="text-gray-700 mb-4">Trabajamos en toda la Comunidad de Madrid, incluyendo:</p>
                 
                 <div class="grid grid-cols-2 gap-4 mb-6">
@@ -406,7 +409,7 @@
     <!-- FAQ Section -->
     <section class="py-16 bg-white">
         <div class="container mx-auto px-4">
-            <h2 class="text-3xl font-bold text-center text-accent mb-12">Preguntas Frecuentes - Contacto</h2>
+            <h2 class="text-3xl font-bold text-center text-primary mb-12 font-display">Preguntas Frecuentes - Contacto</h2>
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
                 <div>
                     <h3 class="text-xl font-semibold mb-3">¿Cuánto tardan en responder?</h3>
@@ -429,7 +432,7 @@
     </section>
 
     <!-- Footer -->
-    <footer class="bg-accent text-white py-12" role="contentinfo">
+    <footer class="footer-gradient text-white py-12" role="contentinfo">
         <div class="container mx-auto px-4">
             <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
                 <div>

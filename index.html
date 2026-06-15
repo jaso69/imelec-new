@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
+    <script>document.documentElement.classList.add('js')</script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Imelec - Electricistas en Madrid | Instalaciones Eléctricas y Puntos de Carga</title>
@@ -38,10 +39,10 @@
     <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com">
 
     <!-- Preload critical resources -->
-    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap"></noscript>
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@400;500;600;700;800&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@400;500;600;700;800&display=swap"></noscript>
     <link rel="preload" href="css/styles.css" as="style">
-    <link rel="preload" href="/img/averias.webp" as="image" type="image/webp">
+    <link rel="preload" href="/img/electricidad2.webp" as="image" type="image/webp">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" media="print" onload="this.media='all'">
     <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"></noscript>
     <script type="application/ld+json">
@@ -101,48 +102,49 @@
      <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
      <style type="text/tailwindcss">
       @theme {
-        --color-primary: #0056b3;
-        --color-secondary: #FFD700;
-        --color-accent: #003366;
-        --color-light: #f8f9fa;
-        --color-dark: #212529;
+        --color-primary: #0f1f3d;
+        --color-primary-light: #1a3a66;
+        --color-secondary: #f5b700;
+        --color-secondary-light: #ffd54f;
+        --color-accent: #06b6d4;
+        --color-light: #f6f8fb;
+        --color-dark: #0a1220;
       }
     </style>
     
     <link rel="stylesheet" href="css/styles.css">
-    <style type="text/css">
-        .hero-pattern {
-            background: linear-gradient(rgba(0, 84, 179, 0.8), rgba(0, 51, 102, 0.8)), url('/img/averias.webp');
-            background-size: cover;
-            background-position: center;
-        }
-    </style>
 </head>
-<body class="bg-gray-50">
+<body class="bg-light">
     <!-- Skip to main content for accessibility -->
     <a href="#main-content" class="visually-hidden focus:not-sr-only focus:absolute focus:top-0 focus:left-0 focus:bg-primary focus:text-white focus:p-4 focus:z-50">Saltar al contenido principal</a>
     
     <!-- Header -->
-    <header class="bg-primary shadow-md sticky top-0 z-50" role="banner">
+    <header id="site-header" class="bg-dark shadow-lg sticky top-0 z-50" role="banner">
         <div class="container mx-auto px-4 py-3">
-            <div class="flex justify-between items-center">
-                <div class="flex items-center">
+            <div class="flex justify-between items-center gap-4">
+                <div class="flex items-center shrink-0">
                     <a href="/index.html" class="flex items-center">
                         <div class="rounded-full p-2 mr-3">
                             <svg class="icon icon-tabler icon-tabler-bolt" height="48" viewBox="0 0 24 24" width="48" fill="none" stroke="#ffec00" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none" stroke="none"></path><path d="M13 3l0 7l6 0l-8 11l0 -7l-6 0l8 -11"></path></svg>
                         </div>
-                        <span class="text-white text-2xl font-bold">IMELEC</span>
+                        <span class="text-white text-2xl font-bold font-display tracking-wide">IMELEC</span>
                     </a>
                 </div>
                 
-                <nav aria-label="Navegación principal">
-                    <ul class="hidden md:flex space-x-8">
-                        <li><a href="/index.html" class="text-white hover:text-secondary font-medium" aria-current="page">Inicio</a></li>
+                <nav aria-label="Navegación principal" class="hidden md:block">
+                    <ul class="flex items-center space-x-8">
+                        <li><a href="/index.html" class="text-white hover:text-secondary font-medium nav-link-active" aria-current="page">Inicio</a></li>
                         <li><a href="/servicios.html" class="text-white hover:text-secondary font-medium">Servicios</a></li>
                         <li><a href="/proyectos.html" class="text-white hover:text-secondary font-medium">Proyectos</a></li>
                         <li><a href="/contacto.html" class="text-white hover:text-secondary font-medium">Contacto</a></li>
                     </ul>
                 </nav>
+
+                <div class="hidden md:block shrink-0">
+                    <a href="/contacto.html" class="header-cta">
+                        <i class="fas fa-file-invoice mr-2" aria-hidden="true"></i>Presupuesto gratis
+                    </a>
+                </div>
                 
                 <div class="md:hidden">
                     <button id="menu-toggle" class="text-white text-2xl" aria-label="Abrir menú" aria-expanded="false" aria-controls="mobile-menu">
@@ -165,38 +167,36 @@
             <li><a href="/servicios.html" class="block py-2 hover:text-secondary">Servicios</a></li>
             <li><a href="/proyectos.html" class="block py-2 hover:text-secondary">Proyectos</a></li>
             <li><a href="/contacto.html" class="block py-2 hover:text-secondary">Contacto</a></li>
-            <li class="pt-8">
-                <a href="tel:+34691502361" class="bg-secondary text-accent font-bold py-3 px-6 rounded-lg inline-block">
+            <li class="pt-4">
+                <a href="/contacto.html" class="bg-secondary text-primary font-bold py-3 px-6 rounded-full inline-block">
+                    <i class="fas fa-file-invoice mr-2"></i>Presupuesto gratis
+                </a>
+            </li>
+            <li>
+                <a href="tel:+34691502361" class="border-2 border-white text-white font-bold py-3 px-6 rounded-full inline-block">
                     <i class="fas fa-phone mr-2"></i>Llamar ahora
                 </a>
             </li>
         </ul>
     </div>
 
-    <!-- Breadcrumb -->
-    <nav class="bg-light py-2" aria-label="Miga de pan">
-        <div class="container mx-auto px-4">
-            <div class="breadcrumb">
-                <ol>
-                    <li><a href="https://www.imelec.es">Inicio</a></li>
-                    <li aria-current="page">Electricistas en Madrid</li>
-                </ol>
-            </div>
-        </div>
-    </nav>
-
     <!-- Main Content -->
     <main id="main-content" tabindex="-1">
     <!-- Hero Section -->
     <section class="hero-pattern py-20 md:py-32 text-white">
         <div class="container mx-auto px-4 text-center">
-            <h1 class="text-4xl md:text-5xl font-bold mb-6">Electricistas Expertos en la Comunidad de Madrid</h1>
-            <p class="text-xl mb-8 max-w-3xl mx-auto">Servicios eléctricos integrales: instalaciones y puntos de carga para vehículos eléctricos</p>
-            <div class="flex flex-col md:flex-row justify-center gap-4">
-                <a href="tel:+34691502361" class="bg-secondary text-accent font-bold py-3 px-8 rounded-lg hover:bg-yellow-400 transition duration-300">
+            <div class="hero-trust-bar">
+                <span class="hero-trust-item"><i class="fas fa-award" aria-hidden="true"></i> +15 años de experiencia</span>
+                <span class="hero-trust-item"><i class="fas fa-certificate" aria-hidden="true"></i> Electricistas certificados</span>
+                <span class="hero-trust-item"><i class="fas fa-shield-halved" aria-hidden="true"></i> Garantía 2 años</span>
+            </div>
+            <h1 class="font-display mb-6">Electricistas Expertos en la Comunidad de Madrid</h1>
+            <p class="hero-subtitle mb-10">Servicios eléctricos integrales para hogares, empresas y comunidades. Instalaciones, reparaciones y puntos de carga para vehículos eléctricos.</p>
+            <div class="hero-actions flex flex-col sm:flex-row justify-center gap-4">
+                <a href="tel:+34691502361" class="btn-primary">
                     <i class="fas fa-phone mr-2" aria-hidden="true"></i>Llamar Ahora
                 </a>
-                <a href="/contacto.html" class="bg-transparent border-2 border-white text-white font-bold py-3 px-8 rounded-lg hover:bg-white hover:text-primary transition duration-300">
+                <a href="/contacto.html" class="btn-secondary">
                     <i class="fas fa-envelope mr-2" aria-hidden="true"></i>Solicitar Presupuesto
                 </a>
             </div>
@@ -206,75 +206,89 @@
     <!-- Services Section -->
     <section id="services" class="py-16 bg-white">
         <div class="container mx-auto px-4">
-            <h2 class="text-3xl font-bold text-center text-accent mb-12">Servicios de Electricidad en Madrid</h2>
+            <h2 class="section-heading reveal">Servicios de Electricidad en Madrid</h2>
+            <div class="section-divider reveal"></div>
+            <p class="section-subheading reveal reveal-delay-1">Soluciones eléctricas completas para hogares, empresas y comunidades en toda la Comunidad de Madrid.</p>
             
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 <!-- Service 1 -->
-                <div class="bg-light rounded-lg p-6 shadow-md hover:shadow-lg transition duration-300">
-                    <div class="text-primary text-4xl mb-4">
+                <div class="service-card bg-light rounded-xl p-6 shadow-md border-l-4 border-primary reveal reveal-delay-1">
+                    <div class="service-icon-wrap">
                         <i class="fas fa-house-chimney" aria-hidden="true"></i>
                     </div>
-                    <h3 class="text-xl font-bold text-accent mb-3">Instalaciones Eléctricas</h3>
+                    <h3 class="text-2xl font-bold text-primary mb-3 font-display">Instalaciones Eléctricas</h3>
                     <p class="text-gray-700">Instalaciones eléctricas completas para viviendas, locales comerciales y edificios. Electricistas certificados en Madrid.</p>
+                    <a href="/servicios.html" class="service-link">Ver servicio <i class="fas fa-arrow-right text-sm" aria-hidden="true"></i></a>
                 </div>
                 
                 <!-- Service 2 -->
-                <div class="bg-light rounded-lg p-6 shadow-md hover:shadow-lg transition duration-300">
-                    <div class="text-primary text-4xl mb-4">
+                <div class="service-card bg-light rounded-xl p-6 shadow-md border-l-4 border-primary reveal reveal-delay-2">
+                    <div class="service-icon-wrap">
                         <i class="fas fa-tools" aria-hidden="true"></i>
                     </div>
-                    <h3 class="text-xl font-bold text-accent mb-3">Reparaciones Urgentes</h3>
+                    <h3 class="text-2xl font-bold text-primary mb-3 font-display">Reparaciones Urgentes</h3>
                     <p class="text-gray-700">Servicio de urgencia en Madrid. Diagnóstico preciso y solución de averías eléctricas con garantía.</p>
+                    <a href="/servicios.html" class="service-link">Ver servicio <i class="fas fa-arrow-right text-sm" aria-hidden="true"></i></a>
                 </div>
                 
                 <!-- Service 3 -->
-                <div class="bg-light rounded-lg p-6 shadow-md hover:shadow-lg transition duration-300">
-                    <div class="text-primary text-4xl mb-4">
+                <div class="service-card bg-light rounded-xl p-6 shadow-md border-l-4 border-primary reveal reveal-delay-3">
+                    <div class="service-icon-wrap">
                         <i class="fas fa-charging-station" aria-hidden="true"></i>
                     </div>
-                    <h3 class="text-xl font-bold text-accent mb-3">Puntos de Carga VE</h3>
+                    <h3 class="text-2xl font-bold text-primary mb-3 font-display">Puntos de Carga VE</h3>
                     <p class="text-gray-700">Instalación de puntos de carga para vehículos eléctricos en Madrid. Asesoramiento y gestión de subvenciones.</p>
+                    <a href="/servicios.html" class="service-link">Ver servicio <i class="fas fa-arrow-right text-sm" aria-hidden="true"></i></a>
                 </div>
                 
                 <!-- Service 4 -->
-                <div class="bg-light rounded-lg p-6 shadow-md hover:shadow-lg transition duration-300">
-                    <div class="text-primary text-4xl mb-4">
+                <div class="service-card bg-light rounded-xl p-6 shadow-md border-l-4 border-primary reveal reveal-delay-4">
+                    <div class="service-icon-wrap">
                         <i class="fas fa-solar-panel" aria-hidden="true"></i>
                     </div>
-                    <h3 class="text-xl font-bold text-accent mb-3">Energías Renovables</h3>
+                    <h3 class="text-2xl font-bold text-primary mb-3 font-display">Energías Renovables</h3>
                     <p class="text-gray-700">Instalación de placas solares y sistemas de autoconsumo en Madrid. Estudio de viabilidad y gestión de subvenciones.</p>
+                    <a href="/servicios.html" class="service-link">Ver servicio <i class="fas fa-arrow-right text-sm" aria-hidden="true"></i></a>
                 </div>
                 
                 <!-- Service 5 -->
-                <div class="bg-light rounded-lg p-6 shadow-md hover:shadow-lg transition duration-300">
-                    <div class="text-primary text-4xl mb-4">
+                <div class="service-card bg-light rounded-xl p-6 shadow-md border-l-4 border-primary reveal reveal-delay-5">
+                    <div class="service-icon-wrap">
                         <i class="fas fa-building" aria-hidden="true"></i>
                     </div>
-                    <h3 class="text-xl font-bold text-accent mb-3">Automatización Industrial</h3>
+                    <h3 class="text-2xl font-bold text-primary mb-3 font-display">Automatización Industrial</h3>
                     <p class="text-gray-700">Sistemas de automatización y cuadros eléctricos para empresas en Madrid. Mejora de eficiencia energética.</p>
+                    <a href="/servicios.html" class="service-link">Ver servicio <i class="fas fa-arrow-right text-sm" aria-hidden="true"></i></a>
                 </div>
                 
                 <!-- Service 6 -->
-                <div class="bg-light rounded-lg p-6 shadow-md hover:shadow-lg transition duration-300">
-                    <div class="text-primary text-4xl mb-4">
+                <div class="service-card bg-light rounded-xl p-6 shadow-md border-l-4 border-primary reveal reveal-delay-6">
+                    <div class="service-icon-wrap">
                         <i class="fas fa-lightbulb" aria-hidden="true"></i>
                     </div>
-                    <h3 class="text-xl font-bold text-accent mb-3">Iluminación Eficiente</h3>
+                    <h3 class="text-2xl font-bold text-primary mb-3 font-display">Iluminación Eficiente</h3>
                     <p class="text-gray-700">Diseño e instalación de sistemas de iluminación LED eficientes para interiores y exteriores en Madrid.</p>
+                    <a href="/servicios.html" class="service-link">Ver servicio <i class="fas fa-arrow-right text-sm" aria-hidden="true"></i></a>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- About Section -->
-    <section id="about" class="py-16 bg-gray-100">
+    <section id="about" class="py-16 bg-light">
         <div class="container mx-auto px-4">
-            <div class="flex flex-col md:flex-row items-center">
-                <div class="md:w-1/2 mb-8 md:mb-0">
-                    <img src="/img/recarga.webp" alt="Electricista profesional de Imelec trabajando en Madrid" class="rounded-lg shadow-lg" width="600" height="400" loading="lazy">
+            <div class="flex flex-col md:flex-row items-center gap-8 md:gap-12">
+                <div class="md:w-1/2 mb-8 md:mb-0 reveal">
+                    <div class="about-image-wrap">
+                        <img src="./img/electricidad2.webp" alt="Electricista profesional de Imelec trabajando en Madrid" class="w-full" width="600" height="800" loading="lazy">
+                        <div class="about-badge">
+                            <i class="fas fa-certificate mr-1" aria-hidden="true"></i>
+                            Certificados REBT
+                        </div>
+                    </div>
                 </div>
-                <div class="md:w-1/2 md:pl-12">
-                    <h2 class="text-3xl font-bold text-accent mb-6">Electricistas Expertos en Madrid</h2>
+                <div class="md:w-1/2 reveal reveal-delay-2">
+                    <h2 class="section-heading text-left mb-6">Electricistas Expertos en Madrid</h2>
                     <p class="text-gray-700 mb-4"><strong>IMELEC</strong> es una empresa de electricistas con más de 15 años de experiencia en Madrid. Ofrecemos servicios de calidad con personal cualificado y las últimas tecnologías.</p>
                     <p class="text-gray-700 mb-6">Nuestro compromiso es proporcionar soluciones seguras, eficientes y adaptadas a las necesidades de cada cliente, ya sean particulares, empresas o administraciones en Madrid.</p>
                     <ul class="space-y-3">
@@ -295,6 +309,20 @@
                             <span class="text-gray-700">Servicio de urgencias en Madrid</span>
                         </li>
                     </ul>
+                    <div class="stats-grid">
+                        <div class="stat-item">
+                            <div class="stat-number">15<span>+</span></div>
+                            <div class="stat-label">Años de experiencia</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">500<span>+</span></div>
+                            <div class="stat-label">Proyectos realizados</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">2</div>
+                            <div class="stat-label">Años de garantía</div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -303,47 +331,64 @@
     <!-- Testimonials Section -->
     <section class="py-16 bg-white">
         <div class="container mx-auto px-4">
-            <h2 class="text-3xl font-bold text-center text-accent mb-12">Opiniones de Nuestros Clientes en Madrid</h2>
+            <h2 class="section-heading reveal">Opiniones de Nuestros Clientes en Madrid</h2>
+            <div class="section-divider reveal"></div>
+            <p class="section-subheading reveal reveal-delay-1">La confianza de nuestros clientes es nuestra mejor carta de presentación.</p>
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <div class="bg-light p-6 rounded-lg shadow">
-                    <div class="flex items-center mb-4">
-                        <div class="text-secondary text-2xl">
-                            <i class="fas fa-star" aria-hidden="true"></i>
-                            <i class="fas fa-star" aria-hidden="true"></i>
-                            <i class="fas fa-star" aria-hidden="true"></i>
-                            <i class="fas fa-star" aria-hidden="true"></i>
-                            <i class="fas fa-star" aria-hidden="true"></i>
-                        </div>
+                <blockquote class="testimonial-card reveal reveal-delay-1">
+                    <span class="testimonial-quote" aria-hidden="true">"</span>
+                    <div class="testimonial-stars" aria-label="5 estrellas">
+                        <i class="fas fa-star" aria-hidden="true"></i>
+                        <i class="fas fa-star" aria-hidden="true"></i>
+                        <i class="fas fa-star" aria-hidden="true"></i>
+                        <i class="fas fa-star" aria-hidden="true"></i>
+                        <i class="fas fa-star" aria-hidden="true"></i>
                     </div>
-                    <p class="text-gray-700 mb-4">"Excelente servicio de electricistas en Madrid. Solucionaron mi problema rápidamente y con profesionalidad. Muy recomendables."</p>
-                    <p class="font-semibold">- Juan Pérez, Alcobendas</p>
-                </div>
-                <div class="bg-light p-6 rounded-lg shadow">
-                    <div class="flex items-center mb-4">
-                        <div class="text-secondary text-2xl">
-                            <i class="fas fa-star" aria-hidden="true"></i>
-                            <i class="fas fa-star" aria-hidden="true"></i>
-                            <i class="fas fa-star" aria-hidden="true"></i>
-                            <i class="fas fa-star" aria-hidden="true"></i>
-                            <i class="fas fa-star" aria-hidden="true"></i>
+                    <p class="text-gray-700 relative z-10">"Excelente servicio de electricistas en Madrid. Solucionaron mi problema rápidamente y con profesionalidad. Muy recomendables."</p>
+                    <footer class="testimonial-author">
+                        <span class="testimonial-avatar" aria-hidden="true">JP</span>
+                        <div>
+                            <cite class="font-semibold not-italic">Juan Pérez</cite>
+                            <p class="text-sm text-gray-500">Alcobendas</p>
                         </div>
+                    </footer>
+                </blockquote>
+                <blockquote class="testimonial-card reveal reveal-delay-2">
+                    <span class="testimonial-quote" aria-hidden="true">"</span>
+                    <div class="testimonial-stars" aria-label="5 estrellas">
+                        <i class="fas fa-star" aria-hidden="true"></i>
+                        <i class="fas fa-star" aria-hidden="true"></i>
+                        <i class="fas fa-star" aria-hidden="true"></i>
+                        <i class="fas fa-star" aria-hidden="true"></i>
+                        <i class="fas fa-star" aria-hidden="true"></i>
                     </div>
-                    <p class="text-gray-700 mb-4">"Instalaron mi punto de carga para el coche eléctrico y gestionaron todas las subvenciones. Todo perfecto."</p>
-                    <p class="font-semibold">- María Gómez, Las Rozas</p>
-                </div>
-                <div class="bg-light p-6 rounded-lg shadow">
-                    <div class="flex items-center mb-4">
-                        <div class="text-secondary text-2xl">
-                            <i class="fas fa-star" aria-hidden="true"></i>
-                            <i class="fas fa-star" aria-hidden="true"></i>
-                            <i class="fas fa-star" aria-hidden="true"></i>
-                            <i class="fas fa-star" aria-hidden="true"></i>
-                            <i class="fas fa-star" aria-hidden="true"></i>
+                    <p class="text-gray-700 relative z-10">"Instalaron mi punto de carga para el coche eléctrico y gestionaron todas las subvenciones. Todo perfecto."</p>
+                    <footer class="testimonial-author">
+                        <span class="testimonial-avatar" aria-hidden="true">MG</span>
+                        <div>
+                            <cite class="font-semibold not-italic">María Gómez</cite>
+                            <p class="text-sm text-gray-500">Las Rozas</p>
                         </div>
+                    </footer>
+                </blockquote>
+                <blockquote class="testimonial-card reveal reveal-delay-3">
+                    <span class="testimonial-quote" aria-hidden="true">"</span>
+                    <div class="testimonial-stars" aria-label="5 estrellas">
+                        <i class="fas fa-star" aria-hidden="true"></i>
+                        <i class="fas fa-star" aria-hidden="true"></i>
+                        <i class="fas fa-star" aria-hidden="true"></i>
+                        <i class="fas fa-star" aria-hidden="true"></i>
+                        <i class="fas fa-star" aria-hidden="true"></i>
                     </div>
-                    <p class="text-gray-700 mb-4">"Servicio urgente impresionante. Vinieron y en menos de una hora solucionaron el problema. Grandes profesionales."</p>
-                    <p class="font-semibold">- Carlos Rodríguez, Madrid Centro</p>
-                </div>
+                    <p class="text-gray-700 relative z-10">"Servicio urgente impresionante. Vinieron y en menos de una hora solucionaron el problema. Grandes profesionales."</p>
+                    <footer class="testimonial-author">
+                        <span class="testimonial-avatar" aria-hidden="true">CR</span>
+                        <div>
+                            <cite class="font-semibold not-italic">Carlos Rodríguez</cite>
+                            <p class="text-sm text-gray-500">Madrid Centro</p>
+                        </div>
+                    </footer>
+                </blockquote>
             </div>
         </div>
     </section>
@@ -351,13 +396,13 @@
     <!-- CTA Section -->
     <section id="contact" class="py-16 bg-primary text-white">
         <div class="container mx-auto px-4 text-center">
-            <h2 class="text-3xl font-bold mb-6">¿Necesita un Electricista en Madrid?</h2>
-            <p class="text-xl mb-8 max-w-3xl mx-auto">Contáctenos para solicitar presupuesto sin compromiso.</p>
-            <div class="flex flex-col md:flex-row justify-center gap-4">
-                <a href="tel:+34691502361" class="bg-secondary text-accent font-bold py-3 px-8 rounded-lg hover:bg-yellow-400 transition duration-300">
+            <h2 class="text-3xl md:text-4xl font-bold mb-6 font-display reveal">¿Necesita un Electricista en Madrid?</h2>
+            <p class="text-xl mb-8 max-w-3xl mx-auto text-white/90 reveal reveal-delay-1">Contáctenos para solicitar presupuesto sin compromiso.</p>
+            <div class="flex flex-col sm:flex-row justify-center gap-4 reveal reveal-delay-2">
+                <a href="tel:+34691502361" class="btn-primary">
                     <i class="fas fa-phone mr-2" aria-hidden="true"></i>691 50 23 61
                 </a>
-                <a href="mailto:info@imelec.es" class="bg-white text-primary font-bold py-3 px-8 rounded-lg hover:bg-gray-100 transition duration-300">
+                <a href="mailto:info@imelec.es" class="btn-secondary">
                     <i class="fas fa-envelope mr-2" aria-hidden="true"></i>info@imelec.es
                 </a>
             </div>
@@ -365,59 +410,70 @@
     </section>
 
     <!-- FAQ Section -->
-    <section class="py-16 bg-gray-100">
+    <section class="py-16 bg-white" aria-labelledby="faq-heading">
         <div class="container mx-auto px-4">
-            <h2 class="text-3xl font-bold text-center text-accent mb-12">Preguntas Frecuentes - Electricistas Madrid</h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                <div>
-                    <h3 class="text-xl font-semibold mb-3">¿Realizan urgencias eléctricas en Madrid?</h3>
-                    <p class="text-gray-700">Sí, ofrecemos servicio de electricistas urgentes en toda la comunidad de Madrid. <span class="font-bold">No trabajamos con servicio 24 horas.</span></p>
-                </div>
-                <div>
-                    <h3 class="text-xl font-semibold mb-3">¿Instalan puntos de carga para coches eléctricos?</h3>
-                    <p class="text-gray-700">Sí, somos especialistas en la instalación de puntos de carga para vehículos eléctricos y gestionamos las subvenciones disponibles.</p>
-                </div>
-                <div>
-                    <h3 class="text-xl font-semibold mb-3">¿Trabajan con comunidades de vecinos?</h3>
-                    <p class="text-gray-700">Sí, realizamos instalaciones y mantenimiento eléctrico para comunidades de vecinos en Madrid.</p>
-                </div>
-                <div>
-                    <h3 class="text-xl font-semibold mb-3">¿Ofrecen garantías en sus trabajos?</h3>
-                    <p class="text-gray-700">Todos nuestros trabajos incluyen garantía por escrito, con cobertura de 2 años en instalaciones.</p>
-                </div>
+            <h2 id="faq-heading" class="section-heading reveal">Preguntas Frecuentes</h2>
+            <div class="section-divider reveal"></div>
+            <p class="section-subheading reveal reveal-delay-1">Resolvemos las dudas más habituales sobre nuestros servicios de electricidad en Madrid.</p>
+            <div class="faq-list">
+                <details class="faq-item reveal reveal-delay-1">
+                    <summary>¿Realizan urgencias eléctricas en Madrid?</summary>
+                    <div class="faq-answer">
+                        <p>Sí, ofrecemos servicio de electricistas urgentes en toda la comunidad de Madrid. <strong>No trabajamos con servicio 24 horas.</strong></p>
+                    </div>
+                </details>
+                <details class="faq-item reveal reveal-delay-2">
+                    <summary>¿Instalan puntos de carga para coches eléctricos?</summary>
+                    <div class="faq-answer">
+                        <p>Sí, somos especialistas en la instalación de puntos de carga para vehículos eléctricos y gestionamos las subvenciones disponibles.</p>
+                    </div>
+                </details>
+                <details class="faq-item reveal reveal-delay-3">
+                    <summary>¿Trabajan con comunidades de vecinos?</summary>
+                    <div class="faq-answer">
+                        <p>Sí, realizamos instalaciones y mantenimiento eléctrico para comunidades de vecinos en Madrid.</p>
+                    </div>
+                </details>
+                <details class="faq-item reveal reveal-delay-4">
+                    <summary>¿Ofrecen garantías en sus trabajos?</summary>
+                    <div class="faq-answer">
+                        <p>Todos nuestros trabajos incluyen garantía por escrito, con cobertura de 2 años en instalaciones.</p>
+                    </div>
+                </details>
             </div>
         </div>
     </section>
 
     <!-- Zonas Section -->
-    <section class="py-16 bg-gray-100">
+    <section class="py-16 zones-section">
         <div class="container mx-auto px-4">
-            <h2 class="text-3xl font-bold text-center text-accent mb-4">Zonas de Madrid que Cubrimos</h2>
-            <p class="text-center text-gray-700 mb-12 max-w-2xl mx-auto">Trabajamos en toda la Comunidad de Madrid. Selecciona tu zona para más información:</p>
+            <h2 class="section-heading reveal">Zonas de Madrid que Cubrimos</h2>
+            <div class="section-divider reveal"></div>
+            <p class="section-subheading reveal reveal-delay-1">Trabajamos en toda la Comunidad de Madrid. Selecciona tu zona para más información:</p>
             <div class="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto">
-                <a href="/electricista-torrejon-de-ardoz.html" class="bg-white rounded-lg p-6 shadow-md hover:shadow-xl hover:bg-primary hover:text-white transition duration-300 text-center group">
+                <a href="/electricista-torrejon-de-ardoz.html" class="zone-card bg-white rounded-xl p-6 shadow-md hover:shadow-xl hover:bg-primary hover:text-white transition duration-300 text-center group reveal reveal-delay-1">
                     <i class="fas fa-map-marker-alt text-primary text-3xl mb-3 group-hover:text-secondary" aria-hidden="true"></i>
-                    <h3 class="text-xl font-bold mb-2">Torrejón de Ardoz</h3>
-                    <p class="text-sm text-gray-600 group-hover:text-white">Oficina central</p>
+                    <h3 class="text-xl font-bold mb-2 font-display">Torrejón de Ardoz</h3>
+                    <p class="text-sm text-gray-600 group-hover:text-white/90">Oficina central</p>
                 </a>
-                <a href="/electricista-alcobendas.html" class="bg-white rounded-lg p-6 shadow-md hover:shadow-xl hover:bg-primary hover:text-white transition duration-300 text-center group">
+                <a href="/electricista-alcobendas.html" class="zone-card bg-white rounded-xl p-6 shadow-md hover:shadow-xl hover:bg-primary hover:text-white transition duration-300 text-center group reveal reveal-delay-2">
                     <i class="fas fa-map-marker-alt text-primary text-3xl mb-3 group-hover:text-secondary" aria-hidden="true"></i>
-                    <h3 class="text-xl font-bold mb-2">Alcobendas</h3>
-                    <p class="text-sm text-gray-600 group-hover:text-white">Servicio rápido</p>
+                    <h3 class="text-xl font-bold mb-2 font-display">Alcobendas</h3>
+                    <p class="text-sm text-gray-600 group-hover:text-white/90">Servicio rápido</p>
                 </a>
-                <a href="/electricista-las-rozas.html" class="bg-white rounded-lg p-6 shadow-md hover:shadow-xl hover:bg-primary hover:text-white transition duration-300 text-center group">
+                <a href="/electricista-las-rozas.html" class="zone-card bg-white rounded-xl p-6 shadow-md hover:shadow-xl hover:bg-primary hover:text-white transition duration-300 text-center group reveal reveal-delay-3">
                     <i class="fas fa-map-marker-alt text-primary text-3xl mb-3 group-hover:text-secondary" aria-hidden="true"></i>
-                    <h3 class="text-xl font-bold mb-2">Las Rozas</h3>
-                    <p class="text-sm text-gray-600 group-hover:text-white">Chalets y urbanizaciones</p>
+                    <h3 class="text-xl font-bold mb-2 font-display">Las Rozas</h3>
+                    <p class="text-sm text-gray-600 group-hover:text-white/90">Chalets y urbanizaciones</p>
                 </a>
             </div>
-            <p class="text-center mt-8 text-gray-700">También trabajamos en Madrid Capital, Getafe, Alcorcón, Móstoles, Pozuelo y toda la comunidad.</p>
+            <p class="text-center mt-8 text-gray-700 reveal reveal-delay-4">También trabajamos en Madrid Capital, Getafe, Alcorcón, Móstoles, Pozuelo y toda la comunidad.</p>
         </div>
     </section>
 
     </main>
     <!-- Footer -->
-    <footer class="bg-accent text-white py-12" role="contentinfo">
+    <footer class="footer-gradient text-white py-12" role="contentinfo">
         <div class="container mx-auto px-4">
             <div class="grid grid-cols-1 md:grid-cols-5 gap-8">
                 <div>

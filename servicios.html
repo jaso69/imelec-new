@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
+    <script>document.documentElement.classList.add('js')</script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Servicios de Electricidad | Imelec - Electricistas en Madrid</title>
@@ -38,8 +39,8 @@
     <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com">
 
     <!-- Preload critical resources -->
-    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap"></noscript>
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@400;500;600;700;800&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@400;500;600;700;800&display=swap"></noscript>
     <link rel="preload" href="css/styles.css" as="style">
     <link rel="preload" href="/img/averias.webp" as="image" type="image/webp">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" media="print" onload="this.media='all'">
@@ -49,18 +50,20 @@
      <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
      <style type="text/tailwindcss">
       @theme {
-        --color-primary: #0056b3;
-        --color-secondary: #FFD700;
-        --color-accent: #003366;
-        --color-light: #f8f9fa;
-        --color-dark: #212529;
+        --color-primary: #0f1f3d;
+        --color-primary-light: #1a3a66;
+        --color-secondary: #f5b700;
+        --color-secondary-light: #ffd54f;
+        --color-accent: #06b6d4;
+        --color-light: #f6f8fb;
+        --color-dark: #0a1220;
       }
     </style>
     
     <link rel="stylesheet" href="css/styles.css">
     <style type="text/css">
         .service-hero {
-            background: linear-gradient(rgba(0, 84, 179, 0.85), rgba(0, 51, 102, 0.85)), url('/img/averias.webp');
+            background: linear-gradient(135deg, rgba(15, 31, 61, 0.92) 0%, rgba(10, 18, 32, 0.90) 100%), url('/img/averias.webp');
             background-size: cover;
             background-position: center;
         }
@@ -131,12 +134,12 @@
         }
     </script>
 </head>
-<body class="bg-gray-50">
+<body class="bg-light">
     <!-- Skip to main content for accessibility -->
     <a href="#main-content" class="visually-hidden focus:not-sr-only focus:absolute focus:top-0 focus:left-0 focus:bg-primary focus:text-white focus:p-4 focus:z-50">Saltar al contenido principal</a>
     
     <!-- Header -->
-    <header class="bg-primary shadow-md sticky top-0 z-50" role="banner">
+    <header class="bg-dark shadow-lg sticky top-0 z-50" role="banner">
         <div class="container mx-auto px-4 py-3">
             <div class="flex justify-between items-center">
                 <div class="flex items-center">
@@ -179,7 +182,7 @@
             <li><a href="/proyectos.html" class="block py-2 hover:text-secondary">Proyectos</a></li>
             <li><a href="/contacto.html" class="block py-2 hover:text-secondary">Contacto</a></li>
             <li class="pt-8">
-                <a href="tel:+34691502361" class="bg-secondary text-accent font-bold py-3 px-6 rounded-lg inline-block">
+                <a href="tel:+34691502361" class="bg-secondary text-primary font-bold py-3 px-6 rounded-lg inline-block">
                     <i class="fas fa-phone mr-2"></i>Llamar ahora
                 </a>
             </li>
@@ -201,9 +204,9 @@
     <!-- Hero Section -->
     <section class="service-hero py-16 md:py-24 text-white">
         <div class="container mx-auto px-4 text-center">
-            <h1 class="text-4xl md:text-5xl font-bold mb-6">Servicios de Electricidad en Madrid</h1>
+            <h1 class="text-4xl md:text-5xl font-bold mb-6 font-display">Servicios de Electricidad en Madrid</h1>
             <p class="text-xl mb-8 max-w-3xl mx-auto">Soluciones eléctricas integrales para hogares, empresas y comunidades en Madrid. Expertos en instalaciones, reparaciones y puntos de carga para vehículos eléctricos.</p>
-            <a href="/contacto.html" class="bg-secondary text-accent font-bold py-3 px-8 rounded-lg hover:bg-yellow-400 transition duration-300 inline-block">
+            <a href="/contacto.html" class="bg-secondary text-primary font-bold py-3 px-8 rounded-lg hover:bg-secondary-light transition duration-300 inline-block">
                 Solicitar Presupuesto
             </a>
         </div>
@@ -212,7 +215,7 @@
     <!-- Services Grid -->
     <main id="main-content" tabindex="-1" class="py-16 bg-white">
         <div class="container mx-auto px-4">
-            <h2 class="text-3xl font-bold text-center text-accent mb-12">Nuestros Servicios de Electricidad</h2>
+            <h2 class="text-3xl font-bold text-center text-primary mb-12 font-display">Nuestros Servicios de Electricidad</h2>
             
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 <!-- Service 1 -->
@@ -220,7 +223,7 @@
                     <div class="text-primary text-4xl mb-4">
                         <i class="fas fa-house-chimney" aria-hidden="true"></i>
                     </div>
-                    <h3 class="text-xl font-bold text-accent mb-3">Instalaciones Eléctricas</h3>
+                    <h3 class="text-xl font-bold text-primary mb-3 font-display">Instalaciones Eléctricas</h3>
                     <p class="text-gray-700 mb-4">Instalaciones eléctricas completas para viviendas, locales comerciales, oficinas y edificios en Madrid.</p>
                     <ul class="text-gray-700 space-y-2 mb-4">
                         <li class="flex items-start">
@@ -251,7 +254,7 @@
                     <div class="text-primary text-4xl mb-4">
                         <i class="fas fa-tools" aria-hidden="true"></i>
                     </div>
-                    <h3 class="text-xl font-bold text-accent mb-3">Reparaciones Urgentes</h3>
+                    <h3 class="text-xl font-bold text-primary mb-3 font-display">Reparaciones Urgentes</h3>
                     <p class="text-gray-700 mb-4">Servicio de urgencia en Madrid. Diagnóstico preciso y solución de averías eléctricas.</p>
                     <ul class="text-gray-700 space-y-2 mb-4">
                         <li class="flex items-start">
@@ -282,7 +285,7 @@
                     <div class="text-primary text-4xl mb-4">
                         <i class="fas fa-charging-station" aria-hidden="true"></i>
                     </div>
-                    <h3 class="text-xl font-bold text-accent mb-3">Puntos de Carga VE</h3>
+                    <h3 class="text-xl font-bold text-primary mb-3 font-display">Puntos de Carga VE</h3>
                     <p class="text-gray-700 mb-4">Instalación de puntos de carga para vehículos eléctricos en Madrid. Asesoramiento completo y gestión de subvenciones.</p>
                     <ul class="text-gray-700 space-y-2 mb-4">
                         <li class="flex items-start">
@@ -313,7 +316,7 @@
                     <div class="text-primary text-4xl mb-4">
                         <i class="fas fa-solar-panel" aria-hidden="true"></i>
                     </div>
-                    <h3 class="text-xl font-bold text-accent mb-3">Energías Renovables</h3>
+                    <h3 class="text-xl font-bold text-primary mb-3 font-display">Energías Renovables</h3>
                     <p class="text-gray-700 mb-4">Instalación de placas solares y sistemas de autoconsumo en Madrid. Estudio de viabilidad y gestión de subvenciones.</p>
                     <ul class="text-gray-700 space-y-2 mb-4">
                         <li class="flex items-start">
@@ -344,7 +347,7 @@
                     <div class="text-primary text-4xl mb-4">
                         <i class="fas fa-building" aria-hidden="true"></i>
                     </div>
-                    <h3 class="text-xl font-bold text-accent mb-3">Automatización Industrial</h3>
+                    <h3 class="text-xl font-bold text-primary mb-3 font-display">Automatización Industrial</h3>
                     <p class="text-gray-700 mb-4">Sistemas de automatización y cuadros eléctricos para empresas en Madrid. Mejora de eficiencia energética.</p>
                     <ul class="text-gray-700 space-y-2 mb-4">
                         <li class="flex items-start">
@@ -375,7 +378,7 @@
                     <div class="text-primary text-4xl mb-4">
                         <i class="fas fa-lightbulb" aria-hidden="true"></i>
                     </div>
-                    <h3 class="text-xl font-bold text-accent mb-3">Iluminación Eficiente</h3>
+                    <h3 class="text-xl font-bold text-primary mb-3 font-display">Iluminación Eficiente</h3>
                     <p class="text-gray-700 mb-4">Diseño e instalación de sistemas de iluminación LED eficientes para interiores y exteriores en Madrid.</p>
                     <ul class="text-gray-700 space-y-2 mb-4">
                         <li class="flex items-start">
@@ -405,32 +408,32 @@
     </main>
 
     <!-- Process Section -->
-    <section class="py-16 bg-gray-100">
+    <section class="py-16 bg-light">
         <div class="container mx-auto px-4">
-            <h2 class="text-3xl font-bold text-center text-accent mb-12">Nuestro Proceso de Trabajo</h2>
+            <h2 class="text-3xl font-bold text-center text-primary mb-12 font-display">Nuestro Proceso de Trabajo</h2>
             
             <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
                 <div class="text-center">
                     <div class="bg-primary text-white rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4 text-2xl font-bold">1</div>
-                    <h3 class="text-xl font-semibold text-accent mb-2">Contacto</h3>
+                    <h3 class="text-xl font-semibold text-primary mb-2 font-display">Contacto</h3>
                     <p class="text-gray-700">Nos llama o rellena el formulario para explicarnos sus necesidades.</p>
                 </div>
                 
                 <div class="text-center">
                     <div class="bg-primary text-white rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4 text-2xl font-bold">2</div>
-                    <h3 class="text-xl font-semibold text-accent mb-2">Evaluación</h3>
+                    <h3 class="text-xl font-semibold text-primary mb-2 font-display">Evaluación</h3>
                     <p class="text-gray-700">Estudiamos su caso y realizamos un presupuesto personalizado.</p>
                 </div>
                 
                 <div class="text-center">
                     <div class="bg-primary text-white rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4 text-2xl font-bold">3</div>
-                    <h3 class="text-xl font-semibold text-accent mb-2">Ejecución</h3>
+                    <h3 class="text-xl font-semibold text-primary mb-2 font-display">Ejecución</h3>
                     <p class="text-gray-700">Realizamos el trabajo con profesionalidad y en el plazo acordado.</p>
                 </div>
                 
                 <div class="text-center">
                     <div class="bg-primary text-white rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4 text-2xl font-bold">4</div>
-                    <h3 class="text-xl font-semibold text-accent mb-2">Garantía</h3>
+                    <h3 class="text-xl font-semibold text-primary mb-2 font-display">Garantía</h3>
                     <p class="text-gray-700">Revisión final y entrega de garantías por escrito de todos los trabajos.</p>
                 </div>
             </div>
@@ -443,10 +446,10 @@
             <h2 class="text-3xl font-bold mb-6">¿Necesita un Electricista en Madrid?</h2>
             <p class="text-xl mb-8 max-w-3xl mx-auto">Contáctenos para solicitar presupuesto sin compromiso.</p>
             <div class="flex flex-col md:flex-row justify-center gap-4">
-                <a href="tel:+34691502361" class="bg-secondary text-accent font-bold py-3 px-8 rounded-lg hover:bg-yellow-400 transition duration-300">
+                <a href="tel:+34691502361" class="bg-secondary text-primary font-bold py-3 px-8 rounded-lg hover:bg-secondary-light transition duration-300">
                     <i class="fas fa-phone mr-2" aria-hidden="true"></i>691 50 23 61
                 </a>
-                <a href="mailto:info@imelec.es" class="bg-white text-primary font-bold py-3 px-8 rounded-lg hover:bg-gray-100 transition duration-300">
+                <a href="mailto:info@imelec.es" class="bg-white text-primary font-bold py-3 px-8 rounded-lg hover:bg-light transition duration-300">
                     <i class="fas fa-envelope mr-2" aria-hidden="true"></i>info@imelec.es
                 </a>
             </div>
@@ -456,7 +459,7 @@
     <!-- FAQ Section -->
     <section class="py-16 bg-white">
         <div class="container mx-auto px-4">
-            <h2 class="text-3xl font-bold text-center text-accent mb-12">Preguntas Frecuentes - Servicios Eléctricos</h2>
+            <h2 class="text-3xl font-bold text-center text-primary mb-12 font-display">Preguntas Frecuentes - Servicios Eléctricos</h2>
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
                 <div>
                     <h3 class="text-xl font-semibold mb-3">¿Qué zonas de Madrid cubren?</h3>
@@ -487,7 +490,7 @@
     </section>
 
     <!-- Footer -->
-    <footer class="bg-accent text-white py-12" role="contentinfo">
+    <footer class="footer-gradient text-white py-12" role="contentinfo">
         <div class="container mx-auto px-4">
             <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
                 <div>
