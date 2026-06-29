@@ -12,32 +12,9 @@
     const MESSAGES_KEY = 'imelec_chat_messages';
     const CHAT_OPEN_KEY = 'imelec_chat_open';
 
-    const AVATAR_SVG = `
-        <svg viewBox="0 0 64 64" aria-hidden="true" focusable="false">
-            <defs>
-                <linearGradient id="imelecAvatarGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-                    <stop offset="0%" stop-color="#f5b700"/>
-                    <stop offset="100%" stop-color="#06b6d4"/>
-                </linearGradient>
-            </defs>
-            <circle cx="32" cy="32" r="30" fill="url(#imelecAvatarGrad)"/>
-            <circle cx="32" cy="26" r="12" fill="#0f1f3d"/>
-            <circle cx="27" cy="24" r="2.5" fill="#ffffff"/>
-            <circle cx="37" cy="24" r="2.5" fill="#ffffff"/>
-            <path d="M24 34 Q32 41 40 34" stroke="#ffffff" stroke-width="2.5" fill="none" stroke-linecap="round"/>
-            <rect x="18" y="38" width="28" height="10" rx="4" fill="#0f1f3d"/>
-            <circle cx="23" cy="43" r="2" fill="#f5b700"/>
-            <circle cx="32" cy="43" r="2" fill="#06b6d4"/>
-            <circle cx="41" cy="43" r="2" fill="#f5b700"/>
-        </svg>
-    `;
+    const AVATAR_IMG = `<img src="img/chatbot.webp" alt="Avatar del asistente" class="imelec-chat-avatar-img">`;
 
-    const TOGGLE_ICON_OPEN = `
-        <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
-            <path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2z" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-            <path d="M8 10h8M8 14h5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-        </svg>
-    `;
+    const TOGGLE_ICON_OPEN = `<img src="img/chatbot.webp" alt="" class="imelec-toggle-robot">`;
 
     const TOGGLE_ICON_CLOSE = `
         <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
@@ -161,7 +138,7 @@
         container.innerHTML = `
             <div class="imelec-chat-window" id="imelec-chat-window" aria-hidden="true">
                 <div class="imelec-chat-header">
-                    <div class="imelec-chat-avatar">${AVATAR_SVG}</div>
+                    <div class="imelec-chat-avatar">${AVATAR_IMG}</div>
                     <div class="imelec-chat-title">
                         <span class="imelec-chat-name">Asistente Imelec</span>
                         <span class="imelec-chat-status">
@@ -191,7 +168,7 @@
                 </form>
             </div>
             <button type="button" class="imelec-chat-toggle" id="imelec-chat-toggle" aria-label="Abrir asistente de Imelec">
-                <span class="imelec-toggle-bg" aria-hidden="true"></span>
+                <span class="imelec-toggle-label" aria-hidden="true">¿Te ayudamos?</span>
                 <span class="imelec-toggle-icon imelec-toggle-open">${TOGGLE_ICON_OPEN}</span>
                 <span class="imelec-toggle-icon imelec-toggle-close">${TOGGLE_ICON_CLOSE}</span>
             </button>
@@ -225,6 +202,12 @@
 
             if (wasChatOpen()) {
                 this.open();
+            } else {
+                // Mostrar la etiqueta de invitación brevemente al cargar
+                this.elements.toggle.classList.add('imelec-toggle-label--visible');
+                setTimeout(() => {
+                    this.elements.toggle.classList.remove('imelec-toggle-label--visible');
+                }, 5000);
             }
         }
 

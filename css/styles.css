@@ -1008,57 +1008,132 @@ button, [role="button"], .btn, a[href] {
 /* Toggle button */
 .imelec-chat-toggle {
     position: relative;
-    width: 4rem;
-    height: 4rem;
+    width: 3.75rem;
+    height: 3.75rem;
     border-radius: 50%;
-    border: none;
+    border: 2px solid #fff;
     cursor: pointer;
     display: flex;
     align-items: center;
     justify-content: center;
     color: var(--color-primary);
-    background: transparent;
+    background: #fff;
     padding: 0;
+    overflow: visible;
+    box-shadow: 0 8px 24px rgba(15, 31, 61, 0.18), 0 2px 6px rgba(15, 31, 61, 0.1);
     transition: transform 0.3s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.3s ease;
+    animation:
+        imelec-toggle-pop 0.7s cubic-bezier(0.22, 1.5, 0.36, 1) both,
+        imelec-toggle-float 4s ease-in-out 0.7s infinite;
 }
 
-.imelec-toggle-bg {
+.imelec-chat-toggle:hover,
+.imelec-chat-toggle:focus-visible {
+    transform: scale(1.06);
+    box-shadow: 0 12px 32px rgba(15, 31, 61, 0.22), 0 0 0 4px rgba(6, 182, 212, 0.12);
+    animation-play-state: paused;
+}
+
+/* Halo pulsante */
+.imelec-chat-toggle::before,
+.imelec-chat-toggle::after {
+    content: '';
     position: absolute;
     inset: 0;
     border-radius: 50%;
-    background: linear-gradient(135deg, var(--color-secondary) 0%, var(--color-secondary-light) 55%, var(--color-accent) 100%);
-    box-shadow: 0 8px 28px rgba(245, 183, 0, 0.45), 0 0 0 4px rgba(245, 183, 0, 0.12);
-    transition: box-shadow 0.3s ease, transform 0.3s ease;
+    border: 2px solid var(--color-accent);
+    opacity: 0;
+    pointer-events: none;
+    animation: imelec-toggle-ring 2.6s cubic-bezier(0.22, 1, 0.36, 1) infinite;
 }
 
-.imelec-chat-toggle:hover .imelec-toggle-bg,
-.imelec-chat-toggle:focus-visible .imelec-toggle-bg {
-    transform: scale(1.05);
-    box-shadow: 0 10px 32px rgba(245, 183, 0, 0.55), 0 0 0 6px rgba(245, 183, 0, 0.18);
+.imelec-chat-toggle::after {
+    border-color: var(--color-secondary);
+    animation-delay: 1.3s;
 }
 
-.imelec-chat-toggle::before {
+.imelec-chatbot--open .imelec-chat-toggle::before,
+.imelec-chatbot--open .imelec-chat-toggle::after {
+    animation-play-state: paused;
+    opacity: 0;
+}
+
+@keyframes imelec-toggle-pop {
+    0% { opacity: 0; transform: scale(0) rotate(-30deg); }
+    60% { transform: scale(1.1) rotate(4deg); }
+    100% { opacity: 1; transform: scale(1) rotate(0deg); }
+}
+
+@keyframes imelec-toggle-float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-6px); }
+}
+
+@keyframes imelec-toggle-ring {
+    0% { transform: scale(1); opacity: 0.55; }
+    100% { transform: scale(1.7); opacity: 0; }
+}
+
+/* Label del toggle */
+.imelec-toggle-label {
+    position: absolute;
+    right: calc(100% + 0.875rem);
+    top: 50%;
+    transform: translateY(-50%) translateX(0.5rem);
+    background: var(--color-primary);
+    color: #fff;
+    padding: 0.5rem 0.875rem;
+    border-radius: 0.625rem;
+    font-size: 0.8125rem;
+    font-weight: 600;
+    white-space: nowrap;
+    box-shadow: 0 4px 14px rgba(15, 31, 61, 0.2);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.imelec-toggle-label::after {
     content: '';
     position: absolute;
-    inset: -6px;
-    border-radius: 50%;
-    background: conic-gradient(from 0deg, var(--color-secondary), var(--color-accent), var(--color-secondary));
-    opacity: 0;
-    filter: blur(10px);
-    animation: imelec-pulse-ring 2.8s ease-in-out infinite;
-    z-index: -1;
+    top: 50%;
+    left: 100%;
+    transform: translateY(-50%);
+    border-width: 6px;
+    border-style: solid;
+    border-color: transparent transparent transparent var(--color-primary);
 }
 
-@keyframes imelec-pulse-ring {
-    0%, 100% { transform: scale(0.9); opacity: 0; }
-    50% { transform: scale(1.15); opacity: 0.35; }
+.imelec-chat-toggle:hover .imelec-toggle-label,
+.imelec-chat-toggle:focus-visible .imelec-toggle-label,
+.imelec-chat-toggle.imelec-toggle-label--visible .imelec-toggle-label {
+    opacity: 1;
+    transform: translateY(-50%) translateX(0);
+}
+
+@media (max-width: 767px) {
+    .imelec-toggle-label {
+        right: auto;
+        left: calc(100% + 0.875rem);
+        transform: translateY(-50%) translateX(-0.5rem);
+    }
+
+    .imelec-toggle-label::after {
+        left: auto;
+        right: 100%;
+        border-color: transparent var(--color-primary) transparent transparent;
+    }
+
+    .imelec-chat-toggle:hover .imelec-toggle-label,
+    .imelec-chat-toggle:focus-visible .imelec-toggle-label,
+    .imelec-chat-toggle.imelec-toggle-label--visible .imelec-toggle-label {
+        transform: translateY(-50%) translateX(0);
+    }
 }
 
 .imelec-toggle-icon {
-    position: relative;
-    z-index: 1;
-    width: 1.75rem;
-    height: 1.75rem;
+    position: absolute;
+    inset: 0;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -1066,22 +1141,27 @@ button, [role="button"], .btn, a[href] {
 }
 
 .imelec-toggle-icon svg {
+    width: 1.5rem;
+    height: 1.5rem;
+}
+
+.imelec-toggle-robot {
     width: 100%;
     height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
 }
 
 .imelec-chatbot--open .imelec-toggle-open,
 .imelec-toggle-close {
     opacity: 0;
-    transform: scale(0.6) rotate(-45deg);
-    position: absolute;
+    transform: scale(0.75);
 }
 
 .imelec-chatbot--open .imelec-toggle-close,
 .imelec-toggle-open {
     opacity: 1;
-    transform: scale(1) rotate(0deg);
-    position: relative;
+    transform: scale(1);
 }
 
 /* Chat window */
@@ -1146,6 +1226,13 @@ button, [role="button"], .btn, a[href] {
 .imelec-chat-avatar svg {
     width: 100%;
     height: 100%;
+    display: block;
+}
+
+.imelec-chat-avatar-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
     display: block;
 }
 
@@ -1246,13 +1333,13 @@ button, [role="button"], .btn, a[href] {
 }
 
 .imelec-chat-message--user .imelec-chat-bubble {
-    background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-light) 100%);
+    background: var(--color-primary);
     color: #fff;
     border-bottom-right-radius: 0.25rem;
 }
 
 .imelec-chat-message--bot .imelec-chat-bubble {
-    background: var(--color-light);
+    background: #fff;
     color: var(--color-text);
     border: 1px solid var(--color-border);
     border-bottom-left-radius: 0.25rem;
@@ -1272,7 +1359,7 @@ button, [role="button"], .btn, a[href] {
 }
 
 .imelec-chat-message--user .imelec-chat-bubble-content strong {
-    color: var(--color-secondary-light);
+    color: var(--color-secondary);
 }
 
 .imelec-chat-bubble-content ul.imelec-chat-list {
@@ -1333,7 +1420,7 @@ button, [role="button"], .btn, a[href] {
     border-radius: 9999px;
     border: 1px solid var(--color-border);
     background: #fff;
-    color: var(--color-primary-light);
+    color: var(--color-primary);
     font-size: 0.8125rem;
     font-weight: 600;
     cursor: pointer;
@@ -1343,8 +1430,8 @@ button, [role="button"], .btn, a[href] {
 
 .imelec-chat-suggestion:hover,
 .imelec-chat-suggestion:focus-visible {
-    background: var(--color-accent-soft);
-    border-color: var(--color-accent);
+    background: var(--color-light);
+    border-color: var(--color-primary-light);
     transform: translateY(-1px);
 }
 
@@ -1397,18 +1484,19 @@ button, [role="button"], .btn, a[href] {
     display: flex;
     align-items: center;
     justify-content: center;
-    background: linear-gradient(135deg, var(--color-secondary) 0%, var(--color-secondary-light) 100%);
-    color: var(--color-primary);
+    background: var(--color-primary);
+    color: #fff;
     cursor: pointer;
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
-    box-shadow: 0 4px 14px rgba(245, 183, 0, 0.3);
+    transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
+    box-shadow: 0 4px 14px rgba(15, 31, 61, 0.2);
     padding: 0.625rem;
 }
 
 .imelec-chat-send:hover:not(:disabled),
 .imelec-chat-send:focus-visible {
     transform: scale(1.08);
-    box-shadow: 0 6px 18px rgba(245, 183, 0, 0.4);
+    background: var(--color-primary-light);
+    box-shadow: 0 6px 18px rgba(15, 31, 61, 0.28);
 }
 
 .imelec-chat-send:disabled {
