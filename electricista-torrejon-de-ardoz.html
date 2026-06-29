@@ -11,7 +11,7 @@
     <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://cdn.jsdelivr.net https://cdnjs.cloudflare.com 'unsafe-inline'; style-src 'self' https://fonts.googleapis.com https://cdnjs.cloudflare.com https://cdn.jsdelivr.net 'unsafe-inline'; font-src https://fonts.gstatic.com https://cdnjs.cloudflare.com; img-src 'self' https: data:; connect-src 'self' https://imelec-emails.vercel.app https://jmfortiz.jasodev.es https://cdn.jsdelivr.net; frame-src 'none'; base-uri 'self'; form-action 'self';">
     <link rel="canonical" href="https://www.imelec.es/electricista-torrejon-de-ardoz.html">
     <link rel="shortcut icon" href="favicon.svg" type="image/svg+xml">
-    <link href="https://cdn.jsdelivr.net/npm/@n8n/chat/dist/style.css" rel="stylesheet" />
+
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -242,14 +242,8 @@
         <a href="tel:+34691502361" class="fab-btn fab-phone" aria-label="Llamar ahora"><span class="fab-label">Llamar</span><i class="fas fa-phone"></i></a>
     </div>
 
-    <script type="module">
-        import { createChat } from 'https://cdn.jsdelivr.net/npm/@n8n/chat/dist/chat.bundle.es.js';
-        createChat({
-            webhookUrl: 'https://jmfortiz.jasodev.es/webhook/a1ad5120-e422-43e0-a1d7-1bf36df3d58b/chat',
-            initialMessages: ['Asistente Imelec Electricdad.'],
-            i18n: { en: { title: 'Imelec Electricidad', subtitle: "", footer: '', getStarted: 'New Conversation', inputPlaceholder: 'Escribe tu consulta..' } },
-        });
-    </script>
+    <!-- Imelec Chatbot -->
+    <script src="js/chatbot.js"></script>
     <script src="js/main.js"></script>
 </body>
 </html>
