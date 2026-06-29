@@ -589,63 +589,6 @@ button, [role="button"], .btn, a[href] {
     }
 }
 
-/* Testimonials
-   ---------------------------------------- */
-.testimonial-card {
-    position: relative;
-    background: var(--color-surface);
-    padding: 2rem 1.75rem 1.75rem;
-    border-radius: var(--radius-lg);
-    box-shadow: var(--shadow-card);
-    border-top: 4px solid var(--color-secondary);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.testimonial-card:hover {
-    transform: translateY(-6px);
-    box-shadow: var(--shadow-card-hover);
-}
-
-.testimonial-quote {
-    position: absolute;
-    top: 0.5rem;
-    left: 1.25rem;
-    font-family: Georgia, serif;
-    font-size: 4.5rem;
-    line-height: 1;
-    color: rgba(245, 183, 0, 0.18);
-    pointer-events: none;
-}
-
-.testimonial-stars {
-    color: var(--color-secondary);
-    font-size: 1rem;
-    margin-bottom: 0.75rem;
-}
-
-.testimonial-author {
-    display: flex;
-    align-items: center;
-    gap: 0.75rem;
-    margin-top: 1.25rem;
-    padding-top: 1rem;
-    border-top: 1px solid var(--color-border);
-}
-
-.testimonial-avatar {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 2.75rem;
-    height: 2.75rem;
-    border-radius: 9999px;
-    background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-light) 100%);
-    color: #fff;
-    font-weight: 700;
-    font-size: 0.9375rem;
-    flex-shrink: 0;
-}
-
 /* FAQ Accordion
    ---------------------------------------- */
 .faq-list {
@@ -1542,7 +1485,8 @@ button, [role="button"], .btn, a[href] {
         animation: none;
     }
 
-    .imelec-chat-toggle::before {
+    .imelec-chat-toggle::before,
+    .imelec-chat-toggle::after {
         animation: none;
     }
 
@@ -1550,3 +1494,5 @@ button, [role="button"], .btn, a[href] {
         animation: none;
     }
 }
+
+
