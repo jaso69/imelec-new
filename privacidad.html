@@ -14,18 +14,21 @@
     <!-- Preload critical resources -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
     <!-- Tailwind CSS -->
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <style type="text/tailwindcss">
       @theme {
-        --color-primary: #0056b3;
-        --color-secondary: #FFD700;
-        --color-accent: #003366;
-        --color-light: #f8f9fa;
-        --color-dark: #212529;
+        --color-primary: #0F1B2D;
+        --color-primary-light: #1E2F45;
+        --color-secondary: #3A4A5E;
+        --color-secondary-light: #4E6076;
+        --color-accent: #F2A93B;
+        --color-accent-hover: #2E7DE1;
+        --color-bg-light: #F7F8FA;
+        --color-text: #1A1F26;
       }
     </style>
     
@@ -51,10 +54,10 @@
                 
                 <nav aria-label="Navegación principal">
                     <ul class="hidden md:flex space-x-8">
-                        <li><a href="/index.html" class="text-white hover:text-secondary font-medium">Inicio</a></li>
-                        <li><a href="/servicios.html" class="text-white hover:text-secondary font-medium">Servicios</a></li>
-                        <li><a href="/proyectos.html" class="text-white hover:text-secondary font-medium">Proyectos</a></li>
-                        <li><a href="/contacto.html" class="text-white hover:text-secondary font-medium">Contacto</a></li>
+                        <li><a href="/index.html" class="text-white hover:text-accent font-medium">Inicio</a></li>
+                        <li><a href="/servicios.html" class="text-white hover:text-accent font-medium">Servicios</a></li>
+                        <li><a href="/proyectos.html" class="text-white hover:text-accent font-medium">Proyectos</a></li>
+                        <li><a href="/contacto.html" class="text-white hover:text-accent font-medium">Contacto</a></li>
                     </ul>
                 </nav>
                 
@@ -75,12 +78,12 @@
             <span class="visually-hidden">Cerrar menú</span>
         </button>
         <ul class="space-y-6 text-white text-xl">
-            <li><a href="/index.html" class="block py-2 hover:text-secondary">Inicio</a></li>
-            <li><a href="/servicios.html" class="block py-2 hover:text-secondary">Servicios</a></li>
-            <li><a href="/proyectos.html" class="block py-2 hover:text-secondary">Proyectos</a></li>
-            <li><a href="/contacto.html" class="block py-2 hover:text-secondary">Contacto</a></li>
+            <li><a href="/index.html" class="block py-2 hover:text-accent">Inicio</a></li>
+            <li><a href="/servicios.html" class="block py-2 hover:text-accent">Servicios</a></li>
+            <li><a href="/proyectos.html" class="block py-2 hover:text-accent">Proyectos</a></li>
+            <li><a href="/contacto.html" class="block py-2 hover:text-accent">Contacto</a></li>
             <li class="pt-8">
-                <a href="tel:+34691502361" class="bg-secondary text-primary font-bold py-3 px-6 rounded-lg inline-block">
+                <a href="tel:+34691502361" class="bg-accent text-primary font-bold py-3 px-6 rounded-lg inline-block">
                     <i class="fas fa-phone mr-2"></i>Llamar ahora
                 </a>
             </li>
@@ -181,20 +184,20 @@
                 <div>
                     <h3 class="text-xl font-bold mb-4">Servicios</h3>
                     <ul class="space-y-2">
-                        <li><a href="/servicios.html" class="hover:text-secondary">Instalaciones eléctricas</a></li>
-                        <li><a href="/servicios.html" class="hover:text-secondary">Reparaciones y mantenimiento</a></li>
-                        <li><a href="/servicios.html" class="hover:text-secondary">Puntos de carga para VE</a></li>
-                        <li><a href="/servicios.html" class="hover:text-secondary">Energías renovables</a></li>
-                        <li><a href="/servicios.html" class="hover:text-secondary">Automatización industrial</a></li>
+                        <li><a href="/servicios.html" class="hover:text-accent">Instalaciones eléctricas</a></li>
+                        <li><a href="/servicios.html" class="hover:text-accent">Reparaciones y mantenimiento</a></li>
+                        <li><a href="/servicios.html" class="hover:text-accent">Puntos de carga para VE</a></li>
+                        <li><a href="/servicios.html" class="hover:text-accent">Energías renovables</a></li>
+                        <li><a href="/servicios.html" class="hover:text-accent">Automatización industrial</a></li>
                     </ul>
                 </div>
                 
                 <div>
                     <h3 class="text-xl font-bold mb-4">Enlaces rápidos</h3>
                     <ul class="space-y-2">
-                        <li><a href="/index.html" class="hover:text-secondary">Inicio</a></li>
-                        <li><a href="/servicios.html" class="hover:text-secondary">Servicios</a></li>
-                        <li><a href="/contacto.html" class="hover:text-secondary">Contacto</a></li>
+                        <li><a href="/index.html" class="hover:text-accent">Inicio</a></li>
+                        <li><a href="/servicios.html" class="hover:text-accent">Servicios</a></li>
+                        <li><a href="/contacto.html" class="hover:text-accent">Contacto</a></li>
                     </ul>
                 </div>
                 
@@ -220,7 +223,7 @@
             <div class="border-t border-gray-600 mt-8 pt-8 text-center">
                 <p>&copy; <span id="current-year">2026</span> IMELEC - Electricistas en Madrid. Todos los derechos reservados.</p>
                 <p class="mt-2 text-sm text-gray-400">
-                    <a href="/privacidad.html" class="hover:text-secondary" aria-current="page">Política de Privacidad</a>
+                    <a href="/privacidad.html" class="hover:text-accent" aria-current="page">Política de Privacidad</a>
                 </p>
             </div>
         </div>

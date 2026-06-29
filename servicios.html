@@ -39,8 +39,8 @@
     <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com">
 
     <!-- Preload critical resources -->
-    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@400;500;600;700;800&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@400;500;600;700;800&display=swap"></noscript>
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@600;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@600;700&display=swap"></noscript>
     <link rel="preload" href="css/styles.css" as="style">
     <link rel="preload" href="/img/averias.webp" as="image" type="image/webp">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" media="print" onload="this.media='all'">
@@ -50,20 +50,21 @@
      <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
      <style type="text/tailwindcss">
       @theme {
-        --color-primary: #0f1f3d;
-        --color-primary-light: #1a3a66;
-        --color-secondary: #f5b700;
-        --color-secondary-light: #ffd54f;
-        --color-accent: #06b6d4;
-        --color-light: #f6f8fb;
-        --color-dark: #0a1220;
+        --color-primary: #0F1B2D;
+        --color-primary-light: #1E2F45;
+        --color-secondary: #3A4A5E;
+        --color-secondary-light: #4E6076;
+        --color-accent: #F2A93B;
+        --color-accent-hover: #2E7DE1;
+        --color-bg-light: #F7F8FA;
+        --color-text: #1A1F26;
       }
     </style>
     
     <link rel="stylesheet" href="css/styles.css">
     <style type="text/css">
         .service-hero {
-            background: linear-gradient(135deg, rgba(15, 31, 61, 0.92) 0%, rgba(10, 18, 32, 0.90) 100%), url('/img/averias.webp');
+            background: linear-gradient(135deg, rgba(15, 27, 45, 0.92) 0%, rgba(15, 27, 45, 0.90) 100%), url('/img/averias.webp');
             background-size: cover;
             background-position: center;
         }
@@ -153,10 +154,10 @@
                 
                 <nav aria-label="Navegación principal">
                     <ul class="hidden md:flex space-x-8">
-                        <li><a href="/index.html" class="text-white hover:text-secondary font-medium">Inicio</a></li>
-                        <li><a href="#main-content" class="text-white hover:text-secondary font-medium" aria-current="page">Servicios</a></li>
-                        <li><a href="/proyectos.html" class="text-white hover:text-secondary font-medium">Proyectos</a></li>
-                        <li><a href="/contacto.html" class="text-white hover:text-secondary font-medium">Contacto</a></li>
+                        <li><a href="/index.html" class="text-white hover:text-accent font-medium">Inicio</a></li>
+                        <li><a href="#main-content" class="text-white hover:text-accent font-medium" aria-current="page">Servicios</a></li>
+                        <li><a href="/proyectos.html" class="text-white hover:text-accent font-medium">Proyectos</a></li>
+                        <li><a href="/contacto.html" class="text-white hover:text-accent font-medium">Contacto</a></li>
                     </ul>
                 </nav>
                 
@@ -177,12 +178,12 @@
             <span class="visually-hidden">Cerrar menú</span>
         </button>
         <ul class="space-y-6 text-white text-xl">
-            <li><a href="/index.html" class="block py-2 hover:text-secondary">Inicio</a></li>
-            <li><a href="/servicios.html" class="block py-2 hover:text-secondary">Servicios</a></li>
-            <li><a href="/proyectos.html" class="block py-2 hover:text-secondary">Proyectos</a></li>
-            <li><a href="/contacto.html" class="block py-2 hover:text-secondary">Contacto</a></li>
+            <li><a href="/index.html" class="block py-2 hover:text-accent">Inicio</a></li>
+            <li><a href="/servicios.html" class="block py-2 hover:text-accent">Servicios</a></li>
+            <li><a href="/proyectos.html" class="block py-2 hover:text-accent">Proyectos</a></li>
+            <li><a href="/contacto.html" class="block py-2 hover:text-accent">Contacto</a></li>
             <li class="pt-8">
-                <a href="tel:+34691502361" class="bg-secondary text-primary font-bold py-3 px-6 rounded-lg inline-block">
+                <a href="tel:+34691502361" class="bg-accent text-primary font-bold py-3 px-6 rounded-lg inline-block">
                     <i class="fas fa-phone mr-2"></i>Llamar ahora
                 </a>
             </li>
@@ -206,7 +207,7 @@
         <div class="container mx-auto px-4 text-center">
             <h1 class="text-4xl md:text-5xl font-bold mb-6 font-display">Servicios de Electricidad en Madrid</h1>
             <p class="text-xl mb-8 max-w-3xl mx-auto">Soluciones eléctricas integrales para hogares, empresas y comunidades en Madrid. Expertos en instalaciones, reparaciones y puntos de carga para vehículos eléctricos.</p>
-            <a href="/contacto.html" class="bg-secondary text-primary font-bold py-3 px-8 rounded-lg hover:bg-secondary-light transition duration-300 inline-block">
+            <a href="/contacto.html" class="bg-accent text-primary font-bold py-3 px-8 rounded-lg hover:bg-accent-hover transition duration-300 inline-block">
                 Solicitar Presupuesto
             </a>
         </div>
@@ -217,191 +218,157 @@
         <div class="container mx-auto px-4">
             <h2 class="text-3xl font-bold text-center text-primary mb-12 font-display">Nuestros Servicios de Electricidad</h2>
             
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!-- Service 1 -->
-                <div class="service-card bg-light rounded-lg p-6 shadow-md hover:shadow-xl border-l-4 border-primary">
-                    <div class="text-primary text-4xl mb-4">
-                        <i class="fas fa-house-chimney" aria-hidden="true"></i>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8">
+                <!-- Service 1: destacado -->
+                <div class="service-card service-card--featured bg-light rounded-xl p-8 shadow-md hover:shadow-xl border-l-4 border-accent">
+                    <div class="service-icon-wrap service-icon-wrap--featured">
+                        <i class="fas fa-network-wired" aria-hidden="true"></i>
                     </div>
-                    <h3 class="text-xl font-bold text-primary mb-3 font-display">Instalaciones Eléctricas</h3>
-                    <p class="text-gray-700 mb-4">Instalaciones eléctricas completas para viviendas, locales comerciales, oficinas y edificios en Madrid.</p>
-                    <ul class="text-gray-700 space-y-2 mb-4">
+                    <h3 class="text-2xl lg:text-3xl font-bold text-primary mb-3 font-display">Instalaciones Eléctricas</h3>
+                    <p class="text-secondary mb-4">Instalaciones eléctricas completas para viviendas, locales comerciales, oficinas y edificios en Madrid.</p>
+                    <ul class="text-secondary space-y-2 mb-4">
                         <li class="flex items-start">
-                            <i class="fas fa-check text-primary mr-2 mt-1" aria-hidden="true"></i>
+                            <i class="fas fa-check text-accent mr-2 mt-1" aria-hidden="true"></i>
                             <span>Cuadros eléctricos y automatismos</span>
                         </li>
                         <li class="flex items-start">
-                            <i class="fas fa-check text-primary mr-2 mt-1" aria-hidden="true"></i>
+                            <i class="fas fa-check text-accent mr-2 mt-1" aria-hidden="true"></i>
                             <span>Instalaciones nuevas y reformas</span>
                         </li>
                         <li class="flex items-start">
-                            <i class="fas fa-check text-primary mr-2 mt-1" aria-hidden="true"></i>
+                            <i class="fas fa-check text-accent mr-2 mt-1" aria-hidden="true"></i>
                             <span>Certificados de instalación eléctrica</span>
                         </li>
                         <li class="flex items-start">
-                            <i class="fas fa-check text-primary mr-2 mt-1" aria-hidden="true"></i>
+                            <i class="fas fa-check text-accent mr-2 mt-1" aria-hidden="true"></i>
                             <span>Cumplimiento del REBT</span>
                         </li>
                     </ul>
-                    <a href="/contacto.html" class="text-primary font-semibold hover:underline inline-flex items-center">
-                        Solicitar información
-                        <i class="fas fa-arrow-right ml-2" aria-hidden="true"></i>
-                    </a>
+                    <a href="/contacto.html" class="service-link">Solicitar información <i class="fas fa-arrow-right text-sm" aria-hidden="true"></i></a>
                 </div>
-                
-                <!-- Service 2 -->
-                <div class="service-card bg-light rounded-lg p-6 shadow-md hover:shadow-xl border-l-4 border-primary">
-                    <div class="text-primary text-4xl mb-4">
-                        <i class="fas fa-tools" aria-hidden="true"></i>
+
+                <!-- Service 2: destacado -->
+                <div class="service-card service-card--featured bg-light rounded-xl p-8 shadow-md hover:shadow-xl border-l-4 border-accent">
+                    <div class="service-icon-wrap service-icon-wrap--featured">
+                        <i class="fas fa-bolt" aria-hidden="true"></i>
                     </div>
-                    <h3 class="text-xl font-bold text-primary mb-3 font-display">Reparaciones Urgentes</h3>
-                    <p class="text-gray-700 mb-4">Servicio de urgencia en Madrid. Diagnóstico preciso y solución de averías eléctricas.</p>
-                    <ul class="text-gray-700 space-y-2 mb-4">
+                    <h3 class="text-2xl lg:text-3xl font-bold text-primary mb-3 font-display">Reparaciones Urgentes</h3>
+                    <p class="text-secondary mb-4">Servicio de urgencia en Madrid. Diagnóstico preciso y solución de averías eléctricas.</p>
+                    <ul class="text-secondary space-y-2 mb-4">
                         <li class="flex items-start">
-                            <i class="fas fa-check text-primary mr-2 mt-1" aria-hidden="true"></i>
+                            <i class="fas fa-check text-accent mr-2 mt-1" aria-hidden="true"></i>
                             <span>Averías eléctricas urgentes</span>
                         </li>
                         <li class="flex items-start">
-                            <i class="fas fa-check text-primary mr-2 mt-1" aria-hidden="true"></i>
+                            <i class="fas fa-check text-accent mr-2 mt-1" aria-hidden="true"></i>
                             <span>Caídas de tensión y cortes de luz</span>
                         </li>
                         <li class="flex items-start">
-                            <i class="fas fa-check text-primary mr-2 mt-1" aria-hidden="true"></i>
+                            <i class="fas fa-check text-accent mr-2 mt-1" aria-hidden="true"></i>
                             <span>Cambio de cuadros eléctricos</span>
                         </li>
                         <li class="flex items-start">
-                            <i class="fas fa-check text-primary mr-2 mt-1" aria-hidden="true"></i>
+                            <i class="fas fa-check text-accent mr-2 mt-1" aria-hidden="true"></i>
                             <span>Reparación de enchufes y puntos de luz</span>
                         </li>
                     </ul>
-                    <a href="tel:+34691502361" class="text-primary font-semibold hover:underline inline-flex items-center">
-                        Llamar ahora
-                        <i class="fas fa-phone ml-2" aria-hidden="true"></i>
-                    </a>
+                    <a href="tel:+34691502361" class="service-link">Llamar ahora <i class="fas fa-phone text-sm" aria-hidden="true"></i></a>
                 </div>
-                
+
                 <!-- Service 3 -->
-                <div class="service-card bg-light rounded-lg p-6 shadow-md hover:shadow-xl border-l-4 border-primary">
-                    <div class="text-primary text-4xl mb-4">
+                <div class="service-card bg-light rounded-xl p-6 shadow-md hover:shadow-xl border-l-4 border-primary">
+                    <div class="service-icon-wrap">
                         <i class="fas fa-charging-station" aria-hidden="true"></i>
                     </div>
                     <h3 class="text-xl font-bold text-primary mb-3 font-display">Puntos de Carga VE</h3>
-                    <p class="text-gray-700 mb-4">Instalación de puntos de carga para vehículos eléctricos en Madrid. Asesoramiento completo y gestión de subvenciones.</p>
-                    <ul class="text-gray-700 space-y-2 mb-4">
+                    <p class="text-secondary mb-4">Instalación de puntos de carga para vehículos eléctricos en Madrid. Asesoramiento completo y gestión de subvenciones.</p>
+                    <ul class="text-secondary space-y-2 mb-4">
                         <li class="flex items-start">
-                            <i class="fas fa-check text-primary mr-2 mt-1" aria-hidden="true"></i>
+                            <i class="fas fa-check text-accent mr-2 mt-1" aria-hidden="true"></i>
                             <span>Instalación Wallbox y puntos de carga</span>
                         </li>
                         <li class="flex items-start">
-                            <i class="fas fa-check text-primary mr-2 mt-1" aria-hidden="true"></i>
+                            <i class="fas fa-check text-accent mr-2 mt-1" aria-hidden="true"></i>
                             <span>Asesoramiento en potencia necesaria</span>
                         </li>
                         <li class="flex items-start">
-                            <i class="fas fa-check text-primary mr-2 mt-1" aria-hidden="true"></i>
+                            <i class="fas fa-check text-accent mr-2 mt-1" aria-hidden="true"></i>
                             <span>Gestión de subvenciones y ayudas</span>
                         </li>
-                        <li class="flex items-start">
-                            <i class="fas fa-check text-primary mr-2 mt-1" aria-hidden="true"></i>
-                            <span>Instalaciones para comunidades</span>
-                        </li>
                     </ul>
-                    <a href="/contacto.html" class="text-primary font-semibold hover:underline inline-flex items-center">
-                        Solicitar información
-                        <i class="fas fa-arrow-right ml-2" aria-hidden="true"></i>
-                    </a>
+                    <a href="/contacto.html" class="service-link">Solicitar información <i class="fas fa-arrow-right text-sm" aria-hidden="true"></i></a>
                 </div>
-                
+
                 <!-- Service 4 -->
-                <div class="service-card bg-light rounded-lg p-6 shadow-md hover:shadow-xl border-l-4 border-primary">
-                    <div class="text-primary text-4xl mb-4">
+                <div class="service-card bg-light rounded-xl p-6 shadow-md hover:shadow-xl border-l-4 border-primary">
+                    <div class="service-icon-wrap">
                         <i class="fas fa-solar-panel" aria-hidden="true"></i>
                     </div>
                     <h3 class="text-xl font-bold text-primary mb-3 font-display">Energías Renovables</h3>
-                    <p class="text-gray-700 mb-4">Instalación de placas solares y sistemas de autoconsumo en Madrid. Estudio de viabilidad y gestión de subvenciones.</p>
-                    <ul class="text-gray-700 space-y-2 mb-4">
+                    <p class="text-secondary mb-4">Instalación de placas solares y sistemas de autoconsumo en Madrid. Estudio de viabilidad y gestión de subvenciones.</p>
+                    <ul class="text-secondary space-y-2 mb-4">
                         <li class="flex items-start">
-                            <i class="fas fa-check text-primary mr-2 mt-1" aria-hidden="true"></i>
+                            <i class="fas fa-check text-accent mr-2 mt-1" aria-hidden="true"></i>
                             <span>Instalación de placas solares</span>
                         </li>
                         <li class="flex items-start">
-                            <i class="fas fa-check text-primary mr-2 mt-1" aria-hidden="true"></i>
+                            <i class="fas fa-check text-accent mr-2 mt-1" aria-hidden="true"></i>
                             <span>Sistemas de autoconsumo</span>
                         </li>
                         <li class="flex items-start">
-                            <i class="fas fa-check text-primary mr-2 mt-1" aria-hidden="true"></i>
-                            <span>Estudios de viabilidad y rentabilidad</span>
-                        </li>
-                        <li class="flex items-start">
-                            <i class="fas fa-check text-primary mr-2 mt-1" aria-hidden="true"></i>
+                            <i class="fas fa-check text-accent mr-2 mt-1" aria-hidden="true"></i>
                             <span>Gestión de subvenciones y bonificaciones</span>
                         </li>
                     </ul>
-                    <a href="/contacto.html" class="text-primary font-semibold hover:underline inline-flex items-center">
-                        Solicitar información
-                        <i class="fas fa-arrow-right ml-2" aria-hidden="true"></i>
-                    </a>
+                    <a href="/contacto.html" class="service-link">Solicitar información <i class="fas fa-arrow-right text-sm" aria-hidden="true"></i></a>
                 </div>
-                
+
                 <!-- Service 5 -->
-                <div class="service-card bg-light rounded-lg p-6 shadow-md hover:shadow-xl border-l-4 border-primary">
-                    <div class="text-primary text-4xl mb-4">
-                        <i class="fas fa-building" aria-hidden="true"></i>
+                <div class="service-card bg-light rounded-xl p-6 shadow-md hover:shadow-xl border-l-4 border-primary">
+                    <div class="service-icon-wrap">
+                        <i class="fas fa-gears" aria-hidden="true"></i>
                     </div>
                     <h3 class="text-xl font-bold text-primary mb-3 font-display">Automatización Industrial</h3>
-                    <p class="text-gray-700 mb-4">Sistemas de automatización y cuadros eléctricos para empresas en Madrid. Mejora de eficiencia energética.</p>
-                    <ul class="text-gray-700 space-y-2 mb-4">
+                    <p class="text-secondary mb-4">Sistemas de automatización y cuadros eléctricos para empresas en Madrid. Mejora de eficiencia energética.</p>
+                    <ul class="text-secondary space-y-2 mb-4">
                         <li class="flex items-start">
-                            <i class="fas fa-check text-primary mr-2 mt-1" aria-hidden="true"></i>
+                            <i class="fas fa-check text-accent mr-2 mt-1" aria-hidden="true"></i>
                             <span>Automatización industrial</span>
                         </li>
                         <li class="flex items-start">
-                            <i class="fas fa-check text-primary mr-2 mt-1" aria-hidden="true"></i>
+                            <i class="fas fa-check text-accent mr-2 mt-1" aria-hidden="true"></i>
                             <span>Cuadros eléctricos personalizados</span>
                         </li>
                         <li class="flex items-start">
-                            <i class="fas fa-check text-primary mr-2 mt-1" aria-hidden="true"></i>
+                            <i class="fas fa-check text-accent mr-2 mt-1" aria-hidden="true"></i>
                             <span>Control y monitorización de consumo</span>
                         </li>
-                        <li class="flex items-start">
-                            <i class="fas fa-check text-primary mr-2 mt-1" aria-hidden="true"></i>
-                            <span>Mejora de eficiencia energética</span>
-                        </li>
                     </ul>
-                    <a href="/contacto.html" class="text-primary font-semibold hover:underline inline-flex items-center">
-                        Solicitar información
-                        <i class="fas fa-arrow-right ml-2" aria-hidden="true"></i>
-                    </a>
+                    <a href="/contacto.html" class="service-link">Solicitar información <i class="fas fa-arrow-right text-sm" aria-hidden="true"></i></a>
                 </div>
-                
+
                 <!-- Service 6 -->
-                <div class="service-card bg-light rounded-lg p-6 shadow-md hover:shadow-xl border-l-4 border-primary">
-                    <div class="text-primary text-4xl mb-4">
+                <div class="service-card bg-light rounded-xl p-6 shadow-md hover:shadow-xl border-l-4 border-primary">
+                    <div class="service-icon-wrap">
                         <i class="fas fa-lightbulb" aria-hidden="true"></i>
                     </div>
                     <h3 class="text-xl font-bold text-primary mb-3 font-display">Iluminación Eficiente</h3>
-                    <p class="text-gray-700 mb-4">Diseño e instalación de sistemas de iluminación LED eficientes para interiores y exteriores en Madrid.</p>
-                    <ul class="text-gray-700 space-y-2 mb-4">
+                    <p class="text-secondary mb-4">Diseño e instalación de sistemas de iluminación LED eficientes para interiores y exteriores en Madrid.</p>
+                    <ul class="text-secondary space-y-2 mb-4">
                         <li class="flex items-start">
-                            <i class="fas fa-check text-primary mr-2 mt-1" aria-hidden="true"></i>
+                            <i class="fas fa-check text-accent mr-2 mt-1" aria-hidden="true"></i>
                             <span>Iluminación LED eficiente</span>
                         </li>
                         <li class="flex items-start">
-                            <i class="fas fa-check text-primary mr-2 mt-1" aria-hidden="true"></i>
+                            <i class="fas fa-check text-accent mr-2 mt-1" aria-hidden="true"></i>
                             <span>Diseño de proyectos de iluminación</span>
                         </li>
                         <li class="flex items-start">
-                            <i class="fas fa-check text-primary mr-2 mt-1" aria-hidden="true"></i>
-                            <span>Automatización de iluminación</span>
-                        </li>
-                        <li class="flex items-start">
-                            <i class="fas fa-check text-primary mr-2 mt-1" aria-hidden="true"></i>
+                            <i class="fas fa-check text-accent mr-2 mt-1" aria-hidden="true"></i>
                             <span>Estudios de ahorro energético</span>
                         </li>
                     </ul>
-                    <a href="/contacto.html" class="text-primary font-semibold hover:underline inline-flex items-center">
-                        Solicitar información
-                        <i class="fas fa-arrow-right ml-2" aria-hidden="true"></i>
-                    </a>
+                    <a href="/contacto.html" class="service-link">Solicitar información <i class="fas fa-arrow-right text-sm" aria-hidden="true"></i></a>
                 </div>
             </div>
         </div>
@@ -446,7 +413,7 @@
             <h2 class="text-3xl font-bold mb-6">¿Necesita un Electricista en Madrid?</h2>
             <p class="text-xl mb-8 max-w-3xl mx-auto">Contáctenos para solicitar presupuesto sin compromiso.</p>
             <div class="flex flex-col md:flex-row justify-center gap-4">
-                <a href="tel:+34691502361" class="bg-secondary text-primary font-bold py-3 px-8 rounded-lg hover:bg-secondary-light transition duration-300">
+                <a href="tel:+34691502361" class="bg-accent text-primary font-bold py-3 px-8 rounded-lg hover:bg-accent-hover transition duration-300">
                     <i class="fas fa-phone mr-2" aria-hidden="true"></i>691 50 23 61
                 </a>
                 <a href="mailto:info@imelec.es" class="bg-white text-primary font-bold py-3 px-8 rounded-lg hover:bg-light transition duration-300">
@@ -502,20 +469,20 @@
                 <div>
                     <h3 class="text-xl font-bold mb-4">Servicios</h3>
                     <ul class="space-y-2">
-                        <li><a href="/servicios.html" class="hover:text-secondary">Instalaciones eléctricas</a></li>
-                        <li><a href="/servicios.html" class="hover:text-secondary">Reparaciones y mantenimiento</a></li>
-                        <li><a href="/servicios.html" class="hover:text-secondary">Puntos de carga para VE</a></li>
-                        <li><a href="/servicios.html" class="hover:text-secondary">Energías renovables</a></li>
-                        <li><a href="/servicios.html" class="hover:text-secondary">Automatización industrial</a></li>
+                        <li><a href="/servicios.html" class="hover:text-accent">Instalaciones eléctricas</a></li>
+                        <li><a href="/servicios.html" class="hover:text-accent">Reparaciones y mantenimiento</a></li>
+                        <li><a href="/servicios.html" class="hover:text-accent">Puntos de carga para VE</a></li>
+                        <li><a href="/servicios.html" class="hover:text-accent">Energías renovables</a></li>
+                        <li><a href="/servicios.html" class="hover:text-accent">Automatización industrial</a></li>
                     </ul>
                 </div>
                 
                 <div>
                     <h3 class="text-xl font-bold mb-4">Enlaces rápidos</h3>
                     <ul class="space-y-2">
-                        <li><a href="/index.html" class="hover:text-secondary">Inicio</a></li>
-                        <li><a href="/servicios.html" class="hover:text-secondary">Servicios</a></li>
-                        <li><a href="/contacto.html" class="hover:text-secondary">Contacto</a></li>
+                        <li><a href="/index.html" class="hover:text-accent">Inicio</a></li>
+                        <li><a href="/servicios.html" class="hover:text-accent">Servicios</a></li>
+                        <li><a href="/contacto.html" class="hover:text-accent">Contacto</a></li>
                     </ul>
                 </div>
                 
@@ -542,8 +509,8 @@
             <div class="border-t border-gray-600 mt-8 pt-8 text-center">
                 <p>&copy; <span id="current-year">2026</span> IMELEC - Electricistas en Madrid. Todos los derechos reservados.</p>
                 <p class="mt-2 text-sm text-gray-400">
-                    <a href="/privacidad.html" class="hover:text-secondary">Política de Privacidad</a> |
-                    <a href="/aviso-legal.html" class="hover:text-secondary">Aviso Legal</a>
+                    <a href="/privacidad.html" class="hover:text-accent">Política de Privacidad</a> |
+                    <a href="/aviso-legal.html" class="hover:text-accent">Aviso Legal</a>
                 </p>
             </div>
         </div>

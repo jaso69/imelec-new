@@ -39,8 +39,8 @@
     <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com">
 
     <!-- Preload critical resources -->
-    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@400;500;600;700;800&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@400;500;600;700;800&display=swap"></noscript>
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@600;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@600;700&display=swap"></noscript>
     <link rel="preload" href="css/styles.css" as="style">
     <link rel="preload" href="/img/electricidad2.webp" as="image" type="image/webp">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" media="print" onload="this.media='all'">
@@ -95,13 +95,14 @@
      <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
      <style type="text/tailwindcss">
       @theme {
-        --color-primary: #0f1f3d;
-        --color-primary-light: #1a3a66;
-        --color-secondary: #f5b700;
-        --color-secondary-light: #ffd54f;
-        --color-accent: #06b6d4;
-        --color-light: #f6f8fb;
-        --color-dark: #0a1220;
+        --color-primary: #0F1B2D;
+        --color-primary-light: #1E2F45;
+        --color-secondary: #3A4A5E;
+        --color-secondary-light: #4E6076;
+        --color-accent: #F2A93B;
+        --color-accent-hover: #2E7DE1;
+        --color-bg-light: #F7F8FA;
+        --color-text: #1A1F26;
       }
     </style>
     
@@ -126,10 +127,10 @@
                 
                 <nav aria-label="Navegación principal" class="hidden md:block">
                     <ul class="flex items-center space-x-8">
-                        <li><a href="/index.html" class="text-white hover:text-secondary font-medium nav-link-active" aria-current="page">Inicio</a></li>
-                        <li><a href="/servicios.html" class="text-white hover:text-secondary font-medium">Servicios</a></li>
-                        <li><a href="/proyectos.html" class="text-white hover:text-secondary font-medium">Proyectos</a></li>
-                        <li><a href="/contacto.html" class="text-white hover:text-secondary font-medium">Contacto</a></li>
+                        <li><a href="/index.html" class="text-white hover:text-accent font-medium nav-link-active" aria-current="page">Inicio</a></li>
+                        <li><a href="/servicios.html" class="text-white hover:text-accent font-medium">Servicios</a></li>
+                        <li><a href="/proyectos.html" class="text-white hover:text-accent font-medium">Proyectos</a></li>
+                        <li><a href="/contacto.html" class="text-white hover:text-accent font-medium">Contacto</a></li>
                     </ul>
                 </nav>
 
@@ -156,12 +157,12 @@
             <span class="visually-hidden">Cerrar menú</span>
         </button>
         <ul class="space-y-6 text-white text-xl">
-            <li><a href="/index.html" class="block py-2 hover:text-secondary">Inicio</a></li>
-            <li><a href="/servicios.html" class="block py-2 hover:text-secondary">Servicios</a></li>
-            <li><a href="/proyectos.html" class="block py-2 hover:text-secondary">Proyectos</a></li>
-            <li><a href="/contacto.html" class="block py-2 hover:text-secondary">Contacto</a></li>
+            <li><a href="/index.html" class="block py-2 hover:text-accent">Inicio</a></li>
+            <li><a href="/servicios.html" class="block py-2 hover:text-accent">Servicios</a></li>
+            <li><a href="/proyectos.html" class="block py-2 hover:text-accent">Proyectos</a></li>
+            <li><a href="/contacto.html" class="block py-2 hover:text-accent">Contacto</a></li>
             <li class="pt-4">
-                <a href="/contacto.html" class="bg-secondary text-primary font-bold py-3 px-6 rounded-full inline-block">
+                <a href="/contacto.html" class="bg-accent text-primary font-bold py-3 px-6 rounded-full inline-block">
                     <i class="fas fa-file-invoice mr-2"></i>Presupuesto gratis
                 </a>
             </li>
@@ -203,64 +204,64 @@
             <div class="section-divider reveal"></div>
             <p class="section-subheading reveal reveal-delay-1">Soluciones eléctricas completas para hogares, empresas y comunidades en toda la Comunidad de Madrid.</p>
             
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!-- Service 1 -->
-                <div class="service-card bg-light rounded-xl p-6 shadow-md border-l-4 border-primary reveal reveal-delay-1">
-                    <div class="service-icon-wrap">
-                        <i class="fas fa-house-chimney" aria-hidden="true"></i>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8">
+                <!-- Service 1: destacado -->
+                <div class="service-card service-card--featured bg-light rounded-xl p-8 shadow-md border-l-4 border-accent reveal reveal-delay-1">
+                    <div class="service-icon-wrap service-icon-wrap--featured">
+                        <i class="fas fa-network-wired" aria-hidden="true"></i>
                     </div>
-                    <h3 class="text-2xl font-bold text-primary mb-3 font-display">Instalaciones Eléctricas</h3>
-                    <p class="text-gray-700">Instalaciones eléctricas completas para viviendas, locales comerciales y edificios. Electricistas certificados en Madrid.</p>
+                    <h3 class="text-2xl lg:text-3xl font-bold text-primary mb-3 font-display">Instalaciones Eléctricas</h3>
+                    <p class="text-secondary">Instalaciones eléctricas completas para viviendas, locales comerciales y edificios. Electricistas certificados en Madrid.</p>
                     <a href="/servicios.html" class="service-link">Ver servicio <i class="fas fa-arrow-right text-sm" aria-hidden="true"></i></a>
                 </div>
-                
-                <!-- Service 2 -->
-                <div class="service-card bg-light rounded-xl p-6 shadow-md border-l-4 border-primary reveal reveal-delay-2">
-                    <div class="service-icon-wrap">
-                        <i class="fas fa-tools" aria-hidden="true"></i>
+
+                <!-- Service 2: destacado -->
+                <div class="service-card service-card--featured bg-light rounded-xl p-8 shadow-md border-l-4 border-accent reveal reveal-delay-2">
+                    <div class="service-icon-wrap service-icon-wrap--featured">
+                        <i class="fas fa-bolt" aria-hidden="true"></i>
                     </div>
-                    <h3 class="text-2xl font-bold text-primary mb-3 font-display">Reparaciones Urgentes</h3>
-                    <p class="text-gray-700">Servicio de urgencia en Madrid. Diagnóstico preciso y solución de averías eléctricas con garantía.</p>
+                    <h3 class="text-2xl lg:text-3xl font-bold text-primary mb-3 font-display">Reparaciones Urgentes</h3>
+                    <p class="text-secondary">Servicio de urgencia en Madrid. Diagnóstico preciso y solución de averías eléctricas con garantía.</p>
                     <a href="/servicios.html" class="service-link">Ver servicio <i class="fas fa-arrow-right text-sm" aria-hidden="true"></i></a>
                 </div>
-                
+
                 <!-- Service 3 -->
                 <div class="service-card bg-light rounded-xl p-6 shadow-md border-l-4 border-primary reveal reveal-delay-3">
                     <div class="service-icon-wrap">
                         <i class="fas fa-charging-station" aria-hidden="true"></i>
                     </div>
-                    <h3 class="text-2xl font-bold text-primary mb-3 font-display">Puntos de Carga VE</h3>
-                    <p class="text-gray-700">Instalación de puntos de carga para vehículos eléctricos en Madrid. Asesoramiento y gestión de subvenciones.</p>
+                    <h3 class="text-xl font-bold text-primary mb-3 font-display">Puntos de Carga VE</h3>
+                    <p class="text-secondary">Instalación de puntos de carga para vehículos eléctricos en Madrid. Asesoramiento y gestión de subvenciones.</p>
                     <a href="/servicios.html" class="service-link">Ver servicio <i class="fas fa-arrow-right text-sm" aria-hidden="true"></i></a>
                 </div>
-                
+
                 <!-- Service 4 -->
                 <div class="service-card bg-light rounded-xl p-6 shadow-md border-l-4 border-primary reveal reveal-delay-4">
                     <div class="service-icon-wrap">
                         <i class="fas fa-solar-panel" aria-hidden="true"></i>
                     </div>
-                    <h3 class="text-2xl font-bold text-primary mb-3 font-display">Energías Renovables</h3>
-                    <p class="text-gray-700">Instalación de placas solares y sistemas de autoconsumo en Madrid. Estudio de viabilidad y gestión de subvenciones.</p>
+                    <h3 class="text-xl font-bold text-primary mb-3 font-display">Energías Renovables</h3>
+                    <p class="text-secondary">Instalación de placas solares y sistemas de autoconsumo en Madrid. Estudio de viabilidad y gestión de subvenciones.</p>
                     <a href="/servicios.html" class="service-link">Ver servicio <i class="fas fa-arrow-right text-sm" aria-hidden="true"></i></a>
                 </div>
-                
+
                 <!-- Service 5 -->
                 <div class="service-card bg-light rounded-xl p-6 shadow-md border-l-4 border-primary reveal reveal-delay-5">
                     <div class="service-icon-wrap">
-                        <i class="fas fa-building" aria-hidden="true"></i>
+                        <i class="fas fa-gears" aria-hidden="true"></i>
                     </div>
-                    <h3 class="text-2xl font-bold text-primary mb-3 font-display">Automatización Industrial</h3>
-                    <p class="text-gray-700">Sistemas de automatización y cuadros eléctricos para empresas en Madrid. Mejora de eficiencia energética.</p>
+                    <h3 class="text-xl font-bold text-primary mb-3 font-display">Automatización Industrial</h3>
+                    <p class="text-secondary">Sistemas de automatización y cuadros eléctricos para empresas en Madrid. Mejora de eficiencia energética.</p>
                     <a href="/servicios.html" class="service-link">Ver servicio <i class="fas fa-arrow-right text-sm" aria-hidden="true"></i></a>
                 </div>
-                
+
                 <!-- Service 6 -->
                 <div class="service-card bg-light rounded-xl p-6 shadow-md border-l-4 border-primary reveal reveal-delay-6">
                     <div class="service-icon-wrap">
                         <i class="fas fa-lightbulb" aria-hidden="true"></i>
                     </div>
-                    <h3 class="text-2xl font-bold text-primary mb-3 font-display">Iluminación Eficiente</h3>
-                    <p class="text-gray-700">Diseño e instalación de sistemas de iluminación LED eficientes para interiores y exteriores en Madrid.</p>
+                    <h3 class="text-xl font-bold text-primary mb-3 font-display">Iluminación Eficiente</h3>
+                    <p class="text-secondary">Diseño e instalación de sistemas de iluminación LED eficientes para interiores y exteriores en Madrid.</p>
                     <a href="/servicios.html" class="service-link">Ver servicio <i class="fas fa-arrow-right text-sm" aria-hidden="true"></i></a>
                 </div>
             </div>
@@ -380,47 +381,47 @@
             <p class="section-subheading reveal reveal-delay-1">Trabajamos en toda la Comunidad de Madrid. Selecciona tu zona para más información:</p>
             <div class="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto">
                 <a href="/electricista-torrejon-de-ardoz.html" class="zone-card bg-white rounded-xl p-6 shadow-md hover:shadow-xl hover:bg-primary hover:text-white transition duration-300 text-center group reveal reveal-delay-1">
-                    <i class="fas fa-map-marker-alt text-primary text-3xl mb-3 group-hover:text-secondary" aria-hidden="true"></i>
+                    <i class="fas fa-map-marker-alt text-primary text-3xl mb-3 group-hover:text-accent" aria-hidden="true"></i>
                     <h3 class="text-xl font-bold mb-2 font-display">Torrejón de Ardoz</h3>
                     <p class="text-sm text-gray-600 group-hover:text-white/90">Oficina central</p>
                 </a>
                 <a href="/electricista-alcobendas.html" class="zone-card bg-white rounded-xl p-6 shadow-md hover:shadow-xl hover:bg-primary hover:text-white transition duration-300 text-center group reveal reveal-delay-2">
-                    <i class="fas fa-map-marker-alt text-primary text-3xl mb-3 group-hover:text-secondary" aria-hidden="true"></i>
+                    <i class="fas fa-map-marker-alt text-primary text-3xl mb-3 group-hover:text-accent" aria-hidden="true"></i>
                     <h3 class="text-xl font-bold mb-2 font-display">Alcobendas</h3>
                     <p class="text-sm text-gray-600 group-hover:text-white/90">Servicio rápido</p>
                 </a>
                 <a href="/electricista-las-rozas.html" class="zone-card bg-white rounded-xl p-6 shadow-md hover:shadow-xl hover:bg-primary hover:text-white transition duration-300 text-center group reveal reveal-delay-3">
-                    <i class="fas fa-map-marker-alt text-primary text-3xl mb-3 group-hover:text-secondary" aria-hidden="true"></i>
+                    <i class="fas fa-map-marker-alt text-primary text-3xl mb-3 group-hover:text-accent" aria-hidden="true"></i>
                     <h3 class="text-xl font-bold mb-2 font-display">Las Rozas</h3>
                     <p class="text-sm text-gray-600 group-hover:text-white/90">Chalets y urbanizaciones</p>
                 </a>
                 <a href="/contacto.html" class="zone-card bg-white rounded-xl p-6 shadow-md hover:shadow-xl hover:bg-primary hover:text-white transition duration-300 text-center group reveal reveal-delay-1">
-                    <i class="fas fa-map-marker-alt text-primary text-3xl mb-3 group-hover:text-secondary" aria-hidden="true"></i>
+                    <i class="fas fa-map-marker-alt text-primary text-3xl mb-3 group-hover:text-accent" aria-hidden="true"></i>
                     <h3 class="text-xl font-bold mb-2 font-display">Madrid Capital</h3>
                     <p class="text-sm text-gray-600 group-hover:text-white/90">Servicio en toda la capital</p>
                 </a>
                 <a href="/contacto.html" class="zone-card bg-white rounded-xl p-6 shadow-md hover:shadow-xl hover:bg-primary hover:text-white transition duration-300 text-center group reveal reveal-delay-2">
-                    <i class="fas fa-map-marker-alt text-primary text-3xl mb-3 group-hover:text-secondary" aria-hidden="true"></i>
+                    <i class="fas fa-map-marker-alt text-primary text-3xl mb-3 group-hover:text-accent" aria-hidden="true"></i>
                     <h3 class="text-xl font-bold mb-2 font-display">Móstoles</h3>
                     <p class="text-sm text-gray-600 group-hover:text-white/90">Electricistas locales</p>
                 </a>
                 <a href="/contacto.html" class="zone-card bg-white rounded-xl p-6 shadow-md hover:shadow-xl hover:bg-primary hover:text-white transition duration-300 text-center group reveal reveal-delay-3">
-                    <i class="fas fa-map-marker-alt text-primary text-3xl mb-3 group-hover:text-secondary" aria-hidden="true"></i>
+                    <i class="fas fa-map-marker-alt text-primary text-3xl mb-3 group-hover:text-accent" aria-hidden="true"></i>
                     <h3 class="text-xl font-bold mb-2 font-display">Alcalá de Henares</h3>
                     <p class="text-sm text-gray-600 group-hover:text-white/90">Desplazamiento rápido</p>
                 </a>
                 <a href="/contacto.html" class="zone-card bg-white rounded-xl p-6 shadow-md hover:shadow-xl hover:bg-primary hover:text-white transition duration-300 text-center group reveal reveal-delay-1">
-                    <i class="fas fa-map-marker-alt text-primary text-3xl mb-3 group-hover:text-secondary" aria-hidden="true"></i>
+                    <i class="fas fa-map-marker-alt text-primary text-3xl mb-3 group-hover:text-accent" aria-hidden="true"></i>
                     <h3 class="text-xl font-bold mb-2 font-display">Fuenlabrada</h3>
                     <p class="text-sm text-gray-600 group-hover:text-white/90">Presupuesto sin compromiso</p>
                 </a>
                 <a href="/contacto.html" class="zone-card bg-white rounded-xl p-6 shadow-md hover:shadow-xl hover:bg-primary hover:text-white transition duration-300 text-center group reveal reveal-delay-2">
-                    <i class="fas fa-map-marker-alt text-primary text-3xl mb-3 group-hover:text-secondary" aria-hidden="true"></i>
+                    <i class="fas fa-map-marker-alt text-primary text-3xl mb-3 group-hover:text-accent" aria-hidden="true"></i>
                     <h3 class="text-xl font-bold mb-2 font-display">Leganés</h3>
                     <p class="text-sm text-gray-600 group-hover:text-white/90">Urgencias y reformas</p>
                 </a>
                 <a href="/contacto.html" class="zone-card bg-white rounded-xl p-6 shadow-md hover:shadow-xl hover:bg-primary hover:text-white transition duration-300 text-center group reveal reveal-delay-3">
-                    <i class="fas fa-map-marker-alt text-primary text-3xl mb-3 group-hover:text-secondary" aria-hidden="true"></i>
+                    <i class="fas fa-map-marker-alt text-primary text-3xl mb-3 group-hover:text-accent" aria-hidden="true"></i>
                     <h3 class="text-xl font-bold mb-2 font-display">Alcorcón</h3>
                     <p class="text-sm text-gray-600 group-hover:text-white/90">Instalaciones y boletines</p>
                 </a>
@@ -442,30 +443,30 @@
                 <div>
                     <h3 class="text-xl font-bold mb-4">Servicios</h3>
                     <ul class="space-y-2">
-                        <li><a href="/servicios.html" class="hover:text-secondary">Instalaciones eléctricas</a></li>
-                        <li><a href="/servicios.html" class="hover:text-secondary">Reparaciones y mantenimiento</a></li>
-                        <li><a href="/servicios.html" class="hover:text-secondary">Puntos de carga para VE</a></li>
-                        <li><a href="/servicios.html" class="hover:text-secondary">Energías renovables</a></li>
-                        <li><a href="/servicios.html" class="hover:text-secondary">Automatización industrial</a></li>
+                        <li><a href="/servicios.html" class="hover:text-accent">Instalaciones eléctricas</a></li>
+                        <li><a href="/servicios.html" class="hover:text-accent">Reparaciones y mantenimiento</a></li>
+                        <li><a href="/servicios.html" class="hover:text-accent">Puntos de carga para VE</a></li>
+                        <li><a href="/servicios.html" class="hover:text-accent">Energías renovables</a></li>
+                        <li><a href="/servicios.html" class="hover:text-accent">Automatización industrial</a></li>
                     </ul>
                 </div>
                 
                 <div>
                     <h3 class="text-xl font-bold mb-4">Enlaces rápidos</h3>
                     <ul class="space-y-2">
-                        <li><a href="/index.html" class="hover:text-secondary">Inicio</a></li>
-                        <li><a href="/servicios.html" class="hover:text-secondary">Servicios</a></li>
-                        <li><a href="/proyectos.html" class="hover:text-secondary">Proyectos</a></li>
-                        <li><a href="/contacto.html" class="hover:text-secondary">Contacto</a></li>
+                        <li><a href="/index.html" class="hover:text-accent">Inicio</a></li>
+                        <li><a href="/servicios.html" class="hover:text-accent">Servicios</a></li>
+                        <li><a href="/proyectos.html" class="hover:text-accent">Proyectos</a></li>
+                        <li><a href="/contacto.html" class="hover:text-accent">Contacto</a></li>
                     </ul>
                 </div>
                 
                 <div>
                     <h3 class="text-xl font-bold mb-4">Zonas</h3>
                     <ul class="space-y-2">
-                        <li><a href="/electricista-torrejon-de-ardoz.html" class="hover:text-secondary">Torrejón de Ardoz</a></li>
-                        <li><a href="/electricista-alcobendas.html" class="hover:text-secondary">Alcobendas</a></li>
-                        <li><a href="/electricista-las-rozas.html" class="hover:text-secondary">Las Rozas</a></li>
+                        <li><a href="/electricista-torrejon-de-ardoz.html" class="hover:text-accent">Torrejón de Ardoz</a></li>
+                        <li><a href="/electricista-alcobendas.html" class="hover:text-accent">Alcobendas</a></li>
+                        <li><a href="/electricista-las-rozas.html" class="hover:text-accent">Las Rozas</a></li>
                     </ul>
                 </div>
                 
@@ -492,8 +493,8 @@
             <div class="border-t border-gray-600 mt-8 pt-8 text-center">
                 <p>&copy; <span id="current-year">2026</span> IMELEC - Electricistas en Madrid. Todos los derechos reservados.</p>
                 <p class="mt-2 text-sm text-gray-400">
-                    <a href="/privacidad.html" class="hover:text-secondary">Política de Privacidad</a> |
-                    <a href="/aviso-legal.html" class="hover:text-secondary">Aviso Legal</a>
+                    <a href="/privacidad.html" class="hover:text-accent">Política de Privacidad</a> |
+                    <a href="/aviso-legal.html" class="hover:text-accent">Aviso Legal</a>
                 </p>
             </div>
         </div>

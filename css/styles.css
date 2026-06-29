@@ -6,26 +6,32 @@
 /* Base
    ---------------------------------------- */
 :root {
-    --font-display: 'Bebas Neue', sans-serif;
-    --font-body: 'DM Sans', sans-serif;
+    --font-display: 'Space Grotesk', sans-serif;
+    --font-body: 'Inter', sans-serif;
 
-    --color-primary: #0f1f3d;
-    --color-primary-light: #1a3a66;
-    --color-secondary: #f5b700;
-    --color-secondary-light: #ffd54f;
-    --color-accent: #06b6d4;
-    --color-accent-soft: rgba(6, 182, 212, 0.12);
-    --color-dark: #0a1220;
-    --color-light: #f6f8fb;
+    --color-primary: #0F1B2D;
+    --color-primary-light: #1E2F45;
+    --color-secondary: #3A4A5E;
+    --color-secondary-light: #4E6076;
+    --color-accent: #F2A93B;
+    --color-accent-light: #F5C66B;
+    --color-accent-hover: #2E7DE1;
+    --color-accent-soft: rgba(242, 169, 59, 0.12);
+    --color-accent-hover-soft: rgba(46, 125, 225, 0.12);
+    --color-dark: #0F1B2D;
+    --color-light: #F7F8FA;
+    --color-bg-light: #F7F8FA;
     --color-surface: #ffffff;
     --color-surface-elevated: #ffffff;
-    --color-text: #1e293b;
-    --color-text-muted: #64748b;
-    --color-border: #e2e8f0;
+    --color-text: #1A1F26;
+    --color-text-muted: #5A6A7D;
+    --color-border: #E2E6EB;
 
-    --shadow-card: 0 4px 24px rgba(15, 31, 61, 0.07);
-    --shadow-card-hover: 0 18px 40px rgba(15, 31, 61, 0.14);
-    --shadow-glow: 0 0 24px rgba(245, 183, 0, 0.25);
+    --shadow-color: 15, 27, 45;
+    --shadow-card: 0 4px 24px rgba(var(--shadow-color), 0.07);
+    --shadow-card-hover: 0 18px 40px rgba(var(--shadow-color), 0.14);
+    --shadow-glow: 0 0 24px rgba(242, 169, 59, 0.3);
+    --shadow-glow-hover: 0 0 32px rgba(46, 125, 225, 0.25);
     --radius-sm: 0.5rem;
     --radius-md: 0.75rem;
     --radius-lg: 1rem;
@@ -34,17 +40,23 @@
 
 body {
     font-family: var(--font-body);
+    font-weight: 400;
     scroll-behavior: smooth;
     color: var(--color-text);
-    background-color: var(--color-light);
+    background-color: var(--color-bg-light);
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
 
 h1, h2, h3, h4, .font-display {
     font-family: var(--font-display);
-    letter-spacing: 0.03em;
-    line-height: 1.05;
+    font-weight: 600;
+    letter-spacing: -0.02em;
+    line-height: 1.1;
+}
+
+h1 {
+    font-weight: 700;
 }
 
 /* Section headings
@@ -52,12 +64,11 @@ h1, h2, h3, h4, .font-display {
 .section-heading {
     font-family: var(--font-display);
     font-size: clamp(1.875rem, 4vw, 2.625rem);
-    font-weight: 400;
+    font-weight: 600;
     color: var(--color-primary);
     text-align: center;
     margin-bottom: 0.75rem;
-    text-transform: uppercase;
-    letter-spacing: 0.04em;
+    letter-spacing: -0.02em;
 }
 
 .section-subheading {
@@ -86,7 +97,7 @@ h1, h2, h3, h4, .font-display {
 /* Accessibility: visible focus indicators for keyboard users
    ---------------------------------------- */
 :focus-visible {
-    outline: 3px solid var(--color-secondary);
+    outline: 3px solid var(--color-accent-hover);
     outline-offset: 3px;
     border-radius: 0.25rem;
 }
@@ -127,17 +138,17 @@ button, [role="button"], .btn, a[href] {
    ---------------------------------------- */
 #site-header {
     transition: background-color 0.3s ease, box-shadow 0.3s ease, backdrop-filter 0.3s ease;
-    background-color: rgba(15, 31, 61, 0.96);
+    background-color: rgba(var(--shadow-color), 0.96);
     backdrop-filter: blur(12px);
 }
 
 #site-header.header-scrolled {
-    background-color: rgba(10, 18, 32, 0.98);
-    box-shadow: 0 8px 30px rgba(15, 31, 61, 0.25);
+    background-color: rgba(15, 27, 45, 0.98);
+    box-shadow: 0 8px 30px rgba(var(--shadow-color), 0.25);
 }
 
 .nav-link-active {
-    color: var(--color-secondary) !important;
+    color: var(--color-accent) !important;
     position: relative;
 }
 
@@ -148,7 +159,7 @@ button, [role="button"], .btn, a[href] {
     left: 0;
     width: 100%;
     height: 2px;
-    background: var(--color-secondary);
+    background: var(--color-accent);
     border-radius: 2px;
 }
 
@@ -156,7 +167,7 @@ button, [role="button"], .btn, a[href] {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    background: linear-gradient(135deg, var(--color-secondary) 0%, var(--color-secondary-light) 100%);
+    background: linear-gradient(135deg, var(--color-accent) 0%, var(--color-accent-light) 100%);
     color: var(--color-primary);
     font-weight: 700;
     padding: 0.5rem 1.25rem;
@@ -166,12 +177,12 @@ button, [role="button"], .btn, a[href] {
     white-space: nowrap;
     transition: transform 0.2s ease, box-shadow 0.2s ease;
     min-height: 44px;
-    box-shadow: 0 4px 14px rgba(245, 183, 0, 0.3);
+    box-shadow: 0 4px 14px rgba(242, 169, 59, 0.3);
 }
 
 .header-cta:hover {
     transform: translateY(-2px);
-    box-shadow: 0 6px 20px rgba(245, 183, 0, 0.4);
+    box-shadow: 0 6px 20px rgba(242, 169, 59, 0.4);
 }
 
 /* Breadcrumb
@@ -208,9 +219,9 @@ button, [role="button"], .btn, a[href] {
 .hero-pattern {
     position: relative;
     background:
-        radial-gradient(ellipse at 20% 20%, rgba(6, 182, 212, 0.15) 0%, transparent 50%),
-        radial-gradient(ellipse at 80% 80%, rgba(245, 183, 0, 0.12) 0%, transparent 50%),
-        linear-gradient(135deg, rgba(15, 31, 61, 0.96) 0%, rgba(10, 18, 32, 0.94) 100%),
+        radial-gradient(ellipse at 20% 20%, rgba(46, 125, 225, 0.15) 0%, transparent 50%),
+        radial-gradient(ellipse at 80% 80%, rgba(242, 169, 59, 0.12) 0%, transparent 50%),
+        linear-gradient(135deg, rgba(var(--shadow-color), 0.96) 0%, rgba(15, 27, 45, 0.94) 100%),
         url('/img/averias.webp');
     background-size: cover, cover, cover, cover;
     background-position: center;
@@ -267,7 +278,7 @@ button, [role="button"], .btn, a[href] {
 }
 
 .hero-trust-item i {
-    color: var(--color-secondary);
+    color: var(--color-accent);
 }
 
 .hero-pattern h1 {
@@ -336,14 +347,14 @@ button, [role="button"], .btn, a[href] {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    background: linear-gradient(135deg, var(--color-secondary) 0%, var(--color-secondary-light) 100%);
+    background: linear-gradient(135deg, var(--color-accent) 0%, var(--color-accent-light) 100%);
     color: var(--color-primary);
     font-weight: 700;
     padding: 1rem 2rem;
     border-radius: var(--radius-md);
     text-decoration: none;
     transition: transform 0.2s ease, box-shadow 0.2s ease;
-    box-shadow: 0 8px 24px rgba(245, 183, 0, 0.3);
+    box-shadow: 0 8px 24px rgba(242, 169, 59, 0.3);
     position: relative;
     overflow: hidden;
 }
@@ -359,7 +370,7 @@ button, [role="button"], .btn, a[href] {
 
 .btn-primary:hover {
     transform: translateY(-3px);
-    box-shadow: 0 12px 32px rgba(245, 183, 0, 0.4);
+    box-shadow: 0 12px 32px rgba(242, 169, 59, 0.4);
 }
 
 .btn-primary:hover::before {
@@ -397,7 +408,7 @@ button, [role="button"], .btn, a[href] {
     left: 0;
     width: 100%;
     height: 100vh;
-    background-color: rgba(10, 18, 32, 0.98);
+    background-color: rgba(15, 27, 45, 0.98);
     z-index: 40;
     padding-top: 80px;
     transform: translateX(-100%);
@@ -430,7 +441,7 @@ button, [role="button"], .btn, a[href] {
     left: 0;
     width: 4px;
     height: 100%;
-    background: linear-gradient(180deg, var(--color-secondary) 0%, var(--color-accent) 100%);
+    background: linear-gradient(180deg, var(--color-accent) 0%, var(--color-accent-hover) 100%);
     transform: scaleY(0);
     transform-origin: top;
     transition: transform 0.35s ease;
@@ -439,11 +450,30 @@ button, [role="button"], .btn, a[href] {
 .service-card:hover {
     transform: translateY(-8px);
     box-shadow: var(--shadow-card-hover);
-    border-bottom-color: var(--color-secondary);
+    border-bottom-color: var(--color-accent);
 }
 
 .service-card:hover::before {
     transform: scaleY(1);
+}
+
+.service-card--featured {
+    border-left-width: 5px;
+    border-left-color: var(--color-accent);
+}
+
+.service-card--featured::before {
+    width: 5px;
+    background: linear-gradient(180deg, var(--color-accent) 0%, var(--color-accent-hover) 100%);
+}
+
+.service-card--featured .service-icon-wrap {
+    background: linear-gradient(135deg, var(--color-accent-soft) 0%, rgba(242, 169, 59, 0.15) 100%);
+    color: var(--color-accent);
+}
+
+.service-card--featured:hover {
+    border-bottom-color: var(--color-accent-hover);
 }
 
 .service-icon-wrap {
@@ -453,8 +483,8 @@ button, [role="button"], .btn, a[href] {
     width: 4rem;
     height: 4rem;
     border-radius: var(--radius-md);
-    background: linear-gradient(135deg, var(--color-accent-soft) 0%, rgba(245, 183, 0, 0.08) 100%);
-    color: var(--color-primary-light);
+    background: linear-gradient(135deg, var(--color-accent-soft) 0%, rgba(242, 169, 59, 0.08) 100%);
+    color: var(--color-accent);
     font-size: 1.625rem;
     margin-bottom: 1.25rem;
     transition: transform 0.3s ease, background 0.3s ease;
@@ -462,7 +492,14 @@ button, [role="button"], .btn, a[href] {
 
 .service-card:hover .service-icon-wrap {
     transform: scale(1.08) rotate(-3deg);
-    background: linear-gradient(135deg, rgba(245, 183, 0, 0.15) 0%, var(--color-accent-soft) 100%);
+    background: linear-gradient(135deg, rgba(242, 169, 59, 0.15) 0%, var(--color-accent-soft) 100%);
+}
+
+.service-icon-wrap--featured {
+    width: 5rem;
+    height: 5rem;
+    font-size: 2rem;
+    background: linear-gradient(135deg, var(--color-accent-soft) 0%, rgba(242, 169, 59, 0.18) 100%);
 }
 
 .service-link {
@@ -479,7 +516,7 @@ button, [role="button"], .btn, a[href] {
 
 .service-link:hover {
     gap: 0.625rem;
-    color: var(--color-secondary);
+    color: var(--color-accent);
 }
 
 .service-link i {
@@ -516,7 +553,7 @@ button, [role="button"], .btn, a[href] {
     content: '';
     position: absolute;
     inset: -1rem;
-    border: 2px solid var(--color-secondary);
+    border: 2px solid var(--color-accent);
     border-radius: var(--radius-xl);
     opacity: 0.35;
     z-index: -1;
@@ -527,7 +564,7 @@ button, [role="button"], .btn, a[href] {
     position: absolute;
     bottom: -1rem;
     right: -0.5rem;
-    background: linear-gradient(135deg, var(--color-secondary) 0%, var(--color-secondary-light) 100%);
+    background: linear-gradient(135deg, var(--color-accent) 0%, var(--color-accent-light) 100%);
     color: var(--color-primary);
     font-weight: 800;
     padding: 0.875rem 1.5rem;
@@ -568,7 +605,7 @@ button, [role="button"], .btn, a[href] {
 }
 
 .stat-number span {
-    color: var(--color-secondary);
+    color: var(--color-accent);
 }
 
 .stat-label {
@@ -635,7 +672,7 @@ button, [role="button"], .btn, a[href] {
     content: "+";
     font-size: 1.75rem;
     font-weight: 300;
-    color: var(--color-secondary);
+    color: var(--color-accent);
     flex-shrink: 0;
     transition: transform 0.3s ease;
     line-height: 1;
@@ -681,7 +718,7 @@ button, [role="button"], .btn, a[href] {
     left: 0;
     width: 100%;
     height: 4px;
-    background: linear-gradient(90deg, var(--color-secondary), var(--color-accent));
+    background: linear-gradient(90deg, var(--color-accent), var(--color-accent-hover));
     transform: scaleX(0);
     transform-origin: left;
     transition: transform 0.35s ease;
@@ -726,7 +763,7 @@ button, [role="button"], .btn, a[href] {
 
 .form-input:focus {
     outline: none;
-    box-shadow: 0 0 0 3px rgba(6, 182, 212, 0.2);
+    box-shadow: 0 0 0 3px rgba(46, 125, 225, 0.2);
     border-color: var(--color-accent);
 }
 
@@ -853,7 +890,7 @@ button, [role="button"], .btn, a[href] {
     z-index: 60;
     font-size: 0.9375rem;
     box-shadow: 0 -4px 20px rgba(0,0,0,0.2);
-    border-top: 3px solid var(--color-secondary);
+    border-top: 3px solid var(--color-accent);
 }
 
 #cookie-banner .cookie-content {
@@ -872,12 +909,12 @@ button, [role="button"], .btn, a[href] {
 }
 
 #cookie-banner a {
-    color: var(--color-secondary);
+    color: var(--color-accent);
     text-decoration: underline;
 }
 
 .cookie-btn {
-    background: var(--color-secondary);
+    background: var(--color-accent);
     color: var(--color-primary);
     border: none;
     padding: 0.5rem 1.5rem;
@@ -889,7 +926,7 @@ button, [role="button"], .btn, a[href] {
 }
 
 .cookie-btn:hover {
-    background: var(--color-secondary-light);
+    background: var(--color-accent-light);
     transform: translateY(-1px);
 }
 
@@ -913,7 +950,7 @@ button, [role="button"], .btn, a[href] {
     left: 0;
     width: 100%;
     height: 4px;
-    background: linear-gradient(90deg, var(--color-secondary), var(--color-accent));
+    background: linear-gradient(90deg, var(--color-accent), var(--color-accent-hover));
     border-radius: 2px;
 }
 
@@ -922,7 +959,7 @@ button, [role="button"], .btn, a[href] {
 .section-divider {
     width: 64px;
     height: 4px;
-    background: linear-gradient(90deg, var(--color-secondary), var(--color-accent));
+    background: linear-gradient(90deg, var(--color-accent), var(--color-accent-hover));
     border-radius: 2px;
     margin: 0 auto 1rem;
 }
@@ -937,7 +974,7 @@ button, [role="button"], .btn, a[href] {
     z-index: 55;
     font-family: var(--font-body);
     --chat-radius: 1.25rem;
-    --chat-shadow: 0 24px 60px rgba(15, 31, 61, 0.22);
+    --chat-shadow: 0 24px 60px rgba(var(--shadow-color), 0.22);
 }
 
 @media (max-width: 767px) {
@@ -963,7 +1000,7 @@ button, [role="button"], .btn, a[href] {
     background: #fff;
     padding: 0;
     overflow: visible;
-    box-shadow: 0 8px 24px rgba(15, 31, 61, 0.18), 0 2px 6px rgba(15, 31, 61, 0.1);
+    box-shadow: 0 8px 24px rgba(var(--shadow-color), 0.18), 0 2px 6px rgba(var(--shadow-color), 0.1);
     transition: transform 0.3s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.3s ease;
     animation:
         imelec-toggle-pop 0.7s cubic-bezier(0.22, 1.5, 0.36, 1) both,
@@ -973,7 +1010,7 @@ button, [role="button"], .btn, a[href] {
 .imelec-chat-toggle:hover,
 .imelec-chat-toggle:focus-visible {
     transform: scale(1.06);
-    box-shadow: 0 12px 32px rgba(15, 31, 61, 0.22), 0 0 0 4px rgba(6, 182, 212, 0.12);
+    box-shadow: 0 12px 32px rgba(var(--shadow-color), 0.22), 0 0 0 4px rgba(46, 125, 225, 0.12);
     animation-play-state: paused;
 }
 
@@ -991,7 +1028,7 @@ button, [role="button"], .btn, a[href] {
 }
 
 .imelec-chat-toggle::after {
-    border-color: var(--color-secondary);
+    border-color: var(--color-accent-hover);
     animation-delay: 1.3s;
 }
 
@@ -1030,7 +1067,7 @@ button, [role="button"], .btn, a[href] {
     font-size: 0.8125rem;
     font-weight: 600;
     white-space: nowrap;
-    box-shadow: 0 4px 14px rgba(15, 31, 61, 0.2);
+    box-shadow: 0 4px 14px rgba(var(--shadow-color), 0.2);
     opacity: 0;
     pointer-events: none;
     transition: opacity 0.3s ease, transform 0.3s ease;
@@ -1272,7 +1309,7 @@ button, [role="button"], .btn, a[href] {
     font-size: 0.9375rem;
     line-height: 1.55;
     position: relative;
-    box-shadow: 0 2px 8px rgba(15, 31, 61, 0.06);
+    box-shadow: 0 2px 8px rgba(var(--shadow-color), 0.06);
 }
 
 .imelec-chat-message--user .imelec-chat-bubble {
@@ -1302,7 +1339,7 @@ button, [role="button"], .btn, a[href] {
 }
 
 .imelec-chat-message--user .imelec-chat-bubble-content strong {
-    color: var(--color-secondary);
+    color: var(--color-accent);
 }
 
 .imelec-chat-bubble-content ul.imelec-chat-list {
@@ -1409,7 +1446,7 @@ button, [role="button"], .btn, a[href] {
 .imelec-chat-input:focus {
     outline: none;
     border-color: var(--color-accent);
-    box-shadow: 0 0 0 3px rgba(6, 182, 212, 0.15);
+    box-shadow: 0 0 0 3px rgba(46, 125, 225, 0.15);
     background: #fff;
 }
 
@@ -1431,7 +1468,7 @@ button, [role="button"], .btn, a[href] {
     color: #fff;
     cursor: pointer;
     transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
-    box-shadow: 0 4px 14px rgba(15, 31, 61, 0.2);
+    box-shadow: 0 4px 14px rgba(var(--shadow-color), 0.2);
     padding: 0.625rem;
 }
 
@@ -1439,7 +1476,7 @@ button, [role="button"], .btn, a[href] {
 .imelec-chat-send:focus-visible {
     transform: scale(1.08);
     background: var(--color-primary-light);
-    box-shadow: 0 6px 18px rgba(15, 31, 61, 0.28);
+    box-shadow: 0 6px 18px rgba(var(--shadow-color), 0.28);
 }
 
 .imelec-chat-send:disabled {
@@ -1463,12 +1500,12 @@ button, [role="button"], .btn, a[href] {
 }
 
 .imelec-chat-messages::-webkit-scrollbar-thumb {
-    background: rgba(15, 31, 61, 0.18);
+    background: rgba(var(--shadow-color), 0.18);
     border-radius: 3px;
 }
 
 .imelec-chat-messages::-webkit-scrollbar-thumb:hover {
-    background: rgba(15, 31, 61, 0.3);
+    background: rgba(var(--shadow-color), 0.3);
 }
 
 /* Reduced motion */

@@ -39,8 +39,8 @@
     <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com">
 
     <!-- Preload critical resources -->
-    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@400;500;600;700;800&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@400;500;600;700;800&display=swap"></noscript>
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@600;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@600;700&display=swap"></noscript>
     <link rel="preload" href="css/styles.css" as="style">
     <link rel="preload" href="/img/recarga.webp" as="image" type="image/webp">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" media="print" onload="this.media='all'">
@@ -50,13 +50,14 @@
      <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
      <style type="text/tailwindcss">
       @theme {
-        --color-primary: #0f1f3d;
-        --color-primary-light: #1a3a66;
-        --color-secondary: #f5b700;
-        --color-secondary-light: #ffd54f;
-        --color-accent: #06b6d4;
-        --color-light: #f6f8fb;
-        --color-dark: #0a1220;
+        --color-primary: #0F1B2D;
+        --color-primary-light: #1E2F45;
+        --color-secondary: #3A4A5E;
+        --color-secondary-light: #4E6076;
+        --color-accent: #F2A93B;
+        --color-accent-hover: #2E7DE1;
+        --color-bg-light: #F7F8FA;
+        --color-text: #1A1F26;
       }
     </style>
     <!-- <script src="https://cdn.tailwindcss.com"></script> -->
@@ -79,7 +80,7 @@
     <link rel="stylesheet" href="css/styles.css">
     <style type="text/css">
         .contact-hero {
-            background: linear-gradient(135deg, rgba(15, 31, 61, 0.92) 0%, rgba(10, 18, 32, 0.90) 100%), url('/img/recarga.webp');
+            background: linear-gradient(135deg, rgba(15, 27, 45, 0.92) 0%, rgba(15, 27, 45, 0.90) 100%), url('/img/recarga.webp');
             background-size: cover;
             background-position: center;
         }
@@ -138,10 +139,10 @@
                 
                 <nav aria-label="Navegación principal">
                     <ul class="hidden md:flex space-x-8">
-                        <li><a href="/index.html" class="text-white hover:text-secondary font-medium">Inicio</a></li>
-                        <li><a href="/servicios.html" class="text-white hover:text-secondary font-medium">Servicios</a></li>
-                        <li><a href="/proyectos.html" class="text-white hover:text-secondary font-medium">Proyectos</a></li>
-                        <li><a href="#main-content" class="text-white hover:text-secondary font-medium" aria-current="page">Contacto</a></li>
+                        <li><a href="/index.html" class="text-white hover:text-accent font-medium">Inicio</a></li>
+                        <li><a href="/servicios.html" class="text-white hover:text-accent font-medium">Servicios</a></li>
+                        <li><a href="/proyectos.html" class="text-white hover:text-accent font-medium">Proyectos</a></li>
+                        <li><a href="#main-content" class="text-white hover:text-accent font-medium" aria-current="page">Contacto</a></li>
                     </ul>
                 </nav>
                 
@@ -162,12 +163,12 @@
             <span class="visually-hidden">Cerrar menú</span>
         </button>
         <ul class="space-y-6 text-white text-xl">
-            <li><a href="/index.html" class="block py-2 hover:text-secondary">Inicio</a></li>
-            <li><a href="/servicios.html" class="block py-2 hover:text-secondary">Servicios</a></li>
-            <li><a href="/proyectos.html" class="block py-2 hover:text-secondary">Proyectos</a></li>
-            <li><a href="/contacto.html" class="block py-2 hover:text-secondary">Contacto</a></li>
+            <li><a href="/index.html" class="block py-2 hover:text-accent">Inicio</a></li>
+            <li><a href="/servicios.html" class="block py-2 hover:text-accent">Servicios</a></li>
+            <li><a href="/proyectos.html" class="block py-2 hover:text-accent">Proyectos</a></li>
+            <li><a href="/contacto.html" class="block py-2 hover:text-accent">Contacto</a></li>
             <li class="pt-8">
-                <a href="tel:+34691502361" class="bg-secondary text-primary font-bold py-3 px-6 rounded-lg inline-block">
+                <a href="tel:+34691502361" class="bg-accent text-primary font-bold py-3 px-6 rounded-lg inline-block">
                     <i class="fas fa-phone mr-2"></i>Llamar ahora
                 </a>
             </li>
@@ -191,7 +192,7 @@
         <div class="container mx-auto px-4 text-center">
             <h1 class="text-4xl md:text-5xl font-bold mb-6 font-display">Contacte con Electricistas en Madrid</h1>
             <p class="text-xl mb-8 max-w-3xl mx-auto">Presupuestos gratuitos, reparaciones urgentes y profesionales certificados.</p>
-            <a href="tel:+34691502361" class="bg-secondary text-primary font-bold py-3 px-8 rounded-lg hover:bg-secondary-light transition duration-300 inline-block">
+            <a href="tel:+34691502361" class="bg-accent text-primary font-bold py-3 px-8 rounded-lg hover:bg-accent-hover transition duration-300 inline-block">
                 <i class="fas fa-phone mr-2" aria-hidden="true"></i>Llamar Ahora:  691 50 23 61
             </a>
         </div>
@@ -443,20 +444,20 @@
                 <div>
                     <h3 class="text-xl font-bold mb-4">Servicios</h3>
                     <ul class="space-y-2">
-                        <li><a href="/servicios.html" class="hover:text-secondary">Instalaciones eléctricas</a></li>
-                        <li><a href="/servicios.html" class="hover:text-secondary">Reparaciones y mantenimiento</a></li>
-                        <li><a href="/servicios.html" class="hover:text-secondary">Puntos de carga para VE</a></li>
-                        <li><a href="/servicios.html" class="hover:text-secondary">Energías renovables</a></li>
-                        <li><a href="/servicios.html" class="hover:text-secondary">Automatización industrial</a></li>
+                        <li><a href="/servicios.html" class="hover:text-accent">Instalaciones eléctricas</a></li>
+                        <li><a href="/servicios.html" class="hover:text-accent">Reparaciones y mantenimiento</a></li>
+                        <li><a href="/servicios.html" class="hover:text-accent">Puntos de carga para VE</a></li>
+                        <li><a href="/servicios.html" class="hover:text-accent">Energías renovables</a></li>
+                        <li><a href="/servicios.html" class="hover:text-accent">Automatización industrial</a></li>
                     </ul>
                 </div>
                 
                 <div>
                     <h3 class="text-xl font-bold mb-4">Enlaces rápidos</h3>
                     <ul class="space-y-2">
-                        <li><a href="/index.html" class="hover:text-secondary">Inicio</a></li>
-                        <li><a href="/servicios.html" class="hover:text-secondary">Servicios</a></li>
-                        <li><a href="/contacto.html" class="hover:text-secondary" aria-current="page">Contacto</a></li>
+                        <li><a href="/index.html" class="hover:text-accent">Inicio</a></li>
+                        <li><a href="/servicios.html" class="hover:text-accent">Servicios</a></li>
+                        <li><a href="/contacto.html" class="hover:text-accent" aria-current="page">Contacto</a></li>
                     </ul>
                 </div>
                 
@@ -483,8 +484,8 @@
             <div class="border-t border-gray-600 mt-8 pt-8 text-center">
                 <p>&copy; <span id="current-year">2026</span> IMELEC - Electricistas en Madrid. Todos los derechos reservados.</p>
                 <p class="mt-2 text-sm text-gray-400">
-                    <a href="/privacidad.html" class="hover:text-secondary">Política de Privacidad</a> |
-                    <a href="/aviso-legal.html" class="hover:text-secondary">Aviso Legal</a>
+                    <a href="/privacidad.html" class="hover:text-accent">Política de Privacidad</a> |
+                    <a href="/aviso-legal.html" class="hover:text-accent">Aviso Legal</a>
                 </p>
             </div>
         </div>
