@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <script>document.documentElement.classList.add('js')</script>
+    <script>(function(){document.documentElement.classList.add('js');try{if(localStorage.getItem('imelec_theme')==='dark'){document.documentElement.setAttribute('data-theme','dark');}}catch(e){}})();</script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Servicios de Electricidad | Imelec - Electricistas en Madrid</title>
@@ -50,11 +50,12 @@
      <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
      <style type="text/tailwindcss">
       @theme {
-        --color-primary: #0F1B2D;
-        --color-primary-light: #1E2F45;
+        --color-primary: #0A2A5E;
+        --color-primary-light: #15407F;
         --color-secondary: #3A4A5E;
         --color-secondary-light: #4E6076;
-        --color-accent: #F2A93B;
+        --color-accent: #FFEC00;
+        --color-accent-light: #FFD400;
         --color-accent-hover: #2E7DE1;
         --color-bg-light: #F7F8FA;
         --color-text: #1A1F26;
@@ -64,7 +65,7 @@
     <link rel="stylesheet" href="css/styles.css">
     <style type="text/css">
         .service-hero {
-            background: linear-gradient(135deg, rgba(15, 27, 45, 0.92) 0%, rgba(15, 27, 45, 0.90) 100%), url('/img/averias.webp');
+            background: linear-gradient(rgba(10, 42, 94, 0.88), rgba(10, 42, 94, 0.88)), url('/img/averias.webp');
             background-size: cover;
             background-position: center;
         }
@@ -207,7 +208,7 @@
         <div class="container mx-auto px-4 text-center">
             <h1 class="text-4xl md:text-5xl font-bold mb-6 font-display">Servicios de Electricidad en Madrid</h1>
             <p class="text-xl mb-8 max-w-3xl mx-auto">Soluciones eléctricas integrales para hogares, empresas y comunidades en Madrid. Expertos en instalaciones, reparaciones y puntos de carga para vehículos eléctricos.</p>
-            <a href="/contacto.html" class="bg-accent text-primary font-bold py-3 px-8 rounded-lg hover:bg-accent-hover transition duration-300 inline-block">
+            <a href="/contacto.html" class="bg-accent text-primary font-bold py-3 px-8 rounded-lg hover:bg-accent-light transition duration-300 inline-block">
                 Solicitar Presupuesto
             </a>
         </div>
@@ -228,19 +229,19 @@
                     <p class="text-secondary mb-4">Instalaciones eléctricas completas para viviendas, locales comerciales, oficinas y edificios en Madrid.</p>
                     <ul class="text-secondary space-y-2 mb-4">
                         <li class="flex items-start">
-                            <i class="fas fa-check text-accent mr-2 mt-1" aria-hidden="true"></i>
+                            <i class="fas fa-check text-accent-hover mr-2 mt-1" aria-hidden="true"></i>
                             <span>Cuadros eléctricos y automatismos</span>
                         </li>
                         <li class="flex items-start">
-                            <i class="fas fa-check text-accent mr-2 mt-1" aria-hidden="true"></i>
+                            <i class="fas fa-check text-accent-hover mr-2 mt-1" aria-hidden="true"></i>
                             <span>Instalaciones nuevas y reformas</span>
                         </li>
                         <li class="flex items-start">
-                            <i class="fas fa-check text-accent mr-2 mt-1" aria-hidden="true"></i>
+                            <i class="fas fa-check text-accent-hover mr-2 mt-1" aria-hidden="true"></i>
                             <span>Certificados de instalación eléctrica</span>
                         </li>
                         <li class="flex items-start">
-                            <i class="fas fa-check text-accent mr-2 mt-1" aria-hidden="true"></i>
+                            <i class="fas fa-check text-accent-hover mr-2 mt-1" aria-hidden="true"></i>
                             <span>Cumplimiento del REBT</span>
                         </li>
                     </ul>
@@ -256,19 +257,19 @@
                     <p class="text-secondary mb-4">Servicio de urgencia en Madrid. Diagnóstico preciso y solución de averías eléctricas.</p>
                     <ul class="text-secondary space-y-2 mb-4">
                         <li class="flex items-start">
-                            <i class="fas fa-check text-accent mr-2 mt-1" aria-hidden="true"></i>
+                            <i class="fas fa-check text-accent-hover mr-2 mt-1" aria-hidden="true"></i>
                             <span>Averías eléctricas urgentes</span>
                         </li>
                         <li class="flex items-start">
-                            <i class="fas fa-check text-accent mr-2 mt-1" aria-hidden="true"></i>
+                            <i class="fas fa-check text-accent-hover mr-2 mt-1" aria-hidden="true"></i>
                             <span>Caídas de tensión y cortes de luz</span>
                         </li>
                         <li class="flex items-start">
-                            <i class="fas fa-check text-accent mr-2 mt-1" aria-hidden="true"></i>
+                            <i class="fas fa-check text-accent-hover mr-2 mt-1" aria-hidden="true"></i>
                             <span>Cambio de cuadros eléctricos</span>
                         </li>
                         <li class="flex items-start">
-                            <i class="fas fa-check text-accent mr-2 mt-1" aria-hidden="true"></i>
+                            <i class="fas fa-check text-accent-hover mr-2 mt-1" aria-hidden="true"></i>
                             <span>Reparación de enchufes y puntos de luz</span>
                         </li>
                     </ul>
@@ -284,15 +285,15 @@
                     <p class="text-secondary mb-4">Instalación de puntos de carga para vehículos eléctricos en Madrid. Asesoramiento completo y gestión de subvenciones.</p>
                     <ul class="text-secondary space-y-2 mb-4">
                         <li class="flex items-start">
-                            <i class="fas fa-check text-accent mr-2 mt-1" aria-hidden="true"></i>
+                            <i class="fas fa-check text-accent-hover mr-2 mt-1" aria-hidden="true"></i>
                             <span>Instalación Wallbox y puntos de carga</span>
                         </li>
                         <li class="flex items-start">
-                            <i class="fas fa-check text-accent mr-2 mt-1" aria-hidden="true"></i>
+                            <i class="fas fa-check text-accent-hover mr-2 mt-1" aria-hidden="true"></i>
                             <span>Asesoramiento en potencia necesaria</span>
                         </li>
                         <li class="flex items-start">
-                            <i class="fas fa-check text-accent mr-2 mt-1" aria-hidden="true"></i>
+                            <i class="fas fa-check text-accent-hover mr-2 mt-1" aria-hidden="true"></i>
                             <span>Gestión de subvenciones y ayudas</span>
                         </li>
                     </ul>
@@ -308,15 +309,15 @@
                     <p class="text-secondary mb-4">Instalación de placas solares y sistemas de autoconsumo en Madrid. Estudio de viabilidad y gestión de subvenciones.</p>
                     <ul class="text-secondary space-y-2 mb-4">
                         <li class="flex items-start">
-                            <i class="fas fa-check text-accent mr-2 mt-1" aria-hidden="true"></i>
+                            <i class="fas fa-check text-accent-hover mr-2 mt-1" aria-hidden="true"></i>
                             <span>Instalación de placas solares</span>
                         </li>
                         <li class="flex items-start">
-                            <i class="fas fa-check text-accent mr-2 mt-1" aria-hidden="true"></i>
+                            <i class="fas fa-check text-accent-hover mr-2 mt-1" aria-hidden="true"></i>
                             <span>Sistemas de autoconsumo</span>
                         </li>
                         <li class="flex items-start">
-                            <i class="fas fa-check text-accent mr-2 mt-1" aria-hidden="true"></i>
+                            <i class="fas fa-check text-accent-hover mr-2 mt-1" aria-hidden="true"></i>
                             <span>Gestión de subvenciones y bonificaciones</span>
                         </li>
                     </ul>
@@ -332,15 +333,15 @@
                     <p class="text-secondary mb-4">Sistemas de automatización y cuadros eléctricos para empresas en Madrid. Mejora de eficiencia energética.</p>
                     <ul class="text-secondary space-y-2 mb-4">
                         <li class="flex items-start">
-                            <i class="fas fa-check text-accent mr-2 mt-1" aria-hidden="true"></i>
+                            <i class="fas fa-check text-accent-hover mr-2 mt-1" aria-hidden="true"></i>
                             <span>Automatización industrial</span>
                         </li>
                         <li class="flex items-start">
-                            <i class="fas fa-check text-accent mr-2 mt-1" aria-hidden="true"></i>
+                            <i class="fas fa-check text-accent-hover mr-2 mt-1" aria-hidden="true"></i>
                             <span>Cuadros eléctricos personalizados</span>
                         </li>
                         <li class="flex items-start">
-                            <i class="fas fa-check text-accent mr-2 mt-1" aria-hidden="true"></i>
+                            <i class="fas fa-check text-accent-hover mr-2 mt-1" aria-hidden="true"></i>
                             <span>Control y monitorización de consumo</span>
                         </li>
                     </ul>
@@ -356,15 +357,15 @@
                     <p class="text-secondary mb-4">Diseño e instalación de sistemas de iluminación LED eficientes para interiores y exteriores en Madrid.</p>
                     <ul class="text-secondary space-y-2 mb-4">
                         <li class="flex items-start">
-                            <i class="fas fa-check text-accent mr-2 mt-1" aria-hidden="true"></i>
+                            <i class="fas fa-check text-accent-hover mr-2 mt-1" aria-hidden="true"></i>
                             <span>Iluminación LED eficiente</span>
                         </li>
                         <li class="flex items-start">
-                            <i class="fas fa-check text-accent mr-2 mt-1" aria-hidden="true"></i>
+                            <i class="fas fa-check text-accent-hover mr-2 mt-1" aria-hidden="true"></i>
                             <span>Diseño de proyectos de iluminación</span>
                         </li>
                         <li class="flex items-start">
-                            <i class="fas fa-check text-accent mr-2 mt-1" aria-hidden="true"></i>
+                            <i class="fas fa-check text-accent-hover mr-2 mt-1" aria-hidden="true"></i>
                             <span>Estudios de ahorro energético</span>
                         </li>
                     </ul>
@@ -413,7 +414,7 @@
             <h2 class="text-3xl font-bold mb-6">¿Necesita un Electricista en Madrid?</h2>
             <p class="text-xl mb-8 max-w-3xl mx-auto">Contáctenos para solicitar presupuesto sin compromiso.</p>
             <div class="flex flex-col md:flex-row justify-center gap-4">
-                <a href="tel:+34691502361" class="bg-accent text-primary font-bold py-3 px-8 rounded-lg hover:bg-accent-hover transition duration-300">
+                <a href="tel:+34691502361" class="bg-accent text-primary font-bold py-3 px-8 rounded-lg hover:bg-accent-light transition duration-300">
                     <i class="fas fa-phone mr-2" aria-hidden="true"></i>691 50 23 61
                 </a>
                 <a href="mailto:info@imelec.es" class="bg-white text-primary font-bold py-3 px-8 rounded-lg hover:bg-light transition duration-300">

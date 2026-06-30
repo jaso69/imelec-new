@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <script>document.documentElement.classList.add('js')</script>
+    <script>(function(){document.documentElement.classList.add('js');try{if(localStorage.getItem('imelec_theme')==='dark'){document.documentElement.setAttribute('data-theme','dark');}}catch(e){}})();</script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Política de Privacidad | Imelec - Electricistas en Madrid</title>
@@ -21,11 +21,12 @@
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <style type="text/tailwindcss">
       @theme {
-        --color-primary: #0F1B2D;
-        --color-primary-light: #1E2F45;
+        --color-primary: #0A2A5E;
+        --color-primary-light: #15407F;
         --color-secondary: #3A4A5E;
         --color-secondary-light: #4E6076;
-        --color-accent: #F2A93B;
+        --color-accent: #FFEC00;
+        --color-accent-light: #FFD400;
         --color-accent-hover: #2E7DE1;
         --color-bg-light: #F7F8FA;
         --color-text: #1A1F26;

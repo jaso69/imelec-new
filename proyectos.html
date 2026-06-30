@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <script>document.documentElement.classList.add('js')</script>
+    <script>(function(){document.documentElement.classList.add('js');try{if(localStorage.getItem('imelec_theme')==='dark'){document.documentElement.setAttribute('data-theme','dark');}}catch(e){}})();</script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Proyectos Realizados | Imelec - Electricistas en Madrid</title>
@@ -25,11 +25,12 @@
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <style type="text/tailwindcss">
       @theme {
-        --color-primary: #0F1B2D;
-        --color-primary-light: #1E2F45;
+        --color-primary: #0A2A5E;
+        --color-primary-light: #15407F;
         --color-secondary: #3A4A5E;
         --color-secondary-light: #4E6076;
-        --color-accent: #F2A93B;
+        --color-accent: #FFEC00;
+        --color-accent-light: #FFD400;
         --color-accent-hover: #2E7DE1;
         --color-bg-light: #F7F8FA;
         --color-text: #1A1F26;
@@ -39,7 +40,7 @@
     <link rel="stylesheet" href="css/styles.css">
     <style type="text/css">
         .projects-hero {
-            background: linear-gradient(135deg, rgba(15, 27, 45, 0.92) 0%, rgba(15, 27, 45, 0.90) 100%), url('/img/averias.webp');
+            background: linear-gradient(rgba(10, 42, 94, 0.88), rgba(10, 42, 94, 0.88)), url('/img/averias.webp');
             background-size: cover;
             background-position: center;
         }
@@ -230,7 +231,7 @@
             <h2 class="text-3xl font-bold mb-6">¿Tiene un Proyecto de Electricidad?</h2>
             <p class="text-xl mb-8 max-w-3xl mx-auto">Solicite presupuesto sin compromiso. Estudiamos su caso y le ofrecemos la mejor solución.</p>
             <div class="flex flex-col md:flex-row justify-center gap-4">
-                <a href="tel:+34691502361" class="bg-accent text-primary font-bold py-3 px-8 rounded-lg hover:bg-accent-hover transition duration-300">
+                <a href="tel:+34691502361" class="bg-accent text-primary font-bold py-3 px-8 rounded-lg hover:bg-accent-light transition duration-300">
                     <i class="fas fa-phone mr-2" aria-hidden="true"></i>691 50 23 61
                 </a>
                 <a href="/contacto.html" class="bg-white text-primary font-bold py-3 px-8 rounded-lg hover:bg-light transition duration-300">

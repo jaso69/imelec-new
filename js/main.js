@@ -125,3 +125,51 @@
         window.addEventListener('scroll', onScroll, { passive: true });
     }
 })();
+
+/* ========================================
+   Theme Toggle (claro / oscuro)
+   ======================================== */
+(function() {
+    var THEME_KEY = 'imelec_theme';
+    var root = document.documentElement;
+
+    var toggle = document.createElement('button');
+    toggle.type = 'button';
+    toggle.id = 'theme-toggle';
+    toggle.className = 'theme-toggle';
+    toggle.setAttribute('aria-label', 'Cambiar entre tema claro y oscuro');
+    toggle.title = 'Cambiar tema';
+    toggle.innerHTML =
+        '<i class="fas fa-moon theme-icon theme-icon-moon" aria-hidden="true"></i>' +
+        '<i class="fas fa-sun theme-icon theme-icon-sun" aria-hidden="true"></i>';
+
+    function isDark() {
+        return root.getAttribute('data-theme') === 'dark';
+    }
+
+    function sync() {
+        toggle.setAttribute('aria-pressed', isDark() ? 'true' : 'false');
+    }
+
+    toggle.addEventListener('click', function() {
+        var next = isDark() ? 'light' : 'dark';
+        if (next === 'dark') {
+            root.setAttribute('data-theme', 'dark');
+        } else {
+            root.removeAttribute('data-theme');
+        }
+        try { localStorage.setItem(THEME_KEY, next); } catch (e) {}
+        sync();
+    });
+
+    // Insertar el toggle antes del botón de menú móvil (visible en todos los tamaños)
+    var menuToggle = document.getElementById('menu-toggle');
+    var anchor = menuToggle && menuToggle.parentElement;
+    if (anchor && anchor.parentNode) {
+        anchor.parentNode.insertBefore(toggle, anchor);
+    } else {
+        var header = document.getElementById('site-header');
+        if (header) header.appendChild(toggle);
+    }
+    sync();
+})();
