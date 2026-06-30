@@ -42,7 +42,7 @@
     <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@600;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
     <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@600;700&display=swap"></noscript>
     <link rel="preload" href="css/styles.css" as="style">
-    <link rel="preload" href="/img/electricidad2.webp" as="image" type="image/webp">
+    <link rel="preload" href="/img/averias.webp" as="image" type="image/webp" fetchpriority="high">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" media="print" onload="this.media='all'">
     <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"></noscript>
     <script type="application/ld+json">
@@ -95,15 +95,15 @@
      <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
      <style type="text/tailwindcss">
       @theme {
-        --color-primary: #0A2A5E;
-        --color-primary-light: #15407F;
-        --color-secondary: #3A4A5E;
-        --color-secondary-light: #4E6076;
-        --color-accent: #FFEC00;
-        --color-accent-light: #FFD400;
-        --color-accent-hover: #2E7DE1;
-        --color-bg-light: #F7F8FA;
-        --color-text: #1A1F26;
+        --color-primary: #102A43;
+        --color-primary-light: #1B4066;
+        --color-secondary: #486581;
+        --color-secondary-light: #627D98;
+        --color-accent: #F5B700;
+        --color-accent-light: #FFC83D;
+        --color-accent-hover: #2563EB;
+        --color-bg-light: #F7F9FC;
+        --color-text: #1A2533;
       }
     </style>
     
@@ -120,7 +120,7 @@
                 <div class="flex items-center shrink-0">
                     <a href="/index.html" class="flex items-center">
                         <div class="rounded-full p-2 mr-3">
-                            <svg class="icon icon-tabler icon-tabler-bolt" height="48" viewBox="0 0 24 24" width="48" fill="none" stroke="#ffec00" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none" stroke="none"></path><path d="M13 3l0 7l6 0l-8 11l0 -7l-6 0l8 -11"></path></svg>
+                            <svg class="icon icon-tabler icon-tabler-bolt" height="48" viewBox="0 0 24 24" width="48" fill="none" stroke="#F5B700" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none" stroke="none"></path><path d="M13 3l0 7l6 0l-8 11l0 -7l-6 0l8 -11"></path></svg>
                         </div>
                         <span class="text-white text-2xl font-bold font-display tracking-wide">IMELEC</span>
                     </a>
@@ -178,22 +178,37 @@
     <!-- Main Content -->
     <main id="main-content" tabindex="-1">
     <!-- Hero Section -->
-    <section class="hero-pattern py-20 md:py-32 text-white">
-        <div class="container mx-auto px-4 text-center">
-            <div class="hero-trust-bar">
-                <span class="hero-trust-item"><i class="fas fa-award" aria-hidden="true"></i> +15 años de experiencia</span>
-                <span class="hero-trust-item"><i class="fas fa-certificate" aria-hidden="true"></i> Electricistas certificados</span>
-                <span class="hero-trust-item"><i class="fas fa-shield-halved" aria-hidden="true"></i> Garantía 2 años</span>
-            </div>
-            <h1 class="font-display mb-6">Electricistas Expertos en la Comunidad de Madrid</h1>
-            <p class="hero-subtitle mb-10">Servicios eléctricos integrales para hogares, empresas y comunidades. Instalaciones, reparaciones y puntos de carga para vehículos eléctricos.</p>
-            <div class="hero-actions flex flex-col sm:flex-row justify-center gap-4">
-                <a href="tel:+34691502361" class="btn-primary">
-                    <i class="fas fa-phone mr-2" aria-hidden="true"></i>Llamar Ahora
-                </a>
-                <a href="/contacto.html" class="btn-secondary">
-                    <i class="fas fa-envelope mr-2" aria-hidden="true"></i>Solicitar Presupuesto
-                </a>
+    <section class="hero py-16 md:py-24 lg:py-28">
+        <div class="container mx-auto px-4">
+            <div class="hero-grid">
+                <div class="hero-content">
+                    <span class="hero-eyebrow"><i class="fas fa-bolt" aria-hidden="true"></i> Electricistas certificados en Madrid</span>
+                    <h1 class="font-display">Electricistas expertos en la <span class="accent">Comunidad de Madrid</span></h1>
+                    <p class="hero-subtitle">Servicios eléctricos integrales para hogares, empresas y comunidades. Instalaciones, reparaciones y puntos de carga para vehículos eléctricos.</p>
+                    <div class="hero-actions">
+                        <a href="tel:+34691502361" class="btn-primary">
+                            <i class="fas fa-phone mr-2" aria-hidden="true"></i>Llamar ahora
+                        </a>
+                        <a href="/contacto.html" class="btn-outline">
+                            <i class="fas fa-envelope mr-2" aria-hidden="true"></i>Solicitar presupuesto
+                        </a>
+                    </div>
+                    <ul class="hero-trust-bar">
+                        <li class="hero-trust-item"><i class="fas fa-award" aria-hidden="true"></i> +15 años de experiencia</li>
+                        <li class="hero-trust-item"><i class="fas fa-certificate" aria-hidden="true"></i> Certificados REBT</li>
+                        <li class="hero-trust-item"><i class="fas fa-shield-halved" aria-hidden="true"></i> Garantía 2 años</li>
+                    </ul>
+                </div>
+                <div class="hero-media">
+                    <img src="./img/averias.webp" alt="Electricista de Imelec realizando una instalación eléctrica en Madrid" width="1792" height="1024" fetchpriority="high">
+                    <div class="hero-media-badge">
+                        <i class="fas fa-bolt" aria-hidden="true"></i>
+                        <div>
+                            <div class="badge-num">500+</div>
+                            <div class="badge-label">Proyectos realizados</div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
