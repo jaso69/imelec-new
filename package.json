@@ -1,11 +1,15 @@
 {
   "name": "imelec-web",
   "private": true,
-  "description": "Herramientas locales: solo sirve para compilar css/tailwind.css. Vercel no lo usa (ver .vercelignore).",
+  "description": "Herramientas locales: compilar css/tailwind.css y css/icons.css. Vercel no lo usa (ver .vercelignore).",
   "scripts": {
-    "build:css": "tailwindcss -i css/tailwind.input.css -o css/tailwind.css --minify"
+    "build:css": "tailwindcss -i css/tailwind.input.css -o css/tailwind.css --minify",
+    "build:icons": "python3 tools/generar-iconos.py"
   },
   "devDependencies": {
+    "@fontsource-variable/inter": "^5.3.0",
+    "@fontsource/space-grotesk": "^5.3.0",
+    "@fortawesome/fontawesome-free": "^6.7.2",
     "@tailwindcss/cli": "^4",
     "tailwindcss": "^4"
   }
