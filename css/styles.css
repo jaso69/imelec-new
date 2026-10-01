@@ -956,7 +956,8 @@ button, [role="button"], .btn, a[href] {
 .reveal-delay-6 { transition-delay: 0.48s; }
 
 @media (prefers-reduced-motion: reduce) {
-    .reveal {
+    .reveal,
+    .js .reveal {
         opacity: 1;
         transform: none;
         transition: none;
