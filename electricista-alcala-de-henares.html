@@ -183,11 +183,11 @@
         <div class="container mx-auto px-4 text-center">
             <h1 class="text-4xl md:text-5xl font-bold mb-6 font-display">Electricista en Alcalá de Henares</h1>
             <p class="text-xl mb-8 max-w-3xl mx-auto">Electricistas en Alcalá de Henares, a pocos kilómetros de nuestra sede en Torrejón de Ardoz. Instalaciones, reparaciones, certificados y puntos de carga.</p>
-            <div class="flex flex-col md:flex-row justify-center gap-4">
-                <a href="tel:+34691502361" class="bg-accent text-primary font-bold py-3 px-8 rounded-lg hover:bg-accent-light transition duration-300">
+            <div class="flex flex-col sm:flex-row justify-center gap-4">
+                <a href="tel:+34691502361" class="btn-primary">
                     <i class="fas fa-phone mr-2" aria-hidden="true"></i>Llamar Ahora
                 </a>
-                <a href="/contacto.html" class="bg-transparent border-2 border-white text-white font-bold py-3 px-8 rounded-lg hover:bg-white hover:text-primary transition duration-300">
+                <a href="/contacto.html" class="btn-secondary">
                     <i class="fas fa-envelope mr-2" aria-hidden="true"></i>Solicitar Presupuesto
                 </a>
             </div>
@@ -196,37 +196,50 @@
 
     <section class="py-16 bg-white">
         <div class="container mx-auto px-4">
-            <h2 class="text-3xl font-bold text-center text-primary mb-12 font-display">Servicios de Electricidad en Alcalá de Henares</h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <div class="bg-light rounded-lg p-6 shadow-md hover:shadow-lg transition duration-300">
-                    <div class="text-primary text-4xl mb-4"><i class="fas fa-landmark" aria-hidden="true"></i></div>
+            <h2 class="section-heading reveal">Servicios de Electricidad en Alcalá de Henares</h2>
+            <div class="section-divider section-divider--spaced reveal"></div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
+                <div class="service-card bg-light rounded-xl p-6 shadow-md border-l-4 border-primary reveal reveal-delay-1">
+                    <div class="service-icon-wrap">
+                        <i class="fas fa-landmark" aria-hidden="true"></i>
+                    </div>
                     <h3 class="text-xl font-bold text-primary mb-3 font-display">Edificios Antiguos</h3>
-                    <p class="text-gray-700">Renovación de instalaciones en edificios del centro, coordinando el trabajo con los permisos municipales que exija cada inmueble.</p>
+                    <p class="text-secondary">Renovación de instalaciones en edificios del centro, coordinando el trabajo con los permisos municipales que exija cada inmueble.</p>
                 </div>
-                <div class="bg-light rounded-lg p-6 shadow-md hover:shadow-lg transition duration-300">
-                    <div class="text-primary text-4xl mb-4"><i class="fas fa-file-signature" aria-hidden="true"></i></div>
+                <div class="service-card bg-light rounded-xl p-6 shadow-md border-l-4 border-primary reveal reveal-delay-2">
+                    <div class="service-icon-wrap">
+                        <i class="fas fa-file-signature" aria-hidden="true"></i>
+                    </div>
                     <h3 class="text-xl font-bold text-primary mb-3 font-display">Certificados para Alquiler</h3>
-                    <p class="text-gray-700">Revisión y certificado de instalación eléctrica para dar de alta el suministro en pisos de alquiler, incluidos los de estudiantes.</p>
+                    <p class="text-secondary">Revisión y certificado de instalación eléctrica para dar de alta el suministro en pisos de alquiler, incluidos los de estudiantes.</p>
                 </div>
-                <div class="bg-light rounded-lg p-6 shadow-md hover:shadow-lg transition duration-300">
-                    <div class="text-primary text-4xl mb-4"><i class="fas fa-tools" aria-hidden="true"></i></div>
+                <div class="service-card bg-light rounded-xl p-6 shadow-md border-l-4 border-primary reveal reveal-delay-3">
+                    <div class="service-icon-wrap">
+                        <i class="fas fa-tools" aria-hidden="true"></i>
+                    </div>
                     <h3 class="text-xl font-bold text-primary mb-3 font-display">Reparaciones Urgentes</h3>
-                    <p class="text-gray-700">Atención de averías en Alcalá de Henares de lunes a viernes, en nuestro horario de urgencias, priorizando las emergencias.</p>
+                    <p class="text-secondary">Atención de averías en Alcalá de Henares de lunes a viernes, en nuestro horario de urgencias, priorizando las emergencias.</p>
                 </div>
-                <div class="bg-light rounded-lg p-6 shadow-md hover:shadow-lg transition duration-300">
-                    <div class="text-primary text-4xl mb-4"><i class="fas fa-charging-station" aria-hidden="true"></i></div>
+                <div class="service-card bg-light rounded-xl p-6 shadow-md border-l-4 border-primary reveal reveal-delay-1">
+                    <div class="service-icon-wrap">
+                        <i class="fas fa-charging-station" aria-hidden="true"></i>
+                    </div>
                     <h3 class="text-xl font-bold text-primary mb-3 font-display">Puntos de Carga VE</h3>
-                    <p class="text-gray-700">Wallbox en garajes de desarrollos como Espartales o La Garena y en viviendas unifamiliares.</p>
+                    <p class="text-secondary">Wallbox en garajes de desarrollos como Espartales o La Garena y en viviendas unifamiliares.</p>
                 </div>
-                <div class="bg-light rounded-lg p-6 shadow-md hover:shadow-lg transition duration-300">
-                    <div class="text-primary text-4xl mb-4"><i class="fas fa-solar-panel" aria-hidden="true"></i></div>
+                <div class="service-card bg-light rounded-xl p-6 shadow-md border-l-4 border-primary reveal reveal-delay-2">
+                    <div class="service-icon-wrap">
+                        <i class="fas fa-solar-panel" aria-hidden="true"></i>
+                    </div>
                     <h3 class="text-xl font-bold text-primary mb-3 font-display">Autoconsumo Solar</h3>
-                    <p class="text-gray-700">Placas solares para chalets y adosados, con estudio de viabilidad y gestión de subvenciones.</p>
+                    <p class="text-secondary">Placas solares para chalets y adosados, con estudio de viabilidad y gestión de subvenciones.</p>
                 </div>
-                <div class="bg-light rounded-lg p-6 shadow-md hover:shadow-lg transition duration-300">
-                    <div class="text-primary text-4xl mb-4"><i class="fas fa-building" aria-hidden="true"></i></div>
+                <div class="service-card bg-light rounded-xl p-6 shadow-md border-l-4 border-primary reveal reveal-delay-3">
+                    <div class="service-icon-wrap">
+                        <i class="fas fa-building" aria-hidden="true"></i>
+                    </div>
                     <h3 class="text-xl font-bold text-primary mb-3 font-display">Comunidades y Locales</h3>
-                    <p class="text-gray-700">Mantenimiento de zonas comunes y adecuación eléctrica de comercios y oficinas.</p>
+                    <p class="text-secondary">Mantenimiento de zonas comunes y adecuación eléctrica de comercios y oficinas.</p>
                 </div>
             </div>
         </div>
@@ -234,12 +247,14 @@
 
     <section class="py-16 bg-light">
         <div class="container mx-auto px-4">
-            <div class="flex flex-col md:flex-row items-center">
-                <div class="md:w-1/2 mb-8 md:mb-0">
-                    <img src="/img/averias.webp" alt="Electricista trabajando en una vivienda de Alcalá de Henares" class="rounded-lg shadow-lg" width="600" height="343" loading="lazy">
+            <div class="flex flex-col md:flex-row items-center gap-8 md:gap-12">
+                <div class="md:w-1/2 mb-8 md:mb-0 reveal">
+                    <div class="about-image-wrap">
+                        <img src="/img/averias.webp" alt="Electricista trabajando en una vivienda de Alcalá de Henares" class="w-full" width="600" height="343" loading="lazy">
+                    </div>
                 </div>
-                <div class="md:w-1/2 md:pl-12">
-                    <h2 class="text-3xl font-bold text-primary mb-6 font-display">Electricistas Cerca de Alcalá de Henares</h2>
+                <div class="md:w-1/2 reveal reveal-delay-2">
+                    <h2 class="section-heading text-left mb-6">Electricistas Cerca de Alcalá de Henares</h2>
                     <p class="text-gray-700 mb-4">Nuestra sede está en Torrejón de Ardoz, el municipio vecino por la A-2, lo que nos permite organizar las visitas a Alcalá de Henares con facilidad. <strong>IMELEC</strong> lleva más de 15 años realizando instalaciones eléctricas en la Comunidad de Madrid.</p>
                     <p class="text-gray-700 mb-6">Alcalá combina un casco histórico declarado Patrimonio de la Humanidad, barrios residenciales de distintas épocas y desarrollos recientes. Adaptamos cada trabajo al tipo de edificio: no es lo mismo actualizar una vivienda del centro que equipar un adosado nuevo.</p>
                     <ul class="space-y-3">
@@ -253,39 +268,41 @@
         </div>
     </section>
 
-    <section class="py-16 bg-white">
+    <section class="py-16 zones-section">
         <div class="container mx-auto px-4">
-            <h2 class="text-3xl font-bold text-center text-primary mb-12 font-display">Zonas de Alcalá de Henares que Cubrimos</h2>
-            <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
-                <div class="bg-light rounded-lg p-4 text-center shadow"><span class="font-semibold text-primary">Casco Histórico</span></div>
-                <div class="bg-light rounded-lg p-4 text-center shadow"><span class="font-semibold text-primary">El Ensanche</span></div>
-                <div class="bg-light rounded-lg p-4 text-center shadow"><span class="font-semibold text-primary">Reyes Católicos</span></div>
-                <div class="bg-light rounded-lg p-4 text-center shadow"><span class="font-semibold text-primary">Espartales</span></div>
-                <div class="bg-light rounded-lg p-4 text-center shadow"><span class="font-semibold text-primary">La Garena</span></div>
-                <div class="bg-light rounded-lg p-4 text-center shadow"><span class="font-semibold text-primary">El Val</span></div>
-                <div class="bg-light rounded-lg p-4 text-center shadow"><span class="font-semibold text-primary">El Chorrillo</span></div>
-                <div class="bg-light rounded-lg p-4 text-center shadow"><span class="font-semibold text-primary">Juan de Austria</span></div>
+            <h2 class="section-heading reveal">Zonas de Alcalá de Henares que Cubrimos</h2>
+            <div class="section-divider section-divider--spaced reveal"></div>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-4 max-w-5xl mx-auto">
+                <div class="barrio-chip reveal reveal-delay-1"><i class="fas fa-map-marker-alt" aria-hidden="true"></i><span>Casco Histórico</span></div>
+                <div class="barrio-chip reveal reveal-delay-2"><i class="fas fa-map-marker-alt" aria-hidden="true"></i><span>El Ensanche</span></div>
+                <div class="barrio-chip reveal reveal-delay-3"><i class="fas fa-map-marker-alt" aria-hidden="true"></i><span>Reyes Católicos</span></div>
+                <div class="barrio-chip reveal reveal-delay-4"><i class="fas fa-map-marker-alt" aria-hidden="true"></i><span>Espartales</span></div>
+                <div class="barrio-chip reveal reveal-delay-1"><i class="fas fa-map-marker-alt" aria-hidden="true"></i><span>La Garena</span></div>
+                <div class="barrio-chip reveal reveal-delay-2"><i class="fas fa-map-marker-alt" aria-hidden="true"></i><span>El Val</span></div>
+                <div class="barrio-chip reveal reveal-delay-3"><i class="fas fa-map-marker-alt" aria-hidden="true"></i><span>El Chorrillo</span></div>
+                <div class="barrio-chip reveal reveal-delay-4"><i class="fas fa-map-marker-alt" aria-hidden="true"></i><span>Juan de Austria</span></div>
             </div>
         </div>
     </section>
 
-    <section class="py-16 bg-light" aria-labelledby="faq-heading">
+    <section class="py-16 bg-white" aria-labelledby="faq-heading">
         <div class="container mx-auto px-4">
-            <h2 id="faq-heading" class="text-3xl font-bold text-center text-primary mb-12 font-display">Preguntas Frecuentes en Alcalá de Henares</h2>
+            <h2 id="faq-heading" class="section-heading reveal">Preguntas Frecuentes en Alcalá de Henares</h2>
+            <div class="section-divider section-divider--spaced reveal"></div>
             <div class="faq-list">
-                <details class="faq-item">
+                <details class="faq-item reveal">
                     <summary>¿Necesito un certificado eléctrico para alquilar un piso en Alcalá?</summary>
                     <div class="faq-answer">
                         <p>Para dar de alta el suministro la distribuidora puede exigir el certificado de instalación eléctrica, sobre todo si la instalación es antigua o el suministro lleva tiempo de baja. Revisamos la vivienda, hacemos las correcciones necesarias y emitimos el certificado.</p>
                     </div>
                 </details>
-                <details class="faq-item">
+                <details class="faq-item reveal">
                     <summary>¿Pueden trabajar en edificios del casco histórico?</summary>
                     <div class="faq-answer">
                         <p>Sí. En los edificios protegidos algunas obras requieren autorización municipal, así que antes de empezar le indicamos qué trámites pueden ser necesarios para que la reforma eléctrica no se retrase.</p>
                     </div>
                 </details>
-                <details class="faq-item">
+                <details class="faq-item reveal">
                     <summary>¿Atienden urgencias en Alcalá de Henares?</summary>
                     <div class="faq-answer">
                         <p>Sí. Nuestro servicio de urgencias está disponible de lunes a viernes 9:00-14:00 / 16:00-19:00, priorizando las emergencias. No trabajamos con servicio 24 horas.</p>
@@ -297,13 +314,13 @@
 
     <section class="py-16 bg-primary text-white">
         <div class="container mx-auto px-4 text-center">
-            <h2 class="text-3xl font-bold mb-6">¿Necesita un Electricista en Alcalá de Henares?</h2>
-            <p class="text-xl mb-8 max-w-3xl mx-auto">Llámenos o escríbanos y organizaremos la visita a su vivienda o negocio en Alcalá de Henares.</p>
-            <div class="flex flex-col md:flex-row justify-center gap-4">
-                <a href="tel:+34691502361" class="bg-accent text-primary font-bold py-3 px-8 rounded-lg hover:bg-accent-light transition duration-300">
+            <h2 class="text-3xl md:text-4xl font-bold mb-6 font-display reveal">¿Necesita un Electricista en Alcalá de Henares?</h2>
+            <p class="text-xl mb-8 max-w-3xl mx-auto text-white/90 reveal reveal-delay-1">Llámenos o escríbanos y organizaremos la visita a su vivienda o negocio en Alcalá de Henares.</p>
+            <div class="flex flex-col sm:flex-row justify-center gap-4 reveal reveal-delay-2">
+                <a href="tel:+34691502361" class="btn-primary">
                     <i class="fas fa-phone mr-2" aria-hidden="true"></i>691 50 23 61
                 </a>
-                <a href="/contacto.html" class="bg-white text-primary font-bold py-3 px-8 rounded-lg hover:bg-light transition duration-300">
+                <a href="/contacto.html" class="btn-secondary">
                     <i class="fas fa-envelope mr-2" aria-hidden="true"></i>Solicitar Presupuesto
                 </a>
             </div>

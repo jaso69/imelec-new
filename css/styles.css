@@ -73,6 +73,13 @@ h1 {
     letter-spacing: -0.02em;
 }
 
+/* Variante alineada a la izquierda (bloques de texto junto a imagen).
+   Las utilidades de Tailwind (text-left, mb-6) no pueden sobrescribir esta clase */
+.section-heading.text-left {
+    text-align: left;
+    margin-bottom: 1.5rem;
+}
+
 .section-subheading {
     text-align: center;
     color: var(--color-text-muted);
@@ -1049,6 +1056,39 @@ button, [role="button"], .btn, a[href] {
     background: var(--color-accent);
     border-radius: 2px;
     margin: 0 auto 1rem;
+}
+
+/* Divider sin subtítulo debajo: separa el encabezado del contenido */
+.section-divider--spaced {
+    margin-bottom: 3rem;
+}
+
+/* Barrios de las páginas de zona
+   ---------------------------------------- */
+.barrio-chip {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 0.875rem 1rem;
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-xs);
+    color: var(--color-primary);
+    font-weight: 600;
+    text-align: center;
+    line-height: 1.3;
+}
+
+.barrio-chip i {
+    color: var(--color-accent-hover);
+    font-size: 0.875rem;
+    flex-shrink: 0;
+}
+
+[data-theme="dark"] .barrio-chip {
+    color: #F1F5FA;
 }
 
 /* ========================================

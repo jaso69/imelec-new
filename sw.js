@@ -3,7 +3,7 @@
    Cache-first strategy for static assets
    ======================================== */
 
-const CACHE_NAME = 'imelec-v2';
+const CACHE_NAME = 'imelec-v3';
 const STATIC_ASSETS = [
     '/',
     '/servicios.html',
