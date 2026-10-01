@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" width="600" height="400" role="img" aria-labelledby="t">
+  <title id="t">Ilustración de una vivienda con placas solares</title>
+  <defs>
+    <radialGradient id="glowA" cx="82%" cy="12%" r="60%">
+      <stop offset="0" stop-color="#F5B700" stop-opacity=".22"/>
+      <stop offset="1" stop-color="#F5B700" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="glowB" cx="8%" cy="96%" r="65%">
+      <stop offset="0" stop-color="#2563EB" stop-opacity=".32"/>
+      <stop offset="1" stop-color="#2563EB" stop-opacity="0"/>
+    </radialGradient>
+    <pattern id="dots" width="24" height="24" patternUnits="userSpaceOnUse">
+      <circle cx="2" cy="2" r="1.4" fill="#fff" fill-opacity=".07"/>
+    </pattern>
+  </defs>
+  <rect width="600" height="400" rx="24" fill="#102A43"/>
+  <rect width="600" height="400" rx="24" fill="url(#dots)"/>
+  <rect width="600" height="400" rx="24" fill="url(#glowA)"/>
+  <rect width="600" height="400" rx="24" fill="url(#glowB)"/>
+  <circle cx="486" cy="92" r="36" fill="#F5B700"/>
+  <line x1="0" y1="-50" x2="0" y2="-64" transform="translate(486 92) rotate(0)" stroke="#F5B700" stroke-width="6" stroke-linecap="round"/>
+  <line x1="0" y1="-50" x2="0" y2="-64" transform="translate(486 92) rotate(45)" stroke="#F5B700" stroke-width="6" stroke-linecap="round"/>
+  <line x1="0" y1="-50" x2="0" y2="-64" transform="translate(486 92) rotate(90)" stroke="#F5B700" stroke-width="6" stroke-linecap="round"/>
+  <line x1="0" y1="-50" x2="0" y2="-64" transform="translate(486 92) rotate(135)" stroke="#F5B700" stroke-width="6" stroke-linecap="round"/>
+  <line x1="0" y1="-50" x2="0" y2="-64" transform="translate(486 92) rotate(180)" stroke="#F5B700" stroke-width="6" stroke-linecap="round"/>
+  <line x1="0" y1="-50" x2="0" y2="-64" transform="translate(486 92) rotate(225)" stroke="#F5B700" stroke-width="6" stroke-linecap="round"/>
+  <line x1="0" y1="-50" x2="0" y2="-64" transform="translate(486 92) rotate(270)" stroke="#F5B700" stroke-width="6" stroke-linecap="round"/>
+  <line x1="0" y1="-50" x2="0" y2="-64" transform="translate(486 92) rotate(315)" stroke="#F5B700" stroke-width="6" stroke-linecap="round"/>
+  <line x1="60" y1="350" x2="540" y2="350" stroke="#243B53" stroke-width="4" stroke-linecap="round"/>
+
+  <rect x="150" y="200" width="280" height="150" fill="#F7F9FC"/>
+  <polygon points="124,208 190,116 390,116 456,208" fill="#334E68"/>
+  <rect x="206" y="130" width="38" height="30" rx="3" fill="#2563EB" stroke="#60A5FA" stroke-width="2"/>
+  <line x1="225" y1="132" x2="225" y2="158" stroke="#60A5FA" stroke-width="1.5" opacity=".7"/>
+  <rect x="250" y="130" width="38" height="30" rx="3" fill="#2563EB" stroke="#60A5FA" stroke-width="2"/>
+  <line x1="269" y1="132" x2="269" y2="158" stroke="#60A5FA" stroke-width="1.5" opacity=".7"/>
+  <rect x="294" y="130" width="38" height="30" rx="3" fill="#2563EB" stroke="#60A5FA" stroke-width="2"/>
+  <line x1="313" y1="132" x2="313" y2="158" stroke="#60A5FA" stroke-width="1.5" opacity=".7"/>
+  <rect x="338" y="130" width="38" height="30" rx="3" fill="#2563EB" stroke="#60A5FA" stroke-width="2"/>
+  <line x1="357" y1="132" x2="357" y2="158" stroke="#60A5FA" stroke-width="1.5" opacity=".7"/>
+  <rect x="206" y="166" width="38" height="30" rx="3" fill="#2563EB" stroke="#60A5FA" stroke-width="2"/>
+  <line x1="225" y1="168" x2="225" y2="194" stroke="#60A5FA" stroke-width="1.5" opacity=".7"/>
+  <rect x="250" y="166" width="38" height="30" rx="3" fill="#2563EB" stroke="#60A5FA" stroke-width="2"/>
+  <line x1="269" y1="168" x2="269" y2="194" stroke="#60A5FA" stroke-width="1.5" opacity=".7"/>
+  <rect x="294" y="166" width="38" height="30" rx="3" fill="#2563EB" stroke="#60A5FA" stroke-width="2"/>
+  <line x1="313" y1="168" x2="313" y2="194" stroke="#60A5FA" stroke-width="1.5" opacity=".7"/>
+  <rect x="338" y="166" width="38" height="30" rx="3" fill="#2563EB" stroke="#60A5FA" stroke-width="2"/>
+  <line x1="357" y1="168" x2="357" y2="194" stroke="#60A5FA" stroke-width="1.5" opacity=".7"/>
+  <rect x="262" y="270" width="52" height="80" rx="4" fill="#829AB1"/>
+  <rect x="182" y="236" width="52" height="40" rx="4" fill="#F5B700" opacity=".9"/>
+  <rect x="350" y="236" width="52" height="40" rx="4" fill="#BCCCDC"/>
+  <path d="M450 208 V262" stroke="#60A5FA" stroke-width="4" stroke-dasharray="8 6"/>
+  <rect x="440" y="262" width="48" height="70" rx="8" fill="#D9E2EC"/>
+  <path d="M3 -13 L-8 2 L-1 2 L-3 13 L8 -2 L1 -2 Z" transform="translate(464 297) scale(.9)" fill="#102A43"/>
+</svg>

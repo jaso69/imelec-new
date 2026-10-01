@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" width="600" height="400" role="img" aria-labelledby="t">
+  <title id="t">Ilustración de un certificado de instalación eléctrica</title>
+  <defs>
+    <radialGradient id="glowA" cx="82%" cy="12%" r="60%">
+      <stop offset="0" stop-color="#F5B700" stop-opacity=".22"/>
+      <stop offset="1" stop-color="#F5B700" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="glowB" cx="8%" cy="96%" r="65%">
+      <stop offset="0" stop-color="#2563EB" stop-opacity=".32"/>
+      <stop offset="1" stop-color="#2563EB" stop-opacity="0"/>
+    </radialGradient>
+    <pattern id="dots" width="24" height="24" patternUnits="userSpaceOnUse">
+      <circle cx="2" cy="2" r="1.4" fill="#fff" fill-opacity=".07"/>
+    </pattern>
+  </defs>
+  <rect width="600" height="400" rx="24" fill="#102A43"/>
+  <rect width="600" height="400" rx="24" fill="url(#dots)"/>
+  <rect width="600" height="400" rx="24" fill="url(#glowA)"/>
+  <rect width="600" height="400" rx="24" fill="url(#glowB)"/>
+  <path d="M200 64 Q200 50 214 50 H382 L420 88 V326 Q420 340 406 340 H214 Q200 340 200 326 Z" fill="#F7F9FC"/>
+  <path d="M382 50 V76 Q382 88 394 88 H420 Z" fill="#BCCCDC"/>
+  <rect x="226" y="82" width="124" height="14" rx="7" fill="#102A43"/>
+  <rect x="226" y="104" width="80" height="10" rx="5" fill="#829AB1"/>
+  <rect x="226" y="138" width="168" height="9" rx="4.5" fill="#D9E2EC"/>
+  <rect x="226" y="162" width="150" height="9" rx="4.5" fill="#D9E2EC"/>
+  <rect x="226" y="186" width="168" height="9" rx="4.5" fill="#D9E2EC"/>
+  <rect x="226" y="210" width="132" height="9" rx="4.5" fill="#D9E2EC"/>
+  <rect x="226" y="234" width="160" height="9" rx="4.5" fill="#D9E2EC"/>
+  <rect x="226" y="258" width="110" height="9" rx="4.5" fill="#D9E2EC"/>
+  <path d="M228 312 q12 -22 24 0 t24 0 t20 -6" fill="none" stroke="#486581" stroke-width="4" stroke-linecap="round"/>
+  <rect x="226" y="320" width="80" height="4" rx="2" fill="#BCCCDC"/>
+  <circle cx="398" cy="300" r="40" fill="#2563EB"/>
+  <path d="M381.2 300.0 l12.0 12.0 l22.0 -24.0" fill="none" stroke="#fff" stroke-width="8.0" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="160" cy="110" r="32" fill="#F5B700"/>
+  <path d="M3 -13 L-8 2 L-1 2 L-3 13 L8 -2 L1 -2 Z" transform="translate(160 110) scale(2.13)" fill="#102A43"/>
+
+</svg>

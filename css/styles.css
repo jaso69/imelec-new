@@ -1063,6 +1063,22 @@ button, [role="button"], .btn, a[href] {
     margin-bottom: 3rem;
 }
 
+/* Cabeceras de páginas internas: degradado de marca con trazado de circuito,
+   sin foto (las fotos genéricas se repetían en todas las páginas)
+   ---------------------------------------- */
+.zone-hero,
+.service-hero,
+.projects-hero,
+.contact-hero {
+    background-color: #102A43;
+    background-image:
+        radial-gradient(circle at 85% 10%, rgba(245, 183, 0, 0.20), transparent 42%),
+        radial-gradient(circle at 8% 95%, rgba(37, 99, 235, 0.28), transparent 48%),
+        url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160' viewBox='0 0 160 160'%3E%3Cg fill='none' stroke='%23ffffff' stroke-opacity='0.07' stroke-width='2'%3E%3Cpath d='M0 40h50l20 20h90M40 0v22M120 60v40l20 20h20M0 120h30l20-20v60M90 160v-30l20-20h20'/%3E%3C/g%3E%3Cg fill='%23ffffff' fill-opacity='0.11'%3E%3Ccircle cx='50' cy='40' r='3.5'/%3E%3Ccircle cx='40' cy='22' r='3.5'/%3E%3Ccircle cx='120' cy='60' r='3.5'/%3E%3Ccircle cx='30' cy='120' r='3.5'/%3E%3Ccircle cx='110' cy='110' r='3.5'/%3E%3C/g%3E%3C/svg%3E"),
+        linear-gradient(125deg, #102A43 0%, #1B4066 100%);
+    background-size: auto, auto, 160px 160px, auto;
+}
+
 /* Barrios de las páginas de zona
    ---------------------------------------- */
 .barrio-chip {

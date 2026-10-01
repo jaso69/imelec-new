@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" width="600" height="400" role="img" aria-labelledby="t">
+  <title id="t">Ilustración de una nave industrial</title>
+  <defs>
+    <radialGradient id="glowA" cx="82%" cy="12%" r="60%">
+      <stop offset="0" stop-color="#F5B700" stop-opacity=".22"/>
+      <stop offset="1" stop-color="#F5B700" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="glowB" cx="8%" cy="96%" r="65%">
+      <stop offset="0" stop-color="#2563EB" stop-opacity=".32"/>
+      <stop offset="1" stop-color="#2563EB" stop-opacity="0"/>
+    </radialGradient>
+    <pattern id="dots" width="24" height="24" patternUnits="userSpaceOnUse">
+      <circle cx="2" cy="2" r="1.4" fill="#fff" fill-opacity=".07"/>
+    </pattern>
+  </defs>
+  <rect width="600" height="400" rx="24" fill="#102A43"/>
+  <rect width="600" height="400" rx="24" fill="url(#dots)"/>
+  <rect width="600" height="400" rx="24" fill="url(#glowA)"/>
+  <rect width="600" height="400" rx="24" fill="url(#glowB)"/>
+  <line x1="50" y1="350" x2="550" y2="350" stroke="#243B53" stroke-width="4" stroke-linecap="round"/>
+
+  <rect x="90" y="196" width="420" height="154" fill="#F7F9FC"/>
+  <polygon points="90,200 90,142 195,108 195,142 300,108 300,142 405,108 405,142 510,108 510,200" fill="#D9E2EC"/>
+  <line x1="195" y1="112" x2="195" y2="140" stroke="#F5B700" stroke-width="5"/>
+  <line x1="300" y1="112" x2="300" y2="140" stroke="#F5B700" stroke-width="5"/>
+  <line x1="405" y1="112" x2="405" y2="140" stroke="#F5B700" stroke-width="5"/>
+  <rect x="130" y="244" width="116" height="106" rx="4" fill="#829AB1"/>
+  <line x1="134" y1="256" x2="242" y2="256" stroke="#486581" stroke-width="3"/>
+  <line x1="134" y1="270" x2="242" y2="270" stroke="#486581" stroke-width="3"/>
+  <line x1="134" y1="284" x2="242" y2="284" stroke="#486581" stroke-width="3"/>
+  <line x1="134" y1="298" x2="242" y2="298" stroke="#486581" stroke-width="3"/>
+  <line x1="134" y1="312" x2="242" y2="312" stroke="#486581" stroke-width="3"/>
+  <line x1="134" y1="326" x2="242" y2="326" stroke="#486581" stroke-width="3"/>
+  <line x1="134" y1="340" x2="242" y2="340" stroke="#486581" stroke-width="3"/>
+  <rect x="276" y="214" width="210" height="16" rx="3" fill="#BCCCDC"/>
+  <rect x="330" y="246" width="66" height="96" rx="6" fill="#1B4066" stroke="#F5B700" stroke-width="3"/>
+  <circle cx="348" cy="266" r="6" fill="#F5B700"/>
+  <circle cx="366" cy="266" r="6" fill="#60A5FA"/>
+  <rect x="342" y="284" width="42" height="8" rx="4" fill="#829AB1"/>
+  <rect x="342" y="300" width="42" height="8" rx="4" fill="#829AB1"/>
+  <rect x="420" y="246" width="66" height="96" rx="6" fill="#1B4066" stroke="#829AB1" stroke-width="3"/>
+  <circle cx="438" cy="266" r="6" fill="#60A5FA"/>
+  <rect x="432" y="284" width="42" height="8" rx="4" fill="#829AB1"/>
+  <circle cx="510" cy="64" r="28" fill="#F5B700"/>
+  <path d="M3 -13 L-8 2 L-1 2 L-3 13 L8 -2 L1 -2 Z" transform="translate(510 64) scale(1.87)" fill="#102A43"/>
+
+</svg>

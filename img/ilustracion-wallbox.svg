@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" width="600" height="400" role="img" aria-labelledby="t">
+  <title id="t">Ilustración de un punto de carga para coche eléctrico</title>
+  <defs>
+    <radialGradient id="glowA" cx="82%" cy="12%" r="60%">
+      <stop offset="0" stop-color="#F5B700" stop-opacity=".22"/>
+      <stop offset="1" stop-color="#F5B700" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="glowB" cx="8%" cy="96%" r="65%">
+      <stop offset="0" stop-color="#2563EB" stop-opacity=".32"/>
+      <stop offset="1" stop-color="#2563EB" stop-opacity="0"/>
+    </radialGradient>
+    <pattern id="dots" width="24" height="24" patternUnits="userSpaceOnUse">
+      <circle cx="2" cy="2" r="1.4" fill="#fff" fill-opacity=".07"/>
+    </pattern>
+  </defs>
+  <rect width="600" height="400" rx="24" fill="#102A43"/>
+  <rect width="600" height="400" rx="24" fill="url(#dots)"/>
+  <rect width="600" height="400" rx="24" fill="url(#glowA)"/>
+  <rect width="600" height="400" rx="24" fill="url(#glowB)"/>
+  <line x1="50" y1="352" x2="550" y2="352" stroke="#243B53" stroke-width="4" stroke-linecap="round"/>
+
+  <ellipse cx="205" cy="352" rx="150" ry="10" fill="#0B1C2E" opacity=".5"/>
+  <path d="M70 318 V268 Q72 246 96 241 L142 235 L186 194 Q197 184 213 184 L272 184 Q288 184 298 198 L324 235 Q340 241 340 262 V318 Z" fill="#486581"/>
+  <path d="M152 236 L192 198 L236 198 V236 Z" fill="#9FB3C8" opacity=".75"/>
+  <path d="M246 198 L271 198 Q282 198 289 208 L308 236 L246 236 Z" fill="#9FB3C8" opacity=".75"/>
+  <rect x="314" y="252" width="14" height="10" rx="3" fill="#F5B700"/>
+  <rect x="70" y="276" width="270" height="6" fill="#243B53" opacity=".35"/>
+  <circle cx="128" cy="318" r="30" fill="#0B1C2E" stroke="#829AB1" stroke-width="7"/>
+  <circle cx="284" cy="318" r="30" fill="#0B1C2E" stroke="#829AB1" stroke-width="7"/>
+  <path d="M440 278 C440 340 340 344 326 262" stroke="#D9E2EC" stroke-width="8" fill="none" stroke-linecap="round"/>
+  <rect x="384" y="118" width="112" height="160" rx="24" fill="#F7F9FC"/>
+  <circle cx="440" cy="182" r="30" fill="none" stroke="#F5B700" stroke-width="7"/>
+  <path d="M3 -13 L-8 2 L-1 2 L-3 13 L8 -2 L1 -2 Z" transform="translate(440 182) scale(1.15)" fill="#F5B700"/>
+  <rect x="410" y="234" width="60" height="9" rx="4.5" fill="#60A5FA"/>
+  <rect x="430" y="278" width="20" height="10" rx="3" fill="#BCCCDC"/>
+  <circle cx="104" cy="92" r="30" fill="#F5B700"/>
+  <path d="M3 -13 L-8 2 L-1 2 L-3 13 L8 -2 L1 -2 Z" transform="translate(104 92) scale(2.00)" fill="#102A43"/>
+
+</svg>
