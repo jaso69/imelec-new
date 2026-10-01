@@ -88,14 +88,15 @@
     })();
 
     // Register Service Worker
+    // Se registra tras la carga para no competir con los recursos de la página
     if ('serviceWorker' in navigator) {
-        navigator.serviceWorker.register('/sw.js')
+        window.addEventListener('load', () => navigator.serviceWorker.register('/sw.js')
             .then((registration) => {
                 console.log('Service Worker registered:', registration.scope);
             })
             .catch((error) => {
                 console.warn('Service Worker registration failed:', error);
-            });
+            }));
     }
 
     // Scroll Reveal: auto-add .revealed when elements enter viewport

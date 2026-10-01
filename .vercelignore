@@ -1,0 +1,5 @@
+# Herramientas locales para compilar css/tailwind.css: no se publican
+node_modules
+package.json
+package-lock.json
+css/tailwind.input.css

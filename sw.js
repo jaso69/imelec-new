@@ -3,17 +3,16 @@
    Cache-first strategy for static assets
    ======================================== */
 
-const CACHE_NAME = 'imelec-v3';
+const CACHE_NAME = 'imelec-v4';
 const STATIC_ASSETS = [
     '/',
     '/servicios.html',
     '/contacto.html',
     '/privacidad.html',
+    '/css/tailwind.css',
     '/css/styles.css',
     '/js/main.js',
     '/js/contact.js',
-    '/img/averias.webp',
-    '/img/recarga.webp',
     '/favicon.svg',
     '/sitemap.xml',
     '/robots.txt'

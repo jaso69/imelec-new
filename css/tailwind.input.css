@@ -1,0 +1,20 @@
+/* Fuente de css/tailwind.css (CSS compilado que usan las páginas).
+   Tras añadir o cambiar clases de Tailwind en los HTML o JS, regenerar con:
+     npx @tailwindcss/cli@4 -i css/tailwind.input.css -o css/tailwind.css --minify
+*/
+@import "tailwindcss" source(none);
+
+@source "../*.html";
+@source "../js/*.js";
+
+@theme {
+  --color-primary: #102A43;
+  --color-primary-light: #1B4066;
+  --color-secondary: #486581;
+  --color-secondary-light: #627D98;
+  --color-accent: #F5B700;
+  --color-accent-light: #FFC83D;
+  --color-accent-hover: #2563EB;
+  --color-bg-light: #F7F9FC;
+  --color-text: #1A2533;
+}

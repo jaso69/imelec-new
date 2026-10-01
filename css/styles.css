@@ -407,7 +407,13 @@ button, [role="button"], .btn, a[href] {
 .hero .hero-subtitle { animation: hero-fade-up 0.7s cubic-bezier(0.22, 1, 0.36, 1) 0.20s both; }
 .hero .hero-actions { animation: hero-fade-up 0.7s cubic-bezier(0.22, 1, 0.36, 1) 0.30s both; }
 .hero .hero-trust-bar { animation: hero-fade-up 0.7s cubic-bezier(0.22, 1, 0.36, 1) 0.40s both; }
-.hero .hero-media { animation: hero-fade-up 0.8s cubic-bezier(0.22, 1, 0.36, 1) 0.18s both; }
+/* La imagen solo se desplaza, sin partir de opacidad 0: así cuenta como LCP desde el primer pintado */
+@keyframes hero-rise {
+    from { transform: translateY(26px); }
+    to { transform: translateY(0); }
+}
+
+.hero .hero-media { animation: hero-rise 0.8s cubic-bezier(0.22, 1, 0.36, 1) both; }
 
 @media (prefers-reduced-motion: reduce) {
     .hero .hero-eyebrow,
