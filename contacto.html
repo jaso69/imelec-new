@@ -92,32 +92,60 @@
         }
     </style>
     <script type="application/ld+json">
-        {
+    {
         "@context": "https://schema.org",
         "@type": "ContactPage",
         "name": "Contacto Imelec - Electricistas en Madrid",
         "description": "Contacte con electricistas expertos en Madrid. Presupuestos gratuitos, reparaciones urgentes y profesionales certificados.",
         "url": "https://www.imelec.es/contacto.html",
         "mainEntity": {
-            "@type": "LocalBusiness",
+            "@type": "Electrician",
             "@id": "https://www.imelec.es/#organization",
             "name": "Imelec",
-            "telephone": "+34-691-50-23-61",
+            "url": "https://www.imelec.es/",
+            "telephone": "+34691502361",
             "email": "info@imelec.es",
             "address": {
                 "@type": "PostalAddress",
-                "streetAddress": "Ctra de Loeches 55, Torrejón de Ardoz",
-                "addressLocality": "Madrid",
+                "streetAddress": "Ctra. de Loeches 55",
+                "addressLocality": "Torrejón de Ardoz",
+                "addressRegion": "Madrid",
                 "postalCode": "28850",
                 "addressCountry": "ES"
             },
             "geo": {
                 "@type": "GeoCoordinates",
-                "latitude": "40.4465358",
-                "longitude": "-3.4665775"
-            }
+                "latitude": 40.4465358,
+                "longitude": -3.4665775
+            },
+            "openingHoursSpecification": [
+                {
+                    "@type": "OpeningHoursSpecification",
+                    "dayOfWeek": [
+                        "Monday",
+                        "Tuesday",
+                        "Wednesday",
+                        "Thursday",
+                        "Friday"
+                    ],
+                    "opens": "09:00",
+                    "closes": "14:00"
+                },
+                {
+                    "@type": "OpeningHoursSpecification",
+                    "dayOfWeek": [
+                        "Monday",
+                        "Tuesday",
+                        "Wednesday",
+                        "Thursday",
+                        "Friday"
+                    ],
+                    "opens": "16:00",
+                    "closes": "19:00"
+                }
+            ]
         }
-        }
+    }
     </script>
 </head>
 <body class="bg-light">
@@ -422,7 +450,7 @@
                 </div>
                 <div>
                     <h3 class="text-xl font-semibold mb-3">¿Atienden urgencias los fines de semana?</h3>
-                    <p class="text-gray-700">No, no trabajamos con servicio 24 horas. Nuestro servicio de urgencias está disponible de lunes a viernes 9:00-14:00 / 16:00-19:00. Priorizando las emergencias.</p>
+                    <p class="text-gray-700">No, no trabajamos con servicio 24 horas. Nuestro servicio de urgencias está disponible de lunes a viernes 9:00-14:00 / 16:00-19:00, priorizando las emergencias.</p>
                 </div>
                 <div>
                     <h3 class="text-xl font-semibold mb-3">¿Trabajan con comunidades de vecinos?</h3>

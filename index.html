@@ -45,49 +45,60 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" media="print" onload="this.media='all'">
     <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"></noscript>
     <script type="application/ld+json">
-        {
+    {
         "@context": "https://schema.org",
-        "@type": "LocalBusiness",
-        "name": "Imelec",
-        "image": "https://www.imelec.es/favicon.svg",
-        "description": "Electricistas expertos en Madrid con más de 15 años de experiencia. Instalaciones eléctricas, reparaciones urgentes, puntos de carga para vehículos eléctricos y energía solar.",
+        "@type": "Electrician",
         "@id": "https://www.imelec.es/#organization",
-        "url": "https://www.imelec.es",
-        "telephone": "+34-691-50-23-61",
+        "name": "Imelec",
+        "url": "https://www.imelec.es/",
+        "image": "https://www.imelec.es/img/og-imelec.jpg",
+        "description": "Electricistas expertos en Madrid con más de 15 años de experiencia. Instalaciones eléctricas, reparaciones urgentes, puntos de carga para vehículos eléctricos y energía solar.",
+        "telephone": "+34691502361",
         "email": "info@imelec.es",
         "address": {
             "@type": "PostalAddress",
-            "streetAddress": "Ctra de Loeches 55, Torrejón de Ardoz",
-            "addressLocality": "Madrid",
+            "streetAddress": "Ctra. de Loeches 55",
+            "addressLocality": "Torrejón de Ardoz",
+            "addressRegion": "Madrid",
             "postalCode": "28850",
             "addressCountry": "ES"
         },
         "geo": {
             "@type": "GeoCoordinates",
-            "latitude": "40.4465358",
-            "longitude": "-3.4665775"
+            "latitude": 40.4465358,
+            "longitude": -3.4665775
         },
         "openingHoursSpecification": [
             {
                 "@type": "OpeningHoursSpecification",
-                "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+                "dayOfWeek": [
+                    "Monday",
+                    "Tuesday",
+                    "Wednesday",
+                    "Thursday",
+                    "Friday"
+                ],
                 "opens": "09:00",
                 "closes": "14:00"
             },
             {
                 "@type": "OpeningHoursSpecification",
-                "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+                "dayOfWeek": [
+                    "Monday",
+                    "Tuesday",
+                    "Wednesday",
+                    "Thursday",
+                    "Friday"
+                ],
                 "opens": "16:00",
                 "closes": "19:00"
             }
         ],
-        "priceRange": "€€",
         "areaServed": {
-            "@type": "City",
-            "name": "Madrid"
-        },
-        "sameAs": []
+            "@type": "AdministrativeArea",
+            "name": "Comunidad de Madrid"
         }
+    }
     </script>
     
     <!-- Tailwind CSS -->
