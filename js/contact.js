@@ -81,7 +81,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     formStatus.classList.remove('hidden');
                 }
                 setTimeout(() => {
-                    window.location.replace("index.html");
+                    window.location.replace("/");
                 }, 1500);
             } else {
                 if (formStatus) {
